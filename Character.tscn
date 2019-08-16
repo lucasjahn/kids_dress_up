@@ -1,0 +1,594 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://assets/2x/figur.png" type="Texture" id=1]
+[ext_resource path="res://Figur.gd" type="Script" id=2]
+[ext_resource path="res://assets/2x/tops/blue/shorts.png" type="Texture" id=3]
+[ext_resource path="res://assets/2x/tops/orange/shorts_orange.png" type="Texture" id=4]
+[ext_resource path="res://assets/2x/tops/green/shorts_1_green.png" type="Texture" id=5]
+[ext_resource path="res://assets/2x/tops/red/shorts_2_red.png" type="Texture" id=6]
+[ext_resource path="res://assets/2x/tops/pink/shorts_3_pink.png" type="Texture" id=7]
+[ext_resource path="res://assets/2x/tops/blue/pants.png" type="Texture" id=8]
+[ext_resource path="res://assets/2x/tops/orange/pants_orange.png" type="Texture" id=9]
+[ext_resource path="res://assets/2x/tops/green/pants_1_green.png" type="Texture" id=10]
+[ext_resource path="res://assets/2x/tops/red/pants_2_red.png" type="Texture" id=11]
+[ext_resource path="res://assets/2x/tops/pink/pants_3_pink.png" type="Texture" id=12]
+[ext_resource path="res://assets/2x/tops/blue/top.png" type="Texture" id=13]
+[ext_resource path="res://assets/2x/tops/orange/ttop_orange.png" type="Texture" id=14]
+[ext_resource path="res://assets/2x/tops/green/ttop_1_green.png" type="Texture" id=15]
+[ext_resource path="res://assets/2x/tops/red/ttop_2_red.png" type="Texture" id=16]
+[ext_resource path="res://assets/2x/tops/pink/ttop_3_pink.png" type="Texture" id=17]
+[ext_resource path="res://assets/2x/tops/blue/pullover.png" type="Texture" id=18]
+[ext_resource path="res://assets/2x/tops/orange/pullover_orange.png" type="Texture" id=19]
+[ext_resource path="res://assets/2x/tops/green/pullover_1_green.png" type="Texture" id=20]
+[ext_resource path="res://assets/2x/tops/red/pullover_2_red.png" type="Texture" id=21]
+[ext_resource path="res://assets/2x/tops/pink/pullover_3_pink.png" type="Texture" id=22]
+[ext_resource path="res://assets/2x/tops/blue/dress_2.png" type="Texture" id=23]
+[ext_resource path="res://assets/2x/tops/blue/dress_1.png" type="Texture" id=24]
+[ext_resource path="res://assets/2x/tops/blue/dress_3.png" type="Texture" id=25]
+[ext_resource path="res://assets/2x/tops/orange/dress_1_orange.png" type="Texture" id=26]
+[ext_resource path="res://assets/2x/tops/orange/dress_2_1_orange.png" type="Texture" id=27]
+[ext_resource path="res://assets/2x/tops/orange/dress_3_orange.png" type="Texture" id=28]
+[ext_resource path="res://assets/2x/tops/green/dress_1_1_green.png" type="Texture" id=29]
+[ext_resource path="res://assets/2x/tops/green/dress_2_green.png" type="Texture" id=30]
+[ext_resource path="res://assets/2x/tops/green/dress_3_1_green.png" type="Texture" id=31]
+[ext_resource path="res://assets/2x/tops/red/dress_1_2_red.png" type="Texture" id=32]
+[ext_resource path="res://assets/2x/tops/red/dress_2_2_red.png" type="Texture" id=33]
+[ext_resource path="res://assets/2x/tops/red/dress_3_2_red.png" type="Texture" id=34]
+[ext_resource path="res://assets/2x/tops/pink/dress_1_3_pink.png" type="Texture" id=35]
+[ext_resource path="res://assets/2x/tops/pink/dress_2_3_pink.png" type="Texture" id=36]
+[ext_resource path="res://assets/2x/tops/pink/dress_3_3_pink.png" type="Texture" id=37]
+[ext_resource path="res://assets/2x/tops/orange/shoes_orange.png" type="Texture" id=38]
+[ext_resource path="res://assets/2x/tops/blue/shoes_blue.png" type="Texture" id=39]
+[ext_resource path="res://assets/2x/tops/pink/shoes_3_pink.png" type="Texture" id=40]
+[ext_resource path="res://assets/2x/tops/green/shoes_1_green.png" type="Texture" id=41]
+[ext_resource path="res://assets/2x/tops/red/shoes_2_red.png" type="Texture" id=42]
+
+[node name="Figur" type="Sprite"]
+editor/display_folded = true
+position = Vector2( 244, 352 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shorts" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Blue" type="Node" parent="Shorts"]
+editor/display_folded = true
+
+[node name="Shorts" type="TextureRect" parent="Shorts/Blue"]
+visible = false
+margin_left = 177.818
+margin_top = 398.236
+margin_right = 441.818
+margin_bottom = 636.236
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Orange" type="Node" parent="Shorts"]
+editor/display_folded = true
+
+[node name="Shorts" type="TextureRect" parent="Shorts/Orange"]
+visible = false
+margin_left = 177.818
+margin_top = 398.236
+margin_right = 441.818
+margin_bottom = 636.236
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Green" type="Node" parent="Shorts"]
+editor/display_folded = true
+
+[node name="Shorts" type="TextureRect" parent="Shorts/Green"]
+visible = false
+margin_left = 177.818
+margin_top = 398.236
+margin_right = 441.818
+margin_bottom = 636.236
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Red" type="Node" parent="Shorts"]
+editor/display_folded = true
+
+[node name="Shorts" type="TextureRect" parent="Shorts/Red"]
+visible = false
+margin_left = 177.818
+margin_top = 398.236
+margin_right = 441.818
+margin_bottom = 636.236
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pink" type="Node" parent="Shorts"]
+editor/display_folded = true
+
+[node name="Shorts" type="TextureRect" parent="Shorts/Pink"]
+visible = false
+margin_left = 177.818
+margin_top = 398.236
+margin_right = 441.818
+margin_bottom = 636.236
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pants" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Blue" type="Node" parent="Pants"]
+
+[node name="Pants" type="TextureRect" parent="Pants/Blue"]
+visible = false
+margin_left = 178.705
+margin_top = 401.734
+margin_right = 438.705
+margin_bottom = 831.734
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Orange" type="Node" parent="Pants"]
+
+[node name="Pants" type="TextureRect" parent="Pants/Orange"]
+visible = false
+margin_left = 178.705
+margin_top = 401.734
+margin_right = 438.705
+margin_bottom = 831.734
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Green" type="Node" parent="Pants"]
+
+[node name="Pants" type="TextureRect" parent="Pants/Green"]
+visible = false
+margin_left = 178.705
+margin_top = 401.734
+margin_right = 438.705
+margin_bottom = 831.734
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Red" type="Node" parent="Pants"]
+
+[node name="Pants" type="TextureRect" parent="Pants/Red"]
+visible = false
+margin_left = 178.705
+margin_top = 401.734
+margin_right = 438.705
+margin_bottom = 831.734
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pink" type="Node" parent="Pants"]
+
+[node name="Pants" type="TextureRect" parent="Pants/Pink"]
+visible = false
+margin_left = 178.705
+margin_top = 401.734
+margin_right = 438.705
+margin_bottom = 831.734
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tops" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Blue" type="Node" parent="Tops"]
+editor/display_folded = true
+
+[node name="Top" type="TextureRect" parent="Tops/Blue"]
+visible = false
+margin_left = 184.242
+margin_top = 247.661
+margin_right = 421.242
+margin_bottom = 592.661
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Orange" type="Node" parent="Tops"]
+
+[node name="Top" type="TextureRect" parent="Tops/Orange"]
+visible = false
+margin_left = 184.242
+margin_top = 247.661
+margin_right = 421.242
+margin_bottom = 592.661
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Green" type="Node" parent="Tops"]
+
+[node name="Top" type="TextureRect" parent="Tops/Green"]
+visible = false
+margin_left = 184.242
+margin_top = 247.661
+margin_right = 421.242
+margin_bottom = 592.661
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Red" type="Node" parent="Tops"]
+
+[node name="Top" type="TextureRect" parent="Tops/Red"]
+visible = false
+margin_left = 184.242
+margin_top = 247.661
+margin_right = 421.242
+margin_bottom = 592.661
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pink" type="Node" parent="Tops"]
+
+[node name="Top" type="TextureRect" parent="Tops/Pink"]
+visible = false
+margin_left = 184.242
+margin_top = 247.661
+margin_right = 421.242
+margin_bottom = 592.661
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pullover" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Blue" type="Node" parent="Pullover"]
+editor/display_folded = true
+
+[node name="Pullover" type="TextureRect" parent="Pullover/Blue"]
+visible = false
+margin_left = 134.586
+margin_top = 247.401
+margin_right = 569.586
+margin_bottom = 589.401
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Orange" type="Node" parent="Pullover"]
+
+[node name="Pullover" type="TextureRect" parent="Pullover/Orange"]
+visible = false
+margin_left = 134.586
+margin_top = 247.401
+margin_right = 569.586
+margin_bottom = 589.401
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Green" type="Node" parent="Pullover"]
+
+[node name="Pullover" type="TextureRect" parent="Pullover/Green"]
+visible = false
+margin_left = 134.586
+margin_top = 247.401
+margin_right = 569.586
+margin_bottom = 589.401
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Red" type="Node" parent="Pullover"]
+
+[node name="Pullover" type="TextureRect" parent="Pullover/Red"]
+visible = false
+margin_left = 134.586
+margin_top = 247.401
+margin_right = 569.586
+margin_bottom = 589.401
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pink" type="Node" parent="Pullover"]
+
+[node name="Pullover" type="TextureRect" parent="Pullover/Pink"]
+visible = false
+margin_left = 134.586
+margin_top = 247.401
+margin_right = 569.586
+margin_bottom = 589.401
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dresses" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Blue" type="Node" parent="Dresses"]
+editor/display_folded = true
+
+[node name="Dress2" type="TextureRect" parent="Dresses/Blue"]
+visible = false
+margin_left = 177.552
+margin_top = 247.417
+margin_right = 445.552
+margin_bottom = 811.417
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress1" type="TextureRect" parent="Dresses/Blue"]
+visible = false
+margin_left = 156.676
+margin_top = 247.419
+margin_right = 513.676
+margin_bottom = 779.419
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress3" type="TextureRect" parent="Dresses/Blue"]
+visible = false
+margin_left = 157.198
+margin_top = 246.946
+margin_right = 515.198
+margin_bottom = 869.946
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Orange" type="Node" parent="Dresses"]
+editor/display_folded = true
+
+[node name="Dress2" type="TextureRect" parent="Dresses/Orange"]
+visible = false
+margin_left = 177.552
+margin_top = 247.417
+margin_right = 445.552
+margin_bottom = 811.417
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress1" type="TextureRect" parent="Dresses/Orange"]
+visible = false
+margin_left = 156.676
+margin_top = 247.419
+margin_right = 513.676
+margin_bottom = 779.419
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress3" type="TextureRect" parent="Dresses/Orange"]
+visible = false
+margin_left = 157.198
+margin_top = 246.946
+margin_right = 515.198
+margin_bottom = 869.946
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Green" type="Node" parent="Dresses"]
+editor/display_folded = true
+
+[node name="Dress2" type="TextureRect" parent="Dresses/Green"]
+visible = false
+margin_left = 177.552
+margin_top = 247.417
+margin_right = 445.552
+margin_bottom = 811.417
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress1" type="TextureRect" parent="Dresses/Green"]
+visible = false
+margin_left = 156.676
+margin_top = 247.419
+margin_right = 513.676
+margin_bottom = 779.419
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress3" type="TextureRect" parent="Dresses/Green"]
+visible = false
+margin_left = 157.198
+margin_top = 246.946
+margin_right = 515.198
+margin_bottom = 869.946
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 31 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Red" type="Node" parent="Dresses"]
+editor/display_folded = true
+
+[node name="Dress2" type="TextureRect" parent="Dresses/Red"]
+visible = false
+margin_left = 177.552
+margin_top = 247.417
+margin_right = 445.552
+margin_bottom = 811.417
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 32 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress1" type="TextureRect" parent="Dresses/Red"]
+visible = false
+margin_left = 156.676
+margin_top = 247.419
+margin_right = 513.676
+margin_bottom = 779.419
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 33 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress3" type="TextureRect" parent="Dresses/Red"]
+visible = false
+margin_left = 157.198
+margin_top = 246.946
+margin_right = 515.198
+margin_bottom = 869.946
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 34 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pink" type="Node" parent="Dresses"]
+editor/display_folded = true
+
+[node name="Dress2" type="TextureRect" parent="Dresses/Pink"]
+visible = false
+margin_left = 177.552
+margin_top = 247.417
+margin_right = 445.552
+margin_bottom = 811.417
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 35 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress1" type="TextureRect" parent="Dresses/Pink"]
+visible = false
+margin_left = 156.676
+margin_top = 247.419
+margin_right = 513.676
+margin_bottom = 779.419
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 36 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Dress3" type="TextureRect" parent="Dresses/Pink"]
+visible = false
+margin_left = 157.198
+margin_top = 246.946
+margin_right = 515.198
+margin_bottom = 869.946
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 37 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shoes" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Orange" type="TextureRect" parent="Shoes"]
+visible = false
+margin_left = -212.0
+margin_top = 529.468
+margin_right = 212.0
+margin_bottom = 597.468
+texture = ExtResource( 38 )
+
+[node name="Blue" type="TextureRect" parent="Shoes"]
+visible = false
+margin_left = -212.0
+margin_top = 529.468
+margin_right = 212.0
+margin_bottom = 597.468
+texture = ExtResource( 39 )
+
+[node name="Pink" type="TextureRect" parent="Shoes"]
+visible = false
+margin_left = -212.0
+margin_top = 529.468
+margin_right = 212.0
+margin_bottom = 597.468
+texture = ExtResource( 40 )
+
+[node name="Green" type="TextureRect" parent="Shoes"]
+visible = false
+margin_left = -212.0
+margin_top = 529.468
+margin_right = 212.0
+margin_bottom = 597.468
+texture = ExtResource( 41 )
+
+[node name="Red" type="TextureRect" parent="Shoes"]
+visible = false
+margin_left = -212.0
+margin_top = 529.468
+margin_right = 212.0
+margin_bottom = 597.468
+texture = ExtResource( 42 )
