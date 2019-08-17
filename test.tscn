@@ -1,8 +1,8 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://assets/room_bg.png" type="Texture" id=2]
-[ext_resource path="res://assets/character_female_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/characterfemale1.png" type="Texture" id=3]
 [ext_resource path="res://Figur.gd" type="Script" id=4]
 [ext_resource path="res://assets/wardrobe/pants/blue/pantslong1.png" type="Texture" id=5]
 [ext_resource path="res://assets/wardrobe/pants/blue/pantslong2.png" type="Texture" id=6]
@@ -45,6 +45,7 @@
 [ext_resource path="res://assets/btn_cat_special.png" type="Texture" id=43]
 [ext_resource path="res://assets/btn_choose_character.png" type="Texture" id=44]
 [ext_resource path="res://assets/btn_lookbook.png" type="Texture" id=45]
+[ext_resource path="res://CharacterSelection.tscn" type="PackedScene" id=46]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Intro"
@@ -75,9 +76,11 @@ margin_bottom = 1536.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
-[node name="Figur" type="Sprite" parent="."]
-position = Vector2( 244.875, 381.875 )
-scale = Vector2( 0.500255, 0.500179 )
+[node name="Figur" type="TextureRect" parent="."]
+margin_top = 35.0
+margin_right = 979.0
+margin_bottom = 1430.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 script = ExtResource( 4 )
 
@@ -87,34 +90,34 @@ position = Vector2( 37.194, -24.792 )
 
 [node name="PantsLong1" type="TextureRect" parent="Figur/Pants"]
 visible = false
-margin_left = -170.876
-margin_top = 150.997
-margin_right = 89.1242
-margin_bottom = 580.997
+margin_left = 288.806
+margin_top = 852.792
+margin_right = 548.806
+margin_bottom = 1282.79
 texture = ExtResource( 5 )
 
 [node name="PantsLong2" type="TextureRect" parent="Figur/Pants"]
 visible = false
-margin_left = -170.876
-margin_top = 150.997
-margin_right = 89.1242
-margin_bottom = 580.997
+margin_left = 286.806
+margin_top = 850.792
+margin_right = 547.806
+margin_bottom = 1280.79
 texture = ExtResource( 6 )
 
 [node name="PantsShort1" type="TextureRect" parent="Figur/Pants"]
 visible = false
-margin_left = -172.875
-margin_top = 148.997
-margin_right = 92.1253
-margin_bottom = 386.997
+margin_left = 284.806
+margin_top = 846.792
+margin_right = 549.806
+margin_bottom = 1084.79
 texture = ExtResource( 7 )
 
 [node name="PantsShort2" type="TextureRect" parent="Figur/Pants"]
 visible = false
-margin_left = -172.875
-margin_top = 148.997
-margin_right = 92.1253
-margin_bottom = 386.997
+margin_left = 284.806
+margin_top = 846.792
+margin_right = 549.806
+margin_bottom = 1084.79
 texture = ExtResource( 8 )
 
 [node name="Tops" type="Node2D" parent="Figur"]
@@ -122,69 +125,70 @@ editor/display_folded = true
 
 [node name="Top1" type="TextureRect" parent="Figur/Tops"]
 visible = false
-margin_left = -119.689
-margin_top = -179.686
-margin_right = 115.311
-margin_bottom = 156.314
+margin_left = 338.0
+margin_top = 522.0
+margin_right = 573.0
+margin_bottom = 858.0
 texture = ExtResource( 9 )
 
 [node name="Tshirt1" type="TextureRect" parent="Figur/Tops"]
 visible = false
-margin_left = -189.653
-margin_top = -179.686
-margin_right = 182.347
-margin_bottom = 157.314
+margin_left = 270.0
+margin_top = 522.0
+margin_right = 642.0
+margin_bottom = 859.0
 texture = ExtResource( 10 )
 
 [node name="Tshirt2" type="TextureRect" parent="Figur/Tops"]
 visible = false
-margin_left = -189.653
-margin_top = -181.685
-margin_right = 182.347
-margin_bottom = 155.315
+margin_left = 270.0
+margin_top = 522.0
+margin_right = 642.0
+margin_bottom = 859.0
 texture = ExtResource( 11 )
 
 [node name="Pullover1" type="TextureRect" parent="Figur/Tops"]
 visible = false
-margin_left = -221.637
-margin_top = -181.685
-margin_right = 213.363
-margin_bottom = 165.315
+margin_left = 238.0
+margin_top = 522.0
+margin_right = 673.0
+margin_bottom = 869.0
 texture = ExtResource( 12 )
 
 [node name="Dresses" type="Node2D" parent="Figur"]
+editor/display_folded = true
 position = Vector2( -489.5, -697.5 )
 
 [node name="Dress1" type="TextureRect" parent="Figur/Dresses"]
 visible = false
-margin_left = 353.819
-margin_top = 517.814
-margin_right = 620.819
-margin_bottom = 1081.81
+margin_left = 813.5
+margin_top = 1219.5
+margin_right = 1080.5
+margin_bottom = 1783.5
 texture = ExtResource( 13 )
 
 [node name="Dress2" type="TextureRect" parent="Figur/Dresses"]
 visible = false
-margin_left = 311.841
-margin_top = 517.814
-margin_right = 669.841
-margin_bottom = 1140.81
+margin_left = 771.5
+margin_top = 1219.5
+margin_right = 1129.5
+margin_bottom = 1842.5
 texture = ExtResource( 14 )
 
 [node name="Dress3" type="TextureRect" parent="Figur/Dresses"]
 visible = false
-margin_left = 311.841
-margin_top = 515.815
-margin_right = 668.841
-margin_bottom = 1048.82
+margin_left = 771.493
+margin_top = 1219.5
+margin_right = 1128.49
+margin_bottom = 1752.5
 texture = ExtResource( 15 )
 
 [node name="Dress4" type="TextureRect" parent="Figur/Dresses"]
 visible = false
-margin_left = 297.848
-margin_top = 517.814
-margin_right = 677.848
-margin_bottom = 1058.81
+margin_left = 757.5
+margin_top = 1219.5
+margin_right = 1137.5
+margin_bottom = 1760.5
 texture = ExtResource( 16 )
 
 [node name="Shoes" type="Node2D" parent="Figur"]
@@ -193,85 +197,86 @@ position = Vector2( -489.904, -763.409 )
 
 [node name="Shoes1" type="TextureRect" parent="Figur/Shoes"]
 visible = false
-margin_left = 266.268
-margin_top = 1315.46
-margin_right = 707.268
-margin_bottom = 1387.46
+margin_left = 723.904
+margin_top = 2019.41
+margin_right = 1164.9
+margin_bottom = 2091.41
 texture = ExtResource( 17 )
 
 [node name="Shoes2" type="TextureRect" parent="Figur/Shoes"]
 visible = false
-margin_left = 274.264
-margin_top = 1321.46
-margin_right = 715.264
-margin_bottom = 1393.46
+margin_left = 731.9
+margin_top = 2023.54
+margin_right = 1172.9
+margin_bottom = 2095.54
 texture = ExtResource( 18 )
 
 [node name="Shoes3" type="TextureRect" parent="Figur/Shoes"]
 visible = false
-margin_left = 266.268
-margin_top = 1269.48
-margin_right = 707.268
-margin_bottom = 1389.48
+margin_left = 725.904
+margin_top = 1971.41
+margin_right = 1166.9
+margin_bottom = 2091.41
 texture = ExtResource( 19 )
 
 [node name="Shoes4" type="TextureRect" parent="Figur/Shoes"]
 visible = false
-margin_left = 274.264
-margin_top = 1313.46
-margin_right = 715.264
-margin_bottom = 1389.46
+margin_left = 731.904
+margin_top = 2017.41
+margin_right = 1172.9
+margin_bottom = 2093.41
 texture = ExtResource( 20 )
 
 [node name="Special" type="Node2D" parent="Figur"]
+editor/display_folded = true
 position = Vector2( -489.904, -763.409 )
 
 [node name="Amerindian" type="TextureRect" parent="Figur/Special"]
 visible = false
-margin_left = 310.246
-margin_top = 109.893
-margin_right = 661.246
-margin_bottom = 1215.89
+margin_left = 769.904
+margin_top = 811.409
+margin_right = 1120.9
+margin_bottom = 1917.41
 texture = ExtResource( 21 )
 
 [node name="Fairy" type="TextureRect" parent="Figur/Special"]
 visible = false
-margin_left = 12.3975
-margin_top = 353.806
-margin_right = 967.398
-margin_bottom = 1123.81
+margin_left = 471.904
+margin_top = 1057.41
+margin_right = 1426.9
+margin_bottom = 1827.42
 texture = ExtResource( 22 )
 
 [node name="Astronaut" type="TextureRect" parent="Figur/Special"]
 visible = false
-margin_left = 256.273
-margin_top = 175.869
-margin_right = 712.273
-margin_bottom = 1391.87
+margin_left = 715.779
+margin_top = 881.585
+margin_right = 1171.78
+margin_bottom = 2097.59
 texture = ExtResource( 23 )
 
 [node name="PeterPan" type="TextureRect" parent="Figur/Special"]
 visible = false
-margin_left = 292.255
-margin_top = 583.723
-margin_right = 679.255
-margin_bottom = 1318.72
+margin_left = 751.904
+margin_top = 1285.41
+margin_right = 1138.9
+margin_bottom = 2020.41
 texture = ExtResource( 24 )
 
 [node name="Star" type="TextureRect" parent="Figur/Special"]
 visible = false
-margin_left = 698.048
-margin_top = 423.781
-margin_right = 922.048
-margin_bottom = 636.781
+margin_left = 1203.9
+margin_top = 961.409
+margin_right = 1427.9
+margin_bottom = 1174.41
 texture = ExtResource( 25 )
 
 [node name="Heart" type="TextureRect" parent="Figur/Special"]
 visible = false
-margin_left = 58.3741
-margin_top = 395.791
-margin_right = 277.374
-margin_bottom = 578.791
+margin_left = 527.904
+margin_top = 1135.41
+margin_right = 746.904
+margin_bottom = 1318.41
 texture = ExtResource( 26 )
 
 [node name="Wardrobe" type="Node2D" parent="."]
@@ -285,15 +290,14 @@ rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 28 )
 
 [node name="Categories" type="Node2D" parent="Wardrobe"]
-editor/display_folded = true
+position = Vector2( 0, 35 )
 
 [node name="Dresses" type="TextureRect" parent="Wardrobe/Categories"]
 editor/display_folded = true
 visible = false
 margin_left = 530.0
-margin_top = 35.0
 margin_right = 1201.0
-margin_bottom = 1440.0
+margin_bottom = 1405.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 29 )
 script = ExtResource( 30 )
@@ -335,9 +339,8 @@ texture_normal = ExtResource( 16 )
 editor/display_folded = true
 visible = false
 margin_left = 530.0
-margin_top = 35.0
 margin_right = 1201.0
-margin_bottom = 1440.0
+margin_bottom = 1405.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 29 )
 script = ExtResource( 30 )
@@ -379,9 +382,8 @@ texture_normal = ExtResource( 12 )
 editor/display_folded = true
 visible = false
 margin_left = 530.0
-margin_top = 35.0
 margin_right = 1201.0
-margin_bottom = 1440.0
+margin_bottom = 1405.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 29 )
 script = ExtResource( 30 )
@@ -423,9 +425,8 @@ texture_normal = ExtResource( 8 )
 editor/display_folded = true
 visible = false
 margin_left = 530.0
-margin_top = 35.0
 margin_right = 1201.0
-margin_bottom = 1440.0
+margin_bottom = 1405.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 29 )
 script = ExtResource( 30 )
@@ -464,9 +465,8 @@ texture_normal = ExtResource( 34 )
 editor/display_folded = true
 visible = false
 margin_left = 530.0
-margin_top = 35.0
 margin_right = 1201.0
-margin_bottom = 1440.0
+margin_bottom = 1405.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 29 )
 script = ExtResource( 30 )
@@ -553,7 +553,6 @@ rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 37 )
 
 [node name="Home" type="Node2D" parent="Wardrobe"]
-editor/display_folded = true
 position = Vector2( 512, -0.42 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 38 )
@@ -660,6 +659,9 @@ margin_bottom = 1341.5
 rect_scale = Vector2( 0.64, 0.64 )
 texture_normal = ExtResource( 43 )
 
+[node name="CharacterSelection" parent="." instance=ExtResource( 46 )]
+visible = false
+
 [node name="IntroAnimation" type="AnimationPlayer" parent="."]
 autoplay = "Intro"
 anims/Intro = SubResource( 1 )
@@ -673,3 +675,4 @@ anims/Intro = SubResource( 1 )
 [connection signal="pressed" from="Wardrobe/ContextualButtons/ButtonColor" to="Wardrobe" method="_on_ButtonColor_pressed"]
 [connection signal="categorySelected" from="Wardrobe/Home" to="Wardrobe" method="openWardrobe"]
 [connection signal="categorySelected" from="Wardrobe/Sidebar" to="Wardrobe" method="openWardrobe"]
+[connection signal="character_selected" from="CharacterSelection" to="." method="_on_CharacterSelection_character_selected"]

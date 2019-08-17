@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="DressUp"
 run/main_scene="res://test.tscn"
+boot_splash/image="res://assets/launch_screen.png"
 config/icon="res://icon.png"
 
 [display]

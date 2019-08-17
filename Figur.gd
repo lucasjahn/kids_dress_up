@@ -1,4 +1,4 @@
-extends Sprite
+extends TextureRect
 
 const assetRootPath = 'res://assets/wardrobe'
 var dressedItems = {
@@ -10,6 +10,16 @@ var dressedItems = {
 	'Pullover': null,
 	'Special': null
 }
+
+func _ready():
+	self.get_parent().get_node('Wardrobe/Home').connect("resetCharacterSelection", self, "resetClothes")
+
+func resetClothes():
+	for category in dressedItems:
+		if dressedItems[category]:
+			dressedItems[category].hide()
+			dressedItems[category] = null
+
 
 func getTexture(category, itemName):
 	return load("%s/%s/%s.png" % [assetRootPath, category, itemName])
@@ -45,3 +55,4 @@ func toggleItemVisability(category, itemName):
 
 func _on_item_pressed(category, itemName):
 	toggleItemVisability(category, itemName)
+	

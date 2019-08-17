@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_female_1.png-d73b65eabcf9c23ba6609158697e0b59.stex"
+path="res://.import/characterfemale2.png-721822dd1b484215832c2cc435abd10b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character_female_1.png"
-dest_files=[ "res://.import/character_female_1.png-d73b65eabcf9c23ba6609158697e0b59.stex" ]
+source_file="res://assets/characterfemale2.png"
+dest_files=[ "res://.import/characterfemale2.png-721822dd1b484215832c2cc435abd10b.stex" ]
 
 [params]
 
@@ -18,11 +18,11 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=true
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
