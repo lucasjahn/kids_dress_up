@@ -39,12 +39,10 @@ func _on_Wardrobe_changed_color(colorName):
 	
 	
 func _on_Wardrobe_closed():
-	buttonMute.rect_position.y = 35
-	
+	buttonMute.rect_position.y = 78
 	
 func _on_Wardrobe_opened():
-	buttonMute.rect_position.y = 127
-
+	buttonMute.rect_position.y = 254
 
 func _on_CharacterSelection_character_selected(characterName):
 	selectedCharacter = characterName
@@ -58,6 +56,7 @@ func _on_CharacterSelection_character_selected(characterName):
 	
 func resetCharacter():
 	characterSelection.show()
+	characterSelection.get_node('AnimationPlayer').play()
 	
 	selectedCharacter = null
 	

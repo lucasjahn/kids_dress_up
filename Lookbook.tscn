@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/bg_room.png" type="Texture" id=2]
 [ext_resource path="res://Background.gd" type="Script" id=3]
 [ext_resource path="res://assets/lookbook_title.png" type="Texture" id=4]
-[ext_resource path="res://assets/btn_home.png" type="Texture" id=5]
+[ext_resource path="res://assets/btn_back.png" type="Texture" id=5]
 [ext_resource path="res://assets/btn_delete.png" type="Texture" id=6]
 [ext_resource path="res://PictureFrames.gd" type="Script" id=7]
 [ext_resource path="res://assets/picture_frame.png" type="Texture" id=8]
@@ -22,8 +22,8 @@
 [node name="Lookbook" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 38.0, -136.0, -26.0, 621.0 ],
-"_edit_vertical_guides_": [ 38.0, 986.0, 512.0, -83.0 ]
+"_edit_horizontal_guides_": [ 79.0, -78.0 ],
+"_edit_vertical_guides_": [ 38.0, 1970.0, 1024.0 ]
 }
 
 [node name="Background" type="TextureRect" parent="."]
@@ -31,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 2048.0
 margin_bottom = 1536.0
-rect_scale = Vector2( 0.5, 0.64 )
+rect_scale = Vector2( 1, 1.28 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -46,11 +46,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 298.0
-margin_top = -101.0
-margin_right = 724.0
-margin_bottom = 246.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 821.0
+margin_top = -35.0
+margin_right = 1247.0
+margin_bottom = 312.0
 rect_pivot_offset = Vector2( 206, 172 )
 texture = ExtResource( 4 )
 __meta__ = {
@@ -59,21 +58,19 @@ __meta__ = {
 
 [node name="ButtonHome" type="TextureButton" parent="Header"]
 margin_left = 38.0
-margin_top = 38.0
+margin_top = 78.0
 margin_right = 202.0
-margin_bottom = 199.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_bottom = 239.0
 texture_normal = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="ButtonDelete" type="TextureButton" parent="Header"]
-margin_left = 904.0
-margin_top = 38.0
-margin_right = 1068.0
-margin_bottom = 199.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 1811.0
+margin_top = 78.0
+margin_right = 1975.0
+margin_bottom = 239.0
 texture_normal = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
@@ -86,10 +83,9 @@ script = ExtResource( 7 )
 [node name="PictureFrame1" type="TextureButton" parent="PictureFrames"]
 editor/display_folded = true
 margin_left = 37.0
-margin_top = 240.0
+margin_top = 480.0
 margin_right = 634.0
-margin_bottom = 960.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_bottom = 1200.0
 texture_normal = ExtResource( 8 )
 script = ExtResource( 9 )
 __meta__ = {
@@ -105,13 +101,18 @@ margin_right = 1071.0
 margin_bottom = 1467.0
 rect_scale = Vector2( 0.4, 0.4 )
 
+[node name="Overlay" type="TextureRect" parent="PictureFrames/PictureFrame1"]
+margin_left = 62.0
+margin_top = 62.0
+margin_right = 527.0
+margin_bottom = 652.0
+
 [node name="PictureFrame2" type="TextureButton" parent="PictureFrames"]
 editor/display_folded = true
-margin_left = 364.0
-margin_top = 240.0
-margin_right = 960.0
-margin_bottom = 960.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 728.0
+margin_top = 480.0
+margin_right = 1325.0
+margin_bottom = 1200.0
 texture_normal = ExtResource( 8 )
 script = ExtResource( 9 )
 __meta__ = {
@@ -127,13 +128,18 @@ margin_right = 1071.0
 margin_bottom = 1467.0
 rect_scale = Vector2( 0.4, 0.4 )
 
+[node name="Overlay" type="TextureRect" parent="PictureFrames/PictureFrame2"]
+margin_left = 58.0
+margin_top = 62.0
+margin_right = 523.0
+margin_bottom = 652.0
+
 [node name="PictureFrame3" type="TextureButton" parent="PictureFrames"]
 editor/display_folded = true
-margin_left = 697.0
-margin_top = 240.0
-margin_right = 1293.0
-margin_bottom = 960.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 1394.0
+margin_top = 480.0
+margin_right = 1991.0
+margin_bottom = 1200.0
 texture_normal = ExtResource( 8 )
 script = ExtResource( 9 )
 __meta__ = {
@@ -148,6 +154,12 @@ margin_top = 72.0
 margin_right = 1071.0
 margin_bottom = 1467.0
 rect_scale = Vector2( 0.4, 0.4 )
+
+[node name="Overlay" type="TextureRect" parent="PictureFrames/PictureFrame3"]
+margin_left = 57.0
+margin_top = 62.0
+margin_right = 522.0
+margin_bottom = 652.0
 
 [node name="Pager" type="Node2D" parent="."]
 editor/display_folded = true
@@ -200,19 +212,17 @@ editor/display_folded = true
 visible = false
 
 [node name="ButtonDeleteDetail" type="TextureButton" parent="PictureDetailControls"]
-margin_left = 472.0
-margin_top = 639.0
-margin_right = 636.0
-margin_bottom = 800.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 944.0
+margin_top = 1278.0
+margin_right = 1108.0
+margin_bottom = 1439.0
 texture_normal = ExtResource( 6 )
 
 [node name="ButtonBack" type="TextureButton" parent="PictureDetailControls"]
-margin_left = 39.0
-margin_top = 38.0
-margin_right = 203.0
-margin_bottom = 199.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 38.0
+margin_top = 78.0
+margin_right = 202.0
+margin_bottom = 239.0
 texture_normal = ExtResource( 15 )
 __meta__ = {
 "_edit_lock_": true

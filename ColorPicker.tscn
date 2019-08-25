@@ -12,25 +12,23 @@
 [node name="ColorPicker" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 573.0, 194.0 ],
-"_edit_vertical_guides_": [ 322.0, 701.0 ]
+"_edit_horizontal_guides_": [ 573.0, 194.0, 769.0 ],
+"_edit_vertical_guides_": [ 322.0, 701.0, -1005.0 ]
 }
 
 [node name="Background" type="TextureRect" parent="."]
 margin_right = 2049.0
 margin_bottom = 1537.0
-rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="ColorPickerWrapper" type="TextureRect" parent="."]
-margin_left = 322.0
-margin_top = 194.0
-margin_right = 1080.0
-margin_bottom = 952.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 644.0
+margin_top = 387.0
+margin_right = 1402.0
+margin_bottom = 1145.0
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true

@@ -111,13 +111,13 @@ func showPictureDetail(node, index):
 				pictureFrame.hide()
 				
 		header.hide()
-		background.rect_scale.y = 0.8
+		background.rect_scale.y = 1.44
 		
-		node.rect_position.x = 290
-		node.rect_position.y = 70
+		node.rect_position.x = 652
+		node.rect_position.y = 219
 		
-		node.rect_scale.x = 0.75
-		node.rect_scale.y = 0.75
+		node.rect_scale.x = 1.25
+		node.rect_scale.y = 1.25
 		
 		playClick()
 		pictureDetailControls.show()
