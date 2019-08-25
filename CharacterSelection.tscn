@@ -25,32 +25,34 @@ texture = ExtResource( 2 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -419.0
-margin_top = 32.0
+margin_top = 70.0
 margin_right = 419.0
-margin_bottom = 610.0
+margin_bottom = 668.0
 texture = ExtResource( 3 )
 
 [node name="Characters" type="Node2D" parent="Background"]
 script = ExtResource( 4 )
 
 [node name="CharacterFemale1" type="TextureButton" parent="Background/Characters"]
-margin_left = 1306.0
-margin_top = 610.0
-margin_right = 1727.0
-margin_bottom = 1799.0
+margin_left = 1322.0
+margin_top = 604.0
+margin_right = 1743.0
+margin_bottom = 1794.0
+rect_scale = Vector2( 0.95, 0.95 )
 texture_normal = ExtResource( 5 )
 
 [node name="CharacterFemale2" type="TextureButton" parent="Background/Characters"]
 margin_left = 812.0
-margin_top = 638.0
+margin_top = 722.0
 margin_right = 1234.0
-margin_bottom = 1834.0
+margin_bottom = 1918.0
 texture_normal = ExtResource( 6 )
 
 [node name="CharacterMale1" type="TextureButton" parent="Background/Characters"]
-margin_left = 310.0
-margin_top = 610.0
-margin_right = 731.0
-margin_bottom = 1799.0
+margin_left = 334.0
+margin_top = 604.0
+margin_right = 755.0
+margin_bottom = 1794.0
+rect_scale = Vector2( 0.95, 0.95 )
 texture_normal = ExtResource( 7 )
 [connection signal="character_clicked" from="Background/Characters" to="." method="_on_Characters_character_clicked"]

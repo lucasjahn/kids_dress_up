@@ -1,6 +1,8 @@
 extends TextureRect
 
+# warning-ignore:unused_class_variable
 export var isColored : bool
+# warning-ignore:unused_class_variable
 export var texturePrefix : String
 
 signal colorSelected

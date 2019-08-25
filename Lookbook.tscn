@@ -1,0 +1,237 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Lookbook.gd" type="Script" id=1]
+[ext_resource path="res://assets/bg_room.png" type="Texture" id=2]
+[ext_resource path="res://Background.gd" type="Script" id=3]
+[ext_resource path="res://assets/lookbook_title.png" type="Texture" id=4]
+[ext_resource path="res://assets/btn_home.png" type="Texture" id=5]
+[ext_resource path="res://assets/btn_delete.png" type="Texture" id=6]
+[ext_resource path="res://PictureFrames.gd" type="Script" id=7]
+[ext_resource path="res://assets/picture_frame.png" type="Texture" id=8]
+[ext_resource path="res://PictureFrame.gd" type="Script" id=9]
+[ext_resource path="res://Figur.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/nav_arrow.png" type="Texture" id=11]
+[ext_resource path="res://assets/page_1.png" type="Texture" id=12]
+[ext_resource path="res://assets/page_2.png" type="Texture" id=13]
+[ext_resource path="res://assets/page_3.png" type="Texture" id=14]
+[ext_resource path="res://assets/btn_lookbook_small.png" type="Texture" id=15]
+[ext_resource path="res://DialogConfirmationDeleteLookbook.tscn" type="PackedScene" id=16]
+[ext_resource path="res://DialogConfirmationDeleteLookbookDetail.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=18]
+
+[node name="Lookbook" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 38.0, -136.0, -26.0, 621.0 ],
+"_edit_vertical_guides_": [ 38.0, 986.0, 512.0, -83.0 ]
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2048.0
+margin_bottom = 1536.0
+rect_scale = Vector2( 0.5, 0.64 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Header" type="Node2D" parent="."]
+
+[node name="TitleSign" type="TextureRect" parent="Header"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 298.0
+margin_top = -101.0
+margin_right = 724.0
+margin_bottom = 246.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 206, 172 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ButtonHome" type="TextureButton" parent="Header"]
+margin_left = 38.0
+margin_top = 38.0
+margin_right = 202.0
+margin_bottom = 199.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ButtonDelete" type="TextureButton" parent="Header"]
+margin_left = 904.0
+margin_top = 38.0
+margin_right = 1068.0
+margin_bottom = 199.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PictureFrames" type="Node2D" parent="."]
+position = Vector2( -1, -5 )
+script = ExtResource( 7 )
+
+[node name="PictureFrame1" type="TextureButton" parent="PictureFrames"]
+editor/display_folded = true
+margin_left = 37.0
+margin_top = 240.0
+margin_right = 634.0
+margin_bottom = 960.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 8 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Figur" parent="PictureFrames/PictureFrame1" instance=ExtResource( 10 )]
+visible = false
+margin_left = 92.0
+margin_top = 72.0
+margin_right = 1071.0
+margin_bottom = 1467.0
+rect_scale = Vector2( 0.4, 0.4 )
+
+[node name="PictureFrame2" type="TextureButton" parent="PictureFrames"]
+editor/display_folded = true
+margin_left = 364.0
+margin_top = 240.0
+margin_right = 960.0
+margin_bottom = 960.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 8 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Figur" parent="PictureFrames/PictureFrame2" instance=ExtResource( 10 )]
+visible = false
+margin_left = 92.0
+margin_top = 72.0
+margin_right = 1071.0
+margin_bottom = 1467.0
+rect_scale = Vector2( 0.4, 0.4 )
+
+[node name="PictureFrame3" type="TextureButton" parent="PictureFrames"]
+editor/display_folded = true
+margin_left = 697.0
+margin_top = 240.0
+margin_right = 1293.0
+margin_bottom = 960.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 8 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Figur" parent="PictureFrames/PictureFrame3" instance=ExtResource( 10 )]
+visible = false
+margin_left = 92.0
+margin_top = 72.0
+margin_right = 1071.0
+margin_bottom = 1467.0
+rect_scale = Vector2( 0.4, 0.4 )
+
+[node name="Pager" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 0, -3 )
+
+[node name="ButtonPrevious" type="TextureButton" parent="Pager"]
+margin_left = 38.0
+margin_top = 580.5
+margin_right = 231.0
+margin_bottom = 755.5
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 11 )
+
+[node name="ButtonNext" type="TextureButton" parent="Pager"]
+margin_left = 986.0
+margin_top = 667.5
+margin_right = 1179.0
+margin_bottom = 842.5
+rect_rotation = 179.864
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 11 )
+
+[node name="TextureButton" type="TextureButton" parent="Pager"]
+margin_left = 377.0
+margin_top = 575.0
+margin_right = 468.0
+margin_bottom = 769.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 12 )
+
+[node name="TextureButton2" type="TextureButton" parent="Pager"]
+margin_left = 481.0
+margin_top = 575.0
+margin_right = 603.0
+margin_bottom = 769.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 13 )
+
+[node name="TextureButton3" type="TextureButton" parent="Pager"]
+margin_left = 585.0
+margin_top = 575.0
+margin_right = 713.0
+margin_bottom = 769.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 14 )
+
+[node name="PictureDetailControls" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+
+[node name="ButtonDeleteDetail" type="TextureButton" parent="PictureDetailControls"]
+margin_left = 472.0
+margin_top = 639.0
+margin_right = 636.0
+margin_bottom = 800.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+
+[node name="ButtonBack" type="TextureButton" parent="PictureDetailControls"]
+margin_left = 39.0
+margin_top = 38.0
+margin_right = 203.0
+margin_bottom = 199.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DialogConfirmationDelete" parent="." instance=ExtResource( 16 )]
+visible = false
+
+[node name="DialogConfirmationDeleteDetail" parent="." instance=ExtResource( 17 )]
+visible = false
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -5.0
+pitch_scale = 0.7
+[connection signal="pressed" from="Header/ButtonHome" to="." method="_on_ButtonHome_pressed"]
+[connection signal="pressed" from="Header/ButtonDelete" to="." method="_on_ButtonDelete_pressed"]
+[connection signal="pictureClicked" from="PictureFrames" to="." method="showPictureDetail"]
+[connection signal="pressed" from="PictureDetailControls/ButtonDeleteDetail" to="." method="_on_ButtonDeleteDetail_pressed"]
+[connection signal="pressed" from="PictureDetailControls/ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="dialog_confirmed" from="DialogConfirmationDelete" to="." method="_on_DialogConfirmationDelete_dialog_confirmed"]
+[connection signal="dialog_confirmed" from="DialogConfirmationDeleteDetail" to="." method="_on_DialogConfirmationDeleteDetail_dialog_confirmed"]
