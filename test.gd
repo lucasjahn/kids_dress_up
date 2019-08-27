@@ -85,6 +85,9 @@ func _on_ButtonMute_pressed():
 
 
 func _on_ButtonLookbook_pressed():
+	clickSfx.pitch_scale = 0.7
+	clickSfx.play(0)
+	
 	lookbook._ready()
 	lookbook.show()
 	
