@@ -208,7 +208,6 @@ rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 14 )
 
 [node name="PictureDetailControls" type="Node2D" parent="."]
-editor/display_folded = true
 visible = false
 
 [node name="ButtonDeleteDetail" type="TextureButton" parent="PictureDetailControls"]

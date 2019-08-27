@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://assets/sounds/background_music.wav" type="AudioStream" id=2]
@@ -34,23 +34,54 @@
 [ext_resource path="res://assets/btn_home.png" type="Texture" id=32]
 [ext_resource path="res://assets/btn_save_look.png" type="Texture" id=33]
 [ext_resource path="res://assets/btn_lookbook_small.png" type="Texture" id=34]
-[ext_resource path="res://assets/btn_color.png" type="Texture" id=35]
-[ext_resource path="res://assets/btn_delete.png" type="Texture" id=36]
-[ext_resource path="res://CategorySelection.gd" type="Script" id=37]
-[ext_resource path="res://assets/btn_cat_dresses.png" type="Texture" id=38]
-[ext_resource path="res://assets/btn_cat_shoes.png" type="Texture" id=39]
-[ext_resource path="res://assets/btn_cat_tops.png" type="Texture" id=40]
-[ext_resource path="res://assets/btn_cat_pants.png" type="Texture" id=41]
-[ext_resource path="res://assets/btn_cat_special.png" type="Texture" id=42]
-[ext_resource path="res://assets/btn_choose_character.png" type="Texture" id=43]
-[ext_resource path="res://assets/btn_lookbook.png" type="Texture" id=44]
-[ext_resource path="res://CharacterSelection.tscn" type="PackedScene" id=45]
-[ext_resource path="res://assets/btn_mute.png" type="Texture" id=46]
-[ext_resource path="res://ColorPicker.tscn" type="PackedScene" id=47]
-[ext_resource path="res://DialogConfirmationDelete.tscn" type="PackedScene" id=48]
-[ext_resource path="res://Lookbook.tscn" type="PackedScene" id=49]
-[ext_resource path="res://assets/black_overlay_bg.png" type="Texture" id=50]
-[ext_resource path="res://assets/picture_frame.png" type="Texture" id=51]
+[ext_resource path="res://ButtonOpenLookbook.gd" type="Script" id=35]
+[ext_resource path="res://assets/sounds/Bad Answer 13.wav" type="AudioStream" id=36]
+[ext_resource path="res://assets/btn_color.png" type="Texture" id=37]
+[ext_resource path="res://assets/btn_delete.png" type="Texture" id=38]
+[ext_resource path="res://CategorySelection.gd" type="Script" id=39]
+[ext_resource path="res://assets/btn_cat_dresses.png" type="Texture" id=40]
+[ext_resource path="res://assets/btn_cat_shoes.png" type="Texture" id=41]
+[ext_resource path="res://assets/btn_cat_tops.png" type="Texture" id=42]
+[ext_resource path="res://assets/btn_cat_pants.png" type="Texture" id=43]
+[ext_resource path="res://assets/btn_cat_special.png" type="Texture" id=44]
+[ext_resource path="res://assets/btn_choose_character.png" type="Texture" id=45]
+[ext_resource path="res://assets/btn_lookbook.png" type="Texture" id=46]
+[ext_resource path="res://CharacterSelection.tscn" type="PackedScene" id=47]
+[ext_resource path="res://assets/btn_mute.png" type="Texture" id=48]
+[ext_resource path="res://ColorPicker.tscn" type="PackedScene" id=49]
+[ext_resource path="res://DialogConfirmationDelete.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Lookbook.tscn" type="PackedScene" id=51]
+[ext_resource path="res://assets/black_overlay_bg.png" type="Texture" id=52]
+[ext_resource path="res://assets/picture_frame.png" type="Texture" id=53]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Wobble"
+length = 0.7
+step = 0.01
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 38, -0.15713, 0.499985, 0.052231, -0.156517, 70, -0.0478784, 0, 0.0609361, 0, 8, -0.0521216, -0.279081, 0.0566929, 0.055817, 70, -0.0565835, -0.334896, 0.0544073, 3.8147e-06, 8, -0.0652887, 1.72853e-06, 0.0631125, 1.72853e-06, 38, -0.167028, -0.323963, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.0892279, 0.187161, 0.28727, 0.40479, 0.6 )
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("WrongSfx")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 36 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "PictureFrameAnimation"
@@ -137,8 +168,8 @@ tracks/6/keys = {
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 78.0, 729.0, 1458.0, 768.0, -231.0 ],
-"_edit_vertical_guides_": [ 699.0, 0.0, 38.0, -503.0, 1799.0, 1024.0 ]
+"_edit_horizontal_guides_": [ 78.0, 729.0, 1458.0, 768.0, -231.0, -1.0, 1114.0 ],
+"_edit_vertical_guides_": [ 699.0, 0.0, 38.0, -503.0, 1799.0, 1024.0, 1411.0, 197.0 ]
 }
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
@@ -188,30 +219,31 @@ script = ExtResource( 9 )
 isColored = true
 
 [node name="Dress1" type="TextureButton" parent="Wardrobe/Categories/Dresses"]
-margin_left = 92.0
+margin_left = 255.0
 margin_top = 96.0
-margin_right = 359.0
+margin_right = 522.0
 margin_bottom = 660.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 10 )
 
 [node name="Dress2" type="TextureButton" parent="Wardrobe/Categories/Dresses"]
-margin_left = 350.0
-margin_top = 72.0
-margin_right = 708.0
-margin_bottom = 695.0
+margin_left = 230.0
+margin_top = 928.0
+margin_right = 588.0
+margin_bottom = 1551.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 11 )
 
 [node name="Dress3" type="TextureButton" parent="Wardrobe/Categories/Dresses"]
-margin_left = 64.0
-margin_top = 510.0
-margin_right = 421.0
-margin_bottom = 1043.0
+margin_left = 230.0
+margin_top = 520.0
+margin_right = 587.0
+margin_bottom = 1053.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 12 )
 
 [node name="Dress4" type="TextureButton" parent="Wardrobe/Categories/Dresses"]
+visible = false
 margin_left = 364.0
 margin_top = 518.0
 margin_right = 744.0
@@ -231,22 +263,23 @@ script = ExtResource( 9 )
 isColored = true
 
 [node name="Top1" type="TextureButton" parent="Wardrobe/Categories/Tops"]
-margin_left = 102.0
-margin_top = 120.0
-margin_right = 337.0
-margin_bottom = 456.0
+margin_left = 268.0
+margin_top = 229.0
+margin_right = 503.0
+margin_bottom = 565.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 14 )
 
 [node name="Tshirt1" type="TextureButton" parent="Wardrobe/Categories/Tops"]
-margin_left = 344.0
-margin_top = 124.0
-margin_right = 716.0
-margin_bottom = 461.0
+margin_left = 224.0
+margin_top = 585.0
+margin_right = 596.0
+margin_bottom = 922.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 15 )
 
 [node name="Tshirt2" type="TextureButton" parent="Wardrobe/Categories/Tops"]
+visible = false
 margin_left = 68.0
 margin_top = 428.0
 margin_right = 440.0
@@ -255,10 +288,10 @@ rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 16 )
 
 [node name="Pullover1" type="TextureButton" parent="Wardrobe/Categories/Tops"]
-margin_left = 344.0
-margin_top = 426.0
-margin_right = 779.0
-margin_bottom = 773.0
+margin_left = 206.0
+margin_top = 941.0
+margin_right = 641.0
+margin_bottom = 1288.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 17 )
 
@@ -274,22 +307,23 @@ script = ExtResource( 9 )
 isColored = true
 
 [node name="PantsLong1" type="TextureButton" parent="Wardrobe/Categories/Pants"]
-margin_left = 104.0
-margin_top = 148.0
-margin_right = 364.0
-margin_bottom = 578.0
+margin_left = 259.0
+margin_top = 207.0
+margin_right = 519.0
+margin_bottom = 637.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 18 )
 
 [node name="PantsLong2" type="TextureButton" parent="Wardrobe/Categories/Pants"]
-margin_left = 382.0
-margin_top = 158.0
-margin_right = 643.0
-margin_bottom = 588.0
+margin_left = 259.0
+margin_top = 640.0
+margin_right = 520.0
+margin_bottom = 1070.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 19 )
 
 [node name="PantsShort1" type="TextureButton" parent="Wardrobe/Categories/Pants"]
+visible = false
 margin_left = 106.0
 margin_top = 510.0
 margin_right = 371.0
@@ -298,10 +332,10 @@ rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 20 )
 
 [node name="PantsShort2" type="TextureButton" parent="Wardrobe/Categories/Pants"]
-margin_left = 378.0
-margin_top = 512.0
-margin_right = 643.0
-margin_bottom = 750.0
+margin_left = 257.0
+margin_top = 1062.0
+margin_right = 522.0
+margin_bottom = 1300.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 21 )
 
@@ -318,20 +352,21 @@ isColored = true
 texturePrefix = "btn_"
 
 [node name="Shoes1" type="TextureButton" parent="Wardrobe/Categories/Shoes"]
-margin_left = 122.0
-margin_top = 154.0
-margin_right = 562.0
-margin_bottom = 228.0
+margin_left = 114.0
+margin_top = 439.0
+margin_right = 554.0
+margin_bottom = 513.0
 texture_normal = ExtResource( 22 )
 
 [node name="Shoes2" type="TextureButton" parent="Wardrobe/Categories/Shoes"]
 margin_left = 126.0
-margin_top = 356.0
+margin_top = 662.0
 margin_right = 549.0
-margin_bottom = 428.0
+margin_bottom = 734.0
 texture_normal = ExtResource( 23 )
 
 [node name="Shoes3" type="TextureButton" parent="Wardrobe/Categories/Shoes"]
+visible = false
 margin_left = 124.0
 margin_top = 538.0
 margin_right = 564.0
@@ -339,10 +374,10 @@ margin_bottom = 662.0
 texture_normal = ExtResource( 24 )
 
 [node name="Shoes4" type="TextureButton" parent="Wardrobe/Categories/Shoes"]
-margin_left = 128.0
-margin_top = 792.0
-margin_right = 552.0
-margin_bottom = 867.0
+margin_left = 125.0
+margin_top = 866.0
+margin_right = 549.0
+margin_bottom = 941.0
 texture_normal = ExtResource( 25 )
 
 [node name="Special" type="TextureRect" parent="Wardrobe/Categories"]
@@ -358,14 +393,15 @@ isColored = false
 texturePrefix = ""
 
 [node name="Amerindian" type="TextureButton" parent="Wardrobe/Categories/Special"]
-margin_left = 412.0
-margin_top = 610.0
-margin_right = 763.0
-margin_bottom = 1716.0
+margin_left = 263.0
+margin_top = 88.0001
+margin_right = 614.0
+margin_bottom = 1194.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 26 )
 
 [node name="Fairy" type="TextureButton" parent="Wardrobe/Categories/Special"]
+visible = false
 margin_left = 258.0
 margin_top = 166.0
 margin_right = 1213.0
@@ -374,14 +410,15 @@ rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 27 )
 
 [node name="Astronaut" type="TextureButton" parent="Wardrobe/Categories/Special"]
-margin_left = 80.0
-margin_top = 586.0
-margin_right = 536.0
-margin_bottom = 1802.0
+margin_left = 240.0
+margin_top = 602.0
+margin_right = 696.0
+margin_bottom = 1818.0
 rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 28 )
 
 [node name="PeterPan" type="TextureButton" parent="Wardrobe/Categories/Special"]
+visible = false
 margin_left = 54.0
 margin_top = 168.0
 margin_right = 441.0
@@ -390,18 +427,18 @@ rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 29 )
 
 [node name="Star" type="TextureButton" parent="Wardrobe/Categories/Special"]
-margin_left = 108.0
-margin_top = 1172.0
-margin_right = 332.0
-margin_bottom = 1385.0
+margin_left = 131.0
+margin_top = 1175.0
+margin_right = 355.0
+margin_bottom = 1388.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 30 )
 
 [node name="Heart" type="TextureButton" parent="Wardrobe/Categories/Special"]
-margin_left = 416.0
-margin_top = 1190.0
-margin_right = 635.0
-margin_bottom = 1373.0
+margin_left = 403.0
+margin_top = 1195.0
+margin_right = 622.0
+margin_bottom = 1378.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 31 )
 
@@ -418,6 +455,7 @@ margin_bottom = 239.0
 texture_normal = ExtResource( 32 )
 
 [node name="ButtonSaveToLookbook" type="TextureButton" parent="Wardrobe/ContextualButtons"]
+visible = false
 margin_left = 38.0
 margin_top = 1300.0
 margin_right = 202.0
@@ -425,11 +463,20 @@ margin_bottom = 1461.0
 texture_normal = ExtResource( 33 )
 
 [node name="ButtonOpenLookbook" type="TextureButton" parent="Wardrobe/ContextualButtons"]
+editor/display_folded = true
 margin_left = 38.0
 margin_top = 1300.0
 margin_right = 202.0
 margin_bottom = 1461.0
 texture_normal = ExtResource( 34 )
+script = ExtResource( 35 )
+
+[node name="Animation" type="AnimationPlayer" parent="Wardrobe/ContextualButtons/ButtonOpenLookbook"]
+anims/Wobble = SubResource( 3 )
+
+[node name="WrongSfx" type="AudioStreamPlayer" parent="Wardrobe/ContextualButtons/ButtonOpenLookbook"]
+stream = ExtResource( 36 )
+volume_db = -5.0
 
 [node name="ButtonColor" type="TextureButton" parent="Wardrobe/ContextualButtons"]
 visible = false
@@ -437,7 +484,7 @@ margin_left = 1799.0
 margin_top = 1236.0
 margin_right = 2027.0
 margin_bottom = 1460.0
-texture_normal = ExtResource( 35 )
+texture_normal = ExtResource( 37 )
 
 [node name="ButtonDelete" type="TextureButton" parent="Wardrobe/ContextualButtons"]
 visible = false
@@ -445,11 +492,12 @@ margin_left = 802.0
 margin_top = 1300.0
 margin_right = 966.0
 margin_bottom = 1461.0
-texture_normal = ExtResource( 36 )
+texture_normal = ExtResource( 38 )
 
 [node name="Home" type="Node2D" parent="Wardrobe"]
+editor/display_folded = true
 position = Vector2( 1007, 0 )
-script = ExtResource( 37 )
+script = ExtResource( 39 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -460,7 +508,7 @@ margin_top = 76.84
 margin_right = 463.0
 margin_bottom = 422.84
 rect_scale = Vector2( 0.95, 0.95 )
-texture_normal = ExtResource( 38 )
+texture_normal = ExtResource( 40 )
 
 [node name="ButtonShoes" type="TextureButton" parent="Wardrobe/Home"]
 margin_left = 592.0
@@ -468,7 +516,7 @@ margin_top = 76.84
 margin_right = 945.0
 margin_bottom = 422.84
 rect_scale = Vector2( 0.95, 0.95 )
-texture_normal = ExtResource( 39 )
+texture_normal = ExtResource( 41 )
 
 [node name="ButtonTops" type="TextureButton" parent="Wardrobe/Home"]
 margin_left = 110.0
@@ -476,7 +524,7 @@ margin_top = 438.84
 margin_right = 463.0
 margin_bottom = 784.84
 rect_scale = Vector2( 0.95, 0.95 )
-texture_normal = ExtResource( 40 )
+texture_normal = ExtResource( 42 )
 
 [node name="ButtonPants" type="TextureButton" parent="Wardrobe/Home"]
 margin_left = 592.0
@@ -484,7 +532,7 @@ margin_top = 438.84
 margin_right = 945.0
 margin_bottom = 784.84
 rect_scale = Vector2( 0.95, 0.95 )
-texture_normal = ExtResource( 41 )
+texture_normal = ExtResource( 43 )
 
 [node name="ButtonSpecial" type="TextureButton" parent="Wardrobe/Home"]
 margin_left = 350.0
@@ -492,7 +540,7 @@ margin_top = 784.84
 margin_right = 704.0
 margin_bottom = 1130.84
 rect_scale = Vector2( 0.95, 0.95 )
-texture_normal = ExtResource( 42 )
+texture_normal = ExtResource( 44 )
 
 [node name="ButtonCharacterSelection" type="TextureButton" parent="Wardrobe/Home"]
 margin_left = 110.0
@@ -500,7 +548,7 @@ margin_top = 1132.84
 margin_right = 463.0
 margin_bottom = 1478.84
 rect_scale = Vector2( 0.95, 0.95 )
-texture_normal = ExtResource( 43 )
+texture_normal = ExtResource( 45 )
 
 [node name="ButtonLookbook" type="TextureButton" parent="Wardrobe/Home"]
 margin_left = 592.0
@@ -508,13 +556,13 @@ margin_top = 1132.84
 margin_right = 945.0
 margin_bottom = 1478.84
 rect_scale = Vector2( 0.95, 0.95 )
-texture_normal = ExtResource( 44 )
+texture_normal = ExtResource( 46 )
 
 [node name="Sidebar" type="Node2D" parent="Wardrobe"]
 editor/display_folded = true
 visible = false
 position = Vector2( 1007, 9 )
-script = ExtResource( 37 )
+script = ExtResource( 39 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -525,7 +573,7 @@ margin_top = 68.7431
 margin_right = 1145.0
 margin_bottom = 414.743
 rect_scale = Vector2( 0.64, 0.64 )
-texture_normal = ExtResource( 38 )
+texture_normal = ExtResource( 40 )
 
 [node name="ButtonShoes" type="TextureButton" parent="Wardrobe/Sidebar"]
 margin_left = 792.0
@@ -533,7 +581,7 @@ margin_top = 764.057
 margin_right = 1145.0
 margin_bottom = 1110.06
 rect_scale = Vector2( 0.64, 0.64 )
-texture_normal = ExtResource( 39 )
+texture_normal = ExtResource( 41 )
 
 [node name="ButtonTops" type="TextureButton" parent="Wardrobe/Sidebar"]
 margin_left = 792.0
@@ -541,7 +589,7 @@ margin_top = 300.743
 margin_right = 1145.0
 margin_bottom = 646.743
 rect_scale = Vector2( 0.64, 0.64 )
-texture_normal = ExtResource( 40 )
+texture_normal = ExtResource( 42 )
 
 [node name="ButtonPants" type="TextureButton" parent="Wardrobe/Sidebar"]
 margin_left = 792.0
@@ -549,7 +597,7 @@ margin_top = 532.183
 margin_right = 1145.0
 margin_bottom = 878.183
 rect_scale = Vector2( 0.64, 0.64 )
-texture_normal = ExtResource( 41 )
+texture_normal = ExtResource( 43 )
 
 [node name="ButtonSpecial" type="TextureButton" parent="Wardrobe/Sidebar"]
 margin_left = 792.0
@@ -557,9 +605,9 @@ margin_top = 995.498
 margin_right = 1146.0
 margin_bottom = 1341.5
 rect_scale = Vector2( 0.64, 0.64 )
-texture_normal = ExtResource( 42 )
+texture_normal = ExtResource( 44 )
 
-[node name="CharacterSelection" parent="." instance=ExtResource( 45 )]
+[node name="CharacterSelection" parent="." instance=ExtResource( 47 )]
 visible = false
 
 [node name="ButtonMute" type="TextureButton" parent="."]
@@ -567,40 +615,40 @@ margin_left = 38.0
 margin_top = 78.0
 margin_right = 202.0
 margin_bottom = 239.0
-texture_normal = ExtResource( 46 )
+texture_normal = ExtResource( 48 )
 
-[node name="ColorPicker" parent="." instance=ExtResource( 47 )]
+[node name="ColorPicker" parent="." instance=ExtResource( 49 )]
 visible = false
 
-[node name="DialogConfirmationDelete" parent="." instance=ExtResource( 48 )]
+[node name="DialogConfirmationDelete" parent="." instance=ExtResource( 50 )]
 visible = false
 
-[node name="Lookbook" parent="." instance=ExtResource( 49 )]
+[node name="Lookbook" parent="." instance=ExtResource( 51 )]
 visible = false
 
 [node name="PictureFrameWrapper" type="TextureRect" parent="."]
+editor/display_folded = true
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Background" type="TextureRect" parent="PictureFrameWrapper"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.501961 )
 margin_right = 40.0
 margin_bottom = 40.0
-texture = ExtResource( 50 )
+texture = ExtResource( 52 )
 
 [node name="PictureFrame" type="TextureRect" parent="PictureFrameWrapper"]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 86.0
-margin_top = 1162.0
-margin_right = 683.007
-margin_bottom = 1882.0
-rect_scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 51 )
+margin_left = 563.0
+margin_top = 233.0
+margin_right = 1160.01
+margin_bottom = 953.0
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 53 )
 
 [node name="Animation" type="AnimationPlayer" parent="PictureFrameWrapper/PictureFrame"]
 anims/PictureFrameAnimation = SubResource( 1 )
+[connection signal="lookbook_is_full" from="Figur" to="Wardrobe/ContextualButtons/ButtonOpenLookbook" method="show_lookbook_full"]
 [connection signal="colorSelected" from="Wardrobe/Categories/Dresses" to="Figur" method="_on_item_pressed"]
 [connection signal="colorSelected" from="Wardrobe/Categories/Tops" to="Figur" method="_on_item_pressed"]
 [connection signal="colorSelected" from="Wardrobe/Categories/Pants" to="Figur" method="_on_item_pressed"]

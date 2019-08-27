@@ -29,6 +29,7 @@
 [ext_resource path="res://assets/wardrobe/special/heart.png" type="Texture" id=27]
 
 [node name="Figur" type="TextureRect"]
+editor/display_folded = true
 margin_left = 18.0
 margin_top = 75.0
 margin_right = 997.0

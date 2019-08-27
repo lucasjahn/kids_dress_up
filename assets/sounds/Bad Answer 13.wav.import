@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bad Answer 13.wav-4d93f5c924426eb301f26d6249997aa3.sample"
+
+[deps]
+
+source_file="res://assets/sounds/Bad Answer 13.wav"
+dest_files=[ "res://.import/Bad Answer 13.wav-4d93f5c924426eb301f26d6249997aa3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

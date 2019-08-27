@@ -1,5 +1,7 @@
 extends TextureRect
 
+signal lookbook_is_full
+
 const assetRootPath = 'res://assets/wardrobe'
 var dressedItems = {
 	'Shoes': null,
@@ -42,6 +44,11 @@ func resetClothes():
 		if dressedItems[category]:
 			dressedItems[category].hide()
 			dressedItems[category] = null
+			
+	if deleteButton and addToLookbookButton and openLookbookButton:
+		deleteButton.hide()
+		addToLookbookButton.hide()
+		openLookbookButton.rect_position.y = 1300
 
 func getTexture(category, itemName):
 	return load("%s/%s/%s.png" % [assetRootPath, category, itemName])
@@ -146,6 +153,11 @@ func load_lookbook():
 func save_to_lookbook():
 	var saveLookbook = File.new()
 	var lookbookData = load_lookbook() if load_lookbook() else []
+	
+	if len(lookbookData) == 3:
+		emit_signal("lookbook_is_full")
+		return
+	
 	var lookbookItem = {
 		"character": self.texture.resource_path,
 		"dressedItems": {}
@@ -166,15 +178,17 @@ func save_to_lookbook():
 	
 	var lookbookDataJson = to_json(lookbookData)
 	saveLookbook.store_string(lookbookDataJson)
+	saveLookbook.close()
 	
 	shutterSfx.play()
 	
 	_duplicate_character(self, pictureFrame)
 	
+	openLookbookButton.load_texture(len(lookbookData))
+	
 	pictureFrameWrapper.show()
 	pictureFrameAnimation.play("PictureFrameAnimation")
 	
-	saveLookbook.close()
 	
 func _duplicate_character(currentNode, targetNode):
 	var characterDuplicate = currentNode.duplicate()

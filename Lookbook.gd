@@ -5,6 +5,7 @@ signal backToHome
 var lookbook = []
 var lookbookFilePath = "user://lookbook.save"
 var activePicture = null
+var buttonTextures = []
 
 onready var pictureFrames = $PictureFrames
 onready var dialgConfirmationDelete = $DialogConfirmationDelete
@@ -12,10 +13,19 @@ onready var header = $Header
 onready var deleteButton = $Header/ButtonDelete
 onready var background = $Background
 onready var pictureDetailControls = $PictureDetailControls
+onready var pictureDetailBackButton = $PictureDetailControls/ButtonBack
 onready var dialogConfirmationDeleteDetail = $DialogConfirmationDeleteDetail
 onready var clickSfx = $Click
+onready var addToLookbookButton = get_parent().get_node('Wardrobe/ContextualButtons/ButtonOpenLookbook') if get_parent().has_node('Wardrobe/ContextualButtons/ButtonOpenLookbook') else null
 
 func _ready():
+	buttonTextures = [
+		preload("res://assets/btn_lookbook_small.png"),
+		preload("res://assets/btn_lookbook_small_1.png"),
+		preload("res://assets/btn_lookbook_small_2.png"),
+		preload("res://assets/btn_lookbook_small_3.png"),
+	]
+	
 	load_lookbook()
 	render_looks()
 	
@@ -32,17 +42,22 @@ func load_lookbook():
     
 	if not lookbookFile.file_exists(lookbookFilePath):
 		lookbook = []
-		
-	lookbookFile.open(lookbookFilePath, File.READ)
-	
-	var lookbookData = parse_json(lookbookFile.get_as_text())
-	
-	lookbookFile.close()
-	
-	if typeof(lookbookData) == TYPE_ARRAY:
-		lookbook = lookbookData
 	else:
-		lookbook = []
+		lookbookFile.open(lookbookFilePath, File.READ)
+		
+		var lookbookData = parse_json(lookbookFile.get_as_text())
+		
+		lookbookFile.close()
+		
+		if typeof(lookbookData) == TYPE_ARRAY:
+			lookbook = lookbookData
+		else:
+			lookbook = []
+		
+	var lookbookLength = len(lookbook)
+	
+	addToLookbookButton.load_texture(lookbookLength)
+	pictureDetailBackButton.texture_normal = buttonTextures[lookbookLength]
 	
 func render_looks():
 	var pictureSingleFrames = pictureFrames.get_children()
