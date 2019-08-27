@@ -2,7 +2,7 @@
 
 [ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://assets/sounds/background_music.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets/room_bg.png" type="Texture" id=3]
+[ext_resource path="res://assets/bg_room.png" type="Texture" id=3]
 [ext_resource path="res://Figur.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Kleiderschrank.gd" type="Script" id=5]
 [ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=6]
@@ -54,7 +54,7 @@
 [ext_resource path="res://assets/black_overlay_bg.png" type="Texture" id=52]
 [ext_resource path="res://assets/picture_frame.png" type="Texture" id=53]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "Wobble"
 length = 0.7
 step = 0.01
@@ -83,8 +83,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "PictureFrameAnimation"
+[sub_resource type="Animation" id=2]
 length = 2.4
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -472,7 +471,7 @@ texture_normal = ExtResource( 34 )
 script = ExtResource( 35 )
 
 [node name="Animation" type="AnimationPlayer" parent="Wardrobe/ContextualButtons/ButtonOpenLookbook"]
-anims/Wobble = SubResource( 3 )
+anims/Wobble = SubResource( 1 )
 
 [node name="WrongSfx" type="AudioStreamPlayer" parent="Wardrobe/ContextualButtons/ButtonOpenLookbook"]
 stream = ExtResource( 36 )
@@ -647,7 +646,7 @@ rect_scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 53 )
 
 [node name="Animation" type="AnimationPlayer" parent="PictureFrameWrapper/PictureFrame"]
-anims/PictureFrameAnimation = SubResource( 1 )
+anims/PictureFrameAnimation = SubResource( 2 )
 [connection signal="lookbook_is_full" from="Figur" to="Wardrobe/ContextualButtons/ButtonOpenLookbook" method="show_lookbook_full"]
 [connection signal="colorSelected" from="Wardrobe/Categories/Dresses" to="Figur" method="_on_item_pressed"]
 [connection signal="colorSelected" from="Wardrobe/Categories/Tops" to="Figur" method="_on_item_pressed"]
