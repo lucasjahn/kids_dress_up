@@ -1,4 +1,4 @@
-extends Node2D
+extends HBoxContainer
 
 signal pictureClicked
 

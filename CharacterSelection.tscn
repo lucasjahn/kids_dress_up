@@ -3,84 +3,24 @@
 [ext_resource path="res://CharacterSelection.gd" type="Script" id=1]
 [ext_resource path="res://assets/bg_room.png" type="Texture" id=2]
 [ext_resource path="res://assets/title.png" type="Texture" id=3]
-[ext_resource path="res://Characters.gd" type="Script" id=4]
-[ext_resource path="res://assets/btn_characterfemale1.png" type="Texture" id=5]
+[ext_resource path="res://HBoxContainer.gd" type="Script" id=4]
+[ext_resource path="res://assets/btn_charactermale1.png" type="Texture" id=5]
 [ext_resource path="res://assets/btn_characterfemale2.png" type="Texture" id=6]
-[ext_resource path="res://assets/btn_charactermale1.png" type="Texture" id=7]
-[ext_resource path="res://assets/click_hand.png" type="Texture" id=8]
+[ext_resource path="res://assets/btn_characterfemale1.png" type="Texture" id=7]
+[ext_resource path="res://ClickAnimation.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "ChooseAnmiation"
 length = 6.0
 loop = true
-tracks/0/type = "bezier"
-tracks/0/path = NodePath("ClickHand:rect_position:x")
+tracks/0/type = "audio"
+tracks/0/path = NodePath("SceneContainer/CenterContainer/ContentContainer/AnimationContainer/ClickSfx")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 470, -0.25, 0, 0.25, 0, 470, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0, 1464, -0.25, 0, 0.25, 0, 1464, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.2, 1.7, 2.7, 3.2, 4.2, 4.7 )
-}
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("ClickHand:rect_position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"points": PoolRealArray( 1160, -0.25, 0, 0.25, 0, 1160, -0.25, 0, 0.25, 0, 1292, -0.25, 0, 0.25, 0, 1292, -0.25, 0, 0.25, 0, 1173, -0.25, 0, 0.25, 0, 1173, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.2, 1.7, 2.7, 3.2, 4.2, 4.7 )
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("ClickHand:modulate:a")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.5, 1, 4.7, 5.2, 5.7 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("Background/Characters/CharacterMale1:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.15204, -2.51643, 0.15204, 2.51643, 0.8, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 1.2, 1.4, 1.6 )
-}
-tracks/4/type = "bezier"
-tracks/4/path = NodePath("Background/Characters/CharacterFemale2:modulate:a")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.8, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 2.8, 3, 3.2 )
-}
-tracks/5/type = "bezier"
-tracks/5/path = NodePath("Background/Characters/CharacterFemale1:modulate:a")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.8, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 4.3, 4.5, 4.7 )
-}
-tracks/6/type = "audio"
-tracks/6/path = NodePath("ClickSfx")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -96,68 +36,156 @@ tracks/6/keys = {
 } ],
 "times": PoolRealArray( 1.3, 2.9, 4.4 )
 }
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("SceneContainer/CenterContainer/ContentContainer/AnimationContainer/ClickHand:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 4.7, 5.2, 5.7 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SceneContainer/CenterContainer/ContentContainer/AnimationContainer/ClickHand:rect_position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1160, -0.25, 0, 0.25, 0, 1160, -0.25, 0, 0.25, 0, 1292, -0.25, 0, 0.25, 0, 1292, -0.25, 0, 0.25, 0, 1173, -0.25, 0, 0.25, 0, 1173, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1.2, 1.7, 2.7, 3.2, 4.2, 4.7 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("SceneContainer/CenterContainer/ContentContainer/AnimationContainer/ClickHand:rect_position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 470, -0.25, 0, 0.25, 0, 470, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0, 960, -0.25, 0, 0.25, 0, 1464, -0.25, 0, 0.25, 0, 1464, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1.2, 1.7, 2.7, 3.2, 4.2, 4.7 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("SceneContainer/CenterContainer/ContentContainer/Characters/CharacterContainer/CharacterMale1:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.8, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1.2, 1.4, 1.6 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("SceneContainer/CenterContainer/ContentContainer/Characters/CharacterContainer2/CharacterFemale2:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.8, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.8, 3, 3.2 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("SceneContainer/CenterContainer/ContentContainer/Characters/CharacterContainer3/CharacterFemale1:modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.8, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 4.3, 4.5, 4.7 )
+}
 
-[node name="CharacterSelection" type="Node2D"]
+[node name="CharacterSelection" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 138.0 ],
-"_edit_vertical_guides_": [ 511.0 ]
+"_edit_horizontal_guides_": [ 672.0, 768.0 ],
+"_edit_vertical_guides_": [ 308.0, 21.0 ]
 }
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
+expand = true
 
-[node name="Title" type="TextureRect" parent="Background"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -419.0
+[node name="SceneContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_top = 70.0
-margin_right = 419.0
-margin_bottom = 668.0
+margin_bottom = 382.0
+
+[node name="CenterContainer" type="CenterContainer" parent="SceneContainer"]
+margin_right = 2048.0
+margin_bottom = 1848.0
+
+[node name="ContentContainer" type="VBoxContainer" parent="SceneContainer/CenterContainer"]
+margin_left = 308.0
+margin_right = 1739.0
+margin_bottom = 1848.0
+
+[node name="LogoContainer" type="CenterContainer" parent="SceneContainer/CenterContainer/ContentContainer"]
+editor/display_folded = true
+margin_right = 1431.0
+margin_bottom = 598.0
+
+[node name="Logo" type="TextureRect" parent="SceneContainer/CenterContainer/ContentContainer/LogoContainer"]
+margin_left = 338.0
+margin_right = 1092.0
+margin_bottom = 598.0
 texture = ExtResource( 3 )
 
-[node name="Characters" type="Node2D" parent="Background"]
+[node name="Characters" type="HBoxContainer" parent="SceneContainer/CenterContainer/ContentContainer"]
+editor/display_folded = true
+margin_top = 602.0
+margin_right = 1431.0
+margin_bottom = 1848.0
 script = ExtResource( 4 )
 
-[node name="CharacterFemale1" type="TextureButton" parent="Background/Characters"]
-margin_left = 1322.0
-margin_top = 604.0
-margin_right = 1743.0
-margin_bottom = 1794.0
-rect_scale = Vector2( 0.95, 0.95 )
+[node name="CharacterContainer" type="MarginContainer" parent="SceneContainer/CenterContainer/ContentContainer/Characters"]
+editor/display_folded = true
+margin_right = 421.0
+margin_bottom = 1246.0
+
+[node name="CharacterMale1" type="TextureButton" parent="SceneContainer/CenterContainer/ContentContainer/Characters/CharacterContainer"]
+margin_right = 421.0
+margin_bottom = 1246.0
 texture_normal = ExtResource( 5 )
 
-[node name="CharacterFemale2" type="TextureButton" parent="Background/Characters"]
-modulate = Color( 1, 1, 1, 0.8 )
-margin_left = 812.0
-margin_top = 722.0
-margin_right = 1234.0
-margin_bottom = 1918.0
+[node name="CharacterContainer2" type="MarginContainer" parent="SceneContainer/CenterContainer/ContentContainer/Characters"]
+editor/display_folded = true
+margin_left = 425.0
+margin_right = 1006.0
+margin_bottom = 1246.0
+custom_constants/margin_right = 80
+custom_constants/margin_top = 50
+custom_constants/margin_left = 80
+
+[node name="CharacterFemale2" type="TextureButton" parent="SceneContainer/CenterContainer/ContentContainer/Characters/CharacterContainer2"]
+margin_left = 80.0
+margin_top = 50.0
+margin_right = 501.0
+margin_bottom = 1246.0
 texture_normal = ExtResource( 6 )
 
-[node name="CharacterMale1" type="TextureButton" parent="Background/Characters"]
-margin_left = 334.0
-margin_top = 604.0
-margin_right = 755.0
-margin_bottom = 1794.0
-rect_scale = Vector2( 0.95, 0.95 )
+[node name="CharacterContainer3" type="MarginContainer" parent="SceneContainer/CenterContainer/ContentContainer/Characters"]
+editor/display_folded = true
+margin_left = 1010.0
+margin_right = 1431.0
+margin_bottom = 1246.0
+
+[node name="CharacterFemale1" type="TextureButton" parent="SceneContainer/CenterContainer/ContentContainer/Characters/CharacterContainer3"]
+margin_right = 421.0
+margin_bottom = 1246.0
 texture_normal = ExtResource( 7 )
 
-[node name="ClickHand" type="TextureRect" parent="."]
-margin_left = 960.0
-margin_top = 1292.0
-margin_right = 1194.0
-margin_bottom = 1562.0
-texture = ExtResource( 8 )
+[node name="AnimationContainer" type="Node2D" parent="SceneContainer/CenterContainer/ContentContainer" instance=ExtResource( 8 )]
+position = Vector2( -308, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "ChooseAnmiation"
 anims/ChooseAnmiation = SubResource( 1 )
-
-[node name="ClickSfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
-volume_db = -0.5
-pitch_scale = 0.7
-[connection signal="character_clicked" from="Background/Characters" to="." method="_on_Characters_character_clicked"]
+[connection signal="character_clicked" from="SceneContainer/CenterContainer/ContentContainer/Characters" to="." method="_on_Characters_character_clicked"]

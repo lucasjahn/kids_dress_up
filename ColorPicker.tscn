@@ -9,58 +9,63 @@
 [ext_resource path="res://assets/btn_red.png" type="Texture" id=7]
 [ext_resource path="res://assets/btn_pink.png" type="Texture" id=8]
 
-[node name="ColorPicker" type="Node2D"]
+[node name="ColorPicker" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_horizontal_guides_": [ 573.0, 194.0, 769.0 ],
-"_edit_vertical_guides_": [ 322.0, 701.0, -1005.0 ]
-}
 
 [node name="Background" type="TextureRect" parent="."]
 margin_right = 2049.0
 margin_bottom = 1537.0
 texture = ExtResource( 2 )
+expand = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ColorPickerWrapper" type="TextureRect" parent="."]
-margin_left = 644.0
-margin_top = 387.0
-margin_right = 1402.0
-margin_bottom = 1145.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 2049.0
+margin_bottom = 1537.0
+
+[node name="ColorPickerWrapper" type="TextureRect" parent="CenterContainer"]
+margin_left = 645.0
+margin_top = 389.0
+margin_right = 1403.0
+margin_bottom = 1147.0
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Blue" type="TextureButton" parent="ColorPickerWrapper"]
+[node name="Blue" type="TextureButton" parent="CenterContainer/ColorPickerWrapper"]
 margin_left = 262.0
 margin_right = 685.0
 margin_bottom = 260.0
 texture_normal = ExtResource( 4 )
 
-[node name="Orange" type="TextureButton" parent="ColorPickerWrapper"]
+[node name="Orange" type="TextureButton" parent="CenterContainer/ColorPickerWrapper"]
 margin_left = 544.0
 margin_top = 156.0
 margin_right = 759.0
 margin_bottom = 602.0
 texture_normal = ExtResource( 5 )
 
-[node name="Green" type="TextureButton" parent="ColorPickerWrapper"]
+[node name="Green" type="TextureButton" parent="CenterContainer/ColorPickerWrapper"]
 margin_left = 262.0
 margin_top = 498.0
 margin_right = 685.0
 margin_bottom = 758.0
 texture_normal = ExtResource( 6 )
 
-[node name="Red" type="TextureButton" parent="ColorPickerWrapper"]
+[node name="Red" type="TextureButton" parent="CenterContainer/ColorPickerWrapper"]
 margin_top = 380.0
 margin_right = 317.0
 margin_bottom = 740.0
 texture_normal = ExtResource( 7 )
 
-[node name="Pink" type="TextureButton" parent="ColorPickerWrapper"]
+[node name="Pink" type="TextureButton" parent="CenterContainer/ColorPickerWrapper"]
 margin_top = 20.0
 margin_right = 317.0
 margin_bottom = 380.0

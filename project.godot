@@ -24,14 +24,13 @@ config/icon="res://icon.png"
 
 window/size/width=2048
 window/size/height=1536
-window/size/resizable=false
 window/size/test_width=1024
 window/size/test_height=768
 window/per_pixel_transparency/allowed=true
 window/per_pixel_transparency/enabled=true
 window/handheld/orientation="sensor_landscape"
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
 
 [importer_defaults]
 

@@ -1,0 +1,464 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://assets/bg_room.png" type="Texture" id=1]
+[ext_resource path="res://assets/title.png" type="Texture" id=2]
+[ext_resource path="res://assets/btn_characterfemale1.png" type="Texture" id=3]
+[ext_resource path="res://assets/btn_charactermale1.png" type="Texture" id=4]
+[ext_resource path="res://assets/btn_characterfemale2.png" type="Texture" id=5]
+[ext_resource path="res://assets/btn_mute.png" type="Texture" id=6]
+[ext_resource path="res://assets/btn_lookbook_small.png" type="Texture" id=7]
+[ext_resource path="res://assets/btn_delete.png" type="Texture" id=8]
+[ext_resource path="res://assets/bg_schrank.png" type="Texture" id=9]
+[ext_resource path="res://assets/btn_cat_dresses.png" type="Texture" id=10]
+[ext_resource path="res://assets/btn_choose_character.png" type="Texture" id=11]
+[ext_resource path="res://assets/btn_lookbook.png" type="Texture" id=12]
+[ext_resource path="res://assets/wardrobe_open_bg.png" type="Texture" id=13]
+[ext_resource path="res://assets/wardrobe/dresses/blue/dress1.png" type="Texture" id=14]
+[ext_resource path="res://assets/wardrobe/dresses/blue/dress2.png" type="Texture" id=15]
+[ext_resource path="res://assets/wardrobe/dresses/blue/dress3.png" type="Texture" id=16]
+[ext_resource path="res://assets/btn_cat_pants.png" type="Texture" id=17]
+[ext_resource path="res://assets/btn_cat_shoes.png" type="Texture" id=18]
+[ext_resource path="res://assets/btn_cat_special.png" type="Texture" id=19]
+[ext_resource path="res://assets/btn_cat_tops.png" type="Texture" id=20]
+[ext_resource path="res://assets/btn_color.png" type="Texture" id=21]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_horizontal_guides_": [ 1498.0, 38.0, 68.0, 1468.0 ],
+"_edit_vertical_guides_": [ 789.0, 38.0, 1063.0, 1731.0 ]
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Intro Szene" type="MarginContainer" parent="."]
+editor/display_folded = true
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 70.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Intro Szene"]
+margin_right = 2048.0
+margin_bottom = 1848.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Intro Szene/CenterContainer"]
+margin_left = 308.0
+margin_right = 1739.0
+margin_bottom = 1848.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Intro Szene/CenterContainer/VBoxContainer"]
+editor/display_folded = true
+margin_right = 1431.0
+margin_bottom = 598.0
+
+[node name="TextureRect" type="TextureRect" parent="Intro Szene/CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 338.0
+margin_right = 1092.0
+margin_bottom = 598.0
+texture = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Intro Szene/CenterContainer/VBoxContainer"]
+margin_top = 602.0
+margin_right = 1431.0
+margin_bottom = 1848.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Intro Szene/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 421.0
+margin_bottom = 1246.0
+
+[node name="TextureButton" type="TextureButton" parent="Intro Szene/CenterContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+margin_right = 421.0
+margin_bottom = 1246.0
+texture_normal = ExtResource( 3 )
+
+[node name="TextureRect2" type="TextureRect" parent="Intro Szene/CenterContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+visible = false
+margin_right = 421.0
+margin_bottom = 1246.0
+texture = ExtResource( 4 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="Intro Szene/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 425.0
+margin_right = 1006.0
+margin_bottom = 1246.0
+custom_constants/margin_right = 80
+custom_constants/margin_top = 50
+custom_constants/margin_left = 80
+
+[node name="TextureRect2" type="TextureRect" parent="Intro Szene/CenterContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+margin_left = 80.0
+margin_top = 50.0
+margin_right = 501.0
+margin_bottom = 1246.0
+texture = ExtResource( 5 )
+
+[node name="MarginContainer3" type="MarginContainer" parent="Intro Szene/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 1010.0
+margin_right = 1431.0
+margin_bottom = 1246.0
+
+[node name="TextureRect2" type="TextureRect" parent="Intro Szene/CenterContainer/VBoxContainer/HBoxContainer/MarginContainer3"]
+margin_right = 421.0
+margin_bottom = 1246.0
+texture = ExtResource( 3 )
+
+[node name="MainScene" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MainSceneContainer" type="HBoxContainer" parent="MainScene"]
+margin_right = 2048.0
+margin_bottom = 1536.0
+
+[node name="ButtonLeftContainer" type="MarginContainer" parent="MainScene/MainSceneContainer"]
+editor/display_folded = true
+margin_right = 202.0
+margin_bottom = 1536.0
+rect_min_size = Vector2( 202, 0 )
+custom_constants/margin_top = 38
+custom_constants/margin_left = 38
+custom_constants/margin_bottom = 38
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainScene/MainSceneContainer/ButtonLeftContainer"]
+editor/display_folded = true
+margin_left = 38.0
+margin_top = 38.0
+margin_right = 202.0
+margin_bottom = 1498.0
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainScene/MainSceneContainer/ButtonLeftContainer/VBoxContainer"]
+editor/display_folded = true
+margin_right = 164.0
+margin_bottom = 1116.0
+size_flags_vertical = 3
+custom_constants/separation = 18
+
+[node name="Mute" type="TextureButton" parent="MainScene/MainSceneContainer/ButtonLeftContainer/VBoxContainer/VBoxContainer"]
+margin_right = 164.0
+margin_bottom = 158.0
+texture_normal = ExtResource( 6 )
+
+[node name="Mute2" type="TextureButton" parent="MainScene/MainSceneContainer/ButtonLeftContainer/VBoxContainer/VBoxContainer"]
+margin_top = 176.0
+margin_right = 164.0
+margin_bottom = 1116.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 6 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MainScene/MainSceneContainer/ButtonLeftContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 1120.0
+margin_right = 164.0
+margin_bottom = 1460.0
+custom_constants/separation = 18
+
+[node name="Mute2" type="TextureButton" parent="MainScene/MainSceneContainer/ButtonLeftContainer/VBoxContainer/VBoxContainer2"]
+margin_right = 164.0
+margin_bottom = 161.0
+texture_normal = ExtResource( 7 )
+
+[node name="Mute3" type="TextureButton" parent="MainScene/MainSceneContainer/ButtonLeftContainer/VBoxContainer/VBoxContainer2"]
+margin_top = 179.0
+margin_right = 164.0
+margin_bottom = 340.0
+texture_normal = ExtResource( 7 )
+
+[node name="CharacterContainer" type="CenterContainer" parent="MainScene/MainSceneContainer"]
+margin_left = 206.0
+margin_right = 802.0
+margin_bottom = 1536.0
+size_flags_horizontal = 3
+
+[node name="Character" type="TextureRect" parent="MainScene/MainSceneContainer/CharacterContainer"]
+margin_left = 87.0
+margin_top = 173.0
+margin_right = 508.0
+margin_bottom = 1363.0
+texture = ExtResource( 4 )
+
+[node name="ButtonRightContainer" type="MarginContainer" parent="MainScene/MainSceneContainer"]
+editor/display_folded = true
+margin_left = 806.0
+margin_right = 1003.0
+margin_bottom = 1536.0
+rect_min_size = Vector2( 197, 0 )
+custom_constants/margin_right = 38
+custom_constants/margin_top = 38
+custom_constants/margin_bottom = 38
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainScene/MainSceneContainer/ButtonRightContainer"]
+margin_top = 38.0
+margin_right = 159.0
+margin_bottom = 1498.0
+size_flags_horizontal = 0
+alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MainScene/MainSceneContainer/ButtonRightContainer/VBoxContainer"]
+margin_top = 1302.0
+margin_right = 159.0
+margin_bottom = 1460.0
+custom_constants/separation = 18
+
+[node name="Mute3" type="TextureButton" parent="MainScene/MainSceneContainer/ButtonRightContainer/VBoxContainer/VBoxContainer2"]
+margin_right = 159.0
+margin_bottom = 158.0
+texture_normal = ExtResource( 8 )
+
+[node name="WardrobeContainer" type="MarginContainer" parent="MainScene/MainSceneContainer"]
+margin_left = 1007.0
+margin_right = 2048.0
+margin_bottom = 1536.0
+
+[node name="WardrobeBackground" type="TextureRect" parent="MainScene/MainSceneContainer/WardrobeContainer"]
+margin_right = 1041.0
+margin_bottom = 1536.0
+texture = ExtResource( 9 )
+
+[node name="WardrobeMenuContainer" type="MarginContainer" parent="MainScene/MainSceneContainer/WardrobeContainer"]
+editor/display_folded = true
+margin_right = 1041.0
+margin_bottom = 1536.0
+custom_constants/margin_top = 38
+custom_constants/margin_bottom = 38
+
+[node name="WardrobeMenuRows" type="VBoxContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer"]
+editor/display_folded = true
+margin_top = 38.0
+margin_right = 1041.0
+margin_bottom = 1498.0
+
+[node name="WardrobeMenuCols" type="HBoxContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows"]
+editor/display_folded = true
+margin_right = 1041.0
+margin_bottom = 367.0
+size_flags_vertical = 3
+custom_constants/separation = 150
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows/WardrobeMenuCols"]
+margin_left = 92.0
+margin_right = 445.0
+margin_bottom = 367.0
+texture_normal = ExtResource( 10 )
+
+[node name="TextureButton2" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows/WardrobeMenuCols"]
+margin_left = 595.0
+margin_right = 948.0
+margin_bottom = 367.0
+texture_normal = ExtResource( 10 )
+
+[node name="WardrobeMenuCols2" type="HBoxContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows"]
+editor/display_folded = true
+margin_top = 371.0
+margin_right = 1041.0
+margin_bottom = 738.0
+size_flags_vertical = 3
+custom_constants/separation = 150
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows/WardrobeMenuCols2"]
+margin_left = 92.0
+margin_right = 445.0
+margin_bottom = 367.0
+texture_normal = ExtResource( 10 )
+
+[node name="TextureButton2" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows/WardrobeMenuCols2"]
+margin_left = 595.0
+margin_right = 948.0
+margin_bottom = 367.0
+texture_normal = ExtResource( 10 )
+
+[node name="WardrobeMenuCols3" type="HBoxContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows"]
+editor/display_folded = true
+margin_top = 742.0
+margin_right = 1041.0
+margin_bottom = 1109.0
+size_flags_vertical = 3
+custom_constants/separation = 150
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows/WardrobeMenuCols3"]
+margin_left = 344.0
+margin_right = 697.0
+margin_bottom = 367.0
+texture_normal = ExtResource( 10 )
+
+[node name="WardrobeMenuCols4" type="HBoxContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows"]
+editor/display_folded = true
+margin_top = 1113.0
+margin_right = 1041.0
+margin_bottom = 1459.0
+custom_constants/separation = 150
+alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows/WardrobeMenuCols4"]
+margin_left = 92.0
+margin_right = 445.0
+margin_bottom = 346.0
+texture_normal = ExtResource( 11 )
+
+[node name="TextureButton3" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/WardrobeMenuContainer/WardrobeMenuRows/WardrobeMenuCols4"]
+margin_left = 595.0
+margin_right = 948.0
+margin_bottom = 346.0
+texture_normal = ExtResource( 12 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MainScene/MainSceneContainer/WardrobeContainer"]
+editor/display_folded = true
+visible = false
+margin_right = 1041.0
+margin_bottom = 1540.0
+custom_constants/margin_right = 25
+custom_constants/margin_top = 38
+custom_constants/margin_left = 38
+custom_constants/margin_bottom = 38
+
+[node name="OpenWardrobeContainer" type="HBoxContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer"]
+margin_left = 38.0
+margin_top = 38.0
+margin_right = 1016.0
+margin_bottom = 1502.0
+custom_constants/separation = 50
+
+[node name="CenterContainer" type="CenterContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer"]
+editor/display_folded = true
+margin_right = 701.0
+margin_bottom = 1464.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/CenterContainer"]
+margin_left = 16.0
+margin_top = 2.0
+margin_right = 685.0
+margin_bottom = 1462.0
+texture = ExtResource( 13 )
+stretch_mode = 5
+
+[node name="Dresses" type="VBoxContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/CenterContainer"]
+margin_left = 243.0
+margin_top = 97.0
+margin_right = 457.0
+margin_bottom = 1367.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 120
+
+[node name="CenterContainer" type="CenterContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/CenterContainer/Dresses"]
+margin_right = 214.0
+margin_bottom = 338.4
+
+[node name="TextureButton" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/CenterContainer/Dresses/CenterContainer"]
+margin_left = 26.0
+margin_right = 186.2
+margin_bottom = 338.4
+rect_min_size = Vector2( 160.2, 338.4 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 14 )
+expand = true
+stretch_mode = 4
+
+[node name="CenterContainer2" type="CenterContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/CenterContainer/Dresses"]
+margin_top = 458.0
+margin_right = 214.8
+margin_bottom = 831.8
+
+[node name="TextureButton2" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/CenterContainer/Dresses/CenterContainer2"]
+margin_right = 214.8
+margin_bottom = 373.8
+rect_min_size = Vector2( 214.8, 373.8 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 15 )
+expand = true
+stretch_mode = 4
+
+[node name="CenterContainer3" type="CenterContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/CenterContainer/Dresses"]
+margin_top = 951.0
+margin_right = 214.2
+margin_bottom = 1270.8
+
+[node name="TextureButton3" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/CenterContainer/Dresses/CenterContainer3"]
+margin_right = 214.2
+margin_bottom = 319.8
+rect_min_size = Vector2( 214.2, 319.8 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture_normal = ExtResource( 16 )
+expand = true
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer"]
+margin_left = 751.0
+margin_right = 978.0
+margin_bottom = 1464.0
+custom_constants/margin_top = 2
+
+[node name="Sidebar" type="VBoxContainer" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/MarginContainer"]
+editor/display_folded = true
+margin_top = 2.0
+margin_right = 227.0
+margin_bottom = 1464.0
+custom_constants/separation = 20
+
+[node name="TextureButton" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/MarginContainer/Sidebar"]
+margin_right = 227.0
+margin_bottom = 227.0
+rect_min_size = Vector2( 227, 227 )
+texture_normal = ExtResource( 10 )
+expand = true
+stretch_mode = 4
+
+[node name="TextureButton2" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/MarginContainer/Sidebar"]
+margin_top = 247.0
+margin_right = 227.0
+margin_bottom = 474.0
+rect_min_size = Vector2( 227, 227 )
+texture_normal = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+
+[node name="TextureButton3" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/MarginContainer/Sidebar"]
+margin_top = 494.0
+margin_right = 227.0
+margin_bottom = 721.0
+rect_min_size = Vector2( 227, 227 )
+texture_normal = ExtResource( 18 )
+expand = true
+stretch_mode = 4
+
+[node name="TextureButton4" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/MarginContainer/Sidebar"]
+margin_top = 741.0
+margin_right = 227.0
+margin_bottom = 968.0
+rect_min_size = Vector2( 227, 227 )
+texture_normal = ExtResource( 19 )
+expand = true
+stretch_mode = 4
+
+[node name="TextureButton5" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/MarginContainer/Sidebar"]
+margin_top = 988.0
+margin_right = 227.0
+margin_bottom = 1215.0
+rect_min_size = Vector2( 227, 227 )
+texture_normal = ExtResource( 20 )
+expand = true
+stretch_mode = 4
+
+[node name="TextureButton6" type="TextureButton" parent="MainScene/MainSceneContainer/WardrobeContainer/MarginContainer/OpenWardrobeContainer/MarginContainer/Sidebar"]
+margin_top = 1235.0
+margin_right = 227.0
+margin_bottom = 1462.0
+rect_min_size = Vector2( 227, 227 )
+texture_normal = ExtResource( 21 )
+expand = true
+stretch_mode = 4

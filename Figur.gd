@@ -15,18 +15,18 @@ var dressedItems = {
 
 export var isTouchable = false
 
+onready var sceneRoot = get_tree().get_root().get_node('Main')
 onready var plopSfx = $Plop
 onready var shutterSfx = $Shutter
-onready var clickSfx = get_parent().get_node('Wardrobe/Click') if get_parent().has_node('Wardrobe/Click') else null
-onready var deleteConfirmationScene = get_parent().get_node('DialogConfirmationDelete') if get_parent().has_node('DialogConfirmationDelete') else null
-onready var deleteButton = get_parent().get_node('Wardrobe/ContextualButtons/ButtonDelete') if get_parent().has_node('Wardrobe/ContextualButtons/ButtonDelete') else null
-onready var addToLookbookButton = get_parent().get_node('Wardrobe/ContextualButtons/ButtonSaveToLookbook') if get_parent().has_node('Wardrobe/ContextualButtons/ButtonSaveToLookbook') else null
-onready var openLookbookButton = get_parent().get_node('Wardrobe/ContextualButtons/ButtonOpenLookbook') if get_parent().has_node('Wardrobe/ContextualButtons/ButtonOpenLookbook') else null
-onready var wardrobe = get_parent().get_node('Wardrobe') if get_parent().has_node('Wardrobe') else null
-onready var wardrobeHome = get_parent().get_node('Wardrobe/Home') if get_parent().has_node('Wardrobe/Home') else null
-onready var pictureFrameWrapper = get_parent().get_node('PictureFrameWrapper') if get_parent().has_node('PictureFrameWrapper') else null
-onready var pictureFrame = get_parent().get_node('PictureFrameWrapper/PictureFrame') if get_parent().has_node('PictureFrameWrapper/PictureFrame') else null
-onready var pictureFrameAnimation = get_parent().get_node('PictureFrameWrapper/PictureFrame/Animation') if get_parent().has_node('PictureFrameWrapper/PictureFrame/Animation') else null
+onready var clickSfx = sceneRoot.get_node('Sfx/Click') if sceneRoot.has_node('Sfx/Click') else null
+onready var deleteConfirmationScene = sceneRoot.get_node('DialogConfirmationDelete') if sceneRoot.has_node('DialogConfirmationDelete') else null
+onready var deleteButton = sceneRoot.get_node('MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBottom/ButtonDelete') if sceneRoot.has_node('MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBottom/ButtonDelete') else null
+onready var addToLookbookButton = sceneRoot.get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook') if sceneRoot.has_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook') else null
+onready var openLookbookButton = sceneRoot.get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook') if sceneRoot.has_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook') else null
+onready var wardrobeHome = sceneRoot.get_node('MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu') if sceneRoot.has_node('MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu') else null
+onready var pictureFrameWrapper = sceneRoot.get_node('PictureFrameWrapper') if sceneRoot.has_node('PictureFrameWrapper') else null
+onready var pictureFrame = sceneRoot.get_node('PictureFrameWrapper/PictureFrame') if sceneRoot.has_node('PictureFrameWrapper/PictureFrame') else null
+onready var pictureFrameAnimation = sceneRoot.get_node('PictureFrameWrapper/PictureFrame/Animation') if sceneRoot.has_node('PictureFrameWrapper/PictureFrame/Animation') else null
 
 func _ready():
 	if deleteConfirmationScene:
@@ -34,9 +34,6 @@ func _ready():
 		
 	if wardrobeHome:
 		wardrobeHome.connect("resetCharacterSelection", self, "resetClothes")
-	
-	if wardrobe:
-		wardrobe.connect("save_look", self, "save_to_lookbook")
 
 
 func resetClothes():
@@ -48,7 +45,6 @@ func resetClothes():
 	if deleteButton and addToLookbookButton and openLookbookButton:
 		deleteButton.hide()
 		addToLookbookButton.hide()
-		openLookbookButton.rect_position.y = 1300
 
 func getTexture(category, itemName):
 	return load("%s/%s/%s.png" % [assetRootPath, category, itemName])
@@ -59,7 +55,7 @@ func getColorTexture(category, color, itemName):
 
 
 func toggleItemVisability(category, itemName, shouldDelete = false):
-	var activeWardrobeColor = get_parent().activeWardrobeColor
+	var activeWardrobeColor = get_tree().get_root().get_node('Main').activeWardrobeColor
 	var categoryName = category.get_name()
 	var targetNode = get_node('%s/%s' % [categoryName, itemName])
 	var dressedItem = dressedItems[categoryName]
@@ -84,7 +80,6 @@ func toggleItemVisability(category, itemName, shouldDelete = false):
 		
 		deleteButton.show()
 		addToLookbookButton.show()
-		openLookbookButton.rect_position.y = 1124
 		
 		dressedItems[categoryName] = targetNode
 		
@@ -98,7 +93,6 @@ func toggleItemVisability(category, itemName, shouldDelete = false):
 	if isNaked:
 		deleteButton.hide()
 		addToLookbookButton.hide()
-		openLookbookButton.rect_position.y = 1300
 			
 	
 func showItemTexture(category, targetNodeName, texturePath):
@@ -121,7 +115,6 @@ func _on_deleteConfirmation_confirmed(status):
 		resetClothes()
 		deleteButton.hide()
 		addToLookbookButton.hide()
-		openLookbookButton.rect_position.y = 1300
 	
 	deleteConfirmationScene.hide()
 

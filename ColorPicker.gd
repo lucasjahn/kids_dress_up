@@ -1,9 +1,9 @@
-extends Node2D
+extends MarginContainer
 
 signal color_selected
 
 func _ready():
-	for child in $ColorPickerWrapper.get_children():
+	for child in $CenterContainer/ColorPickerWrapper.get_children():
 		child.connect("pressed", self, "_on_buttonPressed", [child.get_name()])
 		
 		

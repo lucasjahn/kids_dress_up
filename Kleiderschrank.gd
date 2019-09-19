@@ -1,24 +1,24 @@
-extends Node2D
+extends MarginContainer
 
 signal changed_color
 signal closed
 signal opened
-signal save_look
 
 const assetRootPath = 'res://assets/wardrobe'
-var currentCategory : TextureRect = null
+var currentCategory : VBoxContainer = null
 var currentColor = 'blue'
 
+onready var sceneRoot = get_tree().get_root().get_node('Main')
 onready var contextualButtons = {
-	'back': $ContextualButtons/ButtonBack,
-	'color': $ContextualButtons/ButtonColor,
-	'trash': $ContextualButtons/ButtonDelete,
-	'lookbook': $ContextualButtons/ButtonSaveToLookbook
+	'back': sceneRoot.get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsTop/ButtonBack'),
+	'color': sceneRoot.get_node('MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/SidebarContainer/Sidebar/ButtonColor'),
+	'trash': sceneRoot.get_node('MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBottom/ButtonDelete'),
+	'lookbook': sceneRoot.get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook')
 }
-onready var home = $Home
-onready var sidebar = $Sidebar
-onready var clickSfx = $Click
-onready var colorPickerScene = get_parent().get_node('ColorPicker')
+onready var home = sceneRoot.get_node('MainSceneContainer/Wardrobe/WardrobeMenuContainer')
+onready var openWardrobeNode = sceneRoot.get_node('MainSceneContainer/Wardrobe/OpenWardrobeContainer')
+onready var clickSfx = sceneRoot.get_node('Sfx/Click')
+onready var colorPickerScene = sceneRoot.get_node('ColorPicker')
 
 
 func _ready():
@@ -30,7 +30,7 @@ func closeWardrobe():
 	contextualButtons.back.hide()
 	contextualButtons.color.hide()
 	home.show()
-	sidebar.hide()
+	openWardrobeNode.hide()
 	
 	if currentCategory:
 		currentCategory.hide()
@@ -40,9 +40,9 @@ func closeWardrobe():
 
 func openWardrobe(category):
 	home.hide()
-	sidebar.show()
+	openWardrobeNode.show()
 	
-	var newCategory = get_node('Categories/%s' % category)
+	var newCategory = get_node('OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/%s' % category)
 	
 	load_category(newCategory)
 	currentCategory = newCategory
@@ -54,10 +54,6 @@ func _on_Button_Back_pressed():
 	clickSfx.pitch_scale = 1
 	clickSfx.play(0)
 	closeWardrobe()
-	
-	
-func save_look():
-    emit_signal("save_look")
 
 
 func update_color(colorName):
@@ -83,9 +79,9 @@ func load_category(category = currentCategory):
 			 itemName = category.texturePrefix + itemName
 		
 		if category.isColored:
-			categoryItem.texture_normal = getColorTexture(category.get_name().to_lower(), currentColor, itemName)
+			categoryItem.get_node('Button').texture_normal = getColorTexture(category.get_name().to_lower(), currentColor, itemName)
 		else:
-			categoryItem.texture_normal = getTexture(category.get_name().to_lower(), itemName)
+			categoryItem.get_node('Button').texture_normal = getTexture(category.get_name().to_lower(), itemName)
 			
 		category.show()
 		contextualButtons.color.hide()

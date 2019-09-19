@@ -1,4 +1,4 @@
-extends Node2D
+extends MarginContainer
 
 const assetRootPath = 'res://assets/'
 # warning-ignore:unused_class_variable
@@ -7,12 +7,12 @@ var activeWardrobeColor = 'blue'
 var selectedCharacter = null
 var characterTextures = {}
 
+onready var mainSceneContainer = $MainSceneContainer
 onready var characterSelection = $CharacterSelection
-onready var homeScreen = $Wardrobe/Home
-onready var wardrobe = $Wardrobe
-onready var character = $Figur
-onready var clickSfx = $Wardrobe/Click
-onready var buttonMute = $ButtonMute
+onready var wardrobe = mainSceneContainer.get_node('Wardrobe')
+onready var character = mainSceneContainer.get_node('CharacterContainer/Character')
+onready var clickSfx = $Sfx/Click
+onready var buttonMute = mainSceneContainer.get_node('ButtonLeftContainer/VBoxContainer/ButtonsTop/ButtonMute')
 onready var lookbook = $Lookbook
 
 func _ready():
@@ -23,26 +23,16 @@ func _ready():
 	}
 	
 	wardrobe.connect("changed_color", self, "_on_Wardrobe_changed_color")
-	wardrobe.connect("closed", self, "_on_Wardrobe_closed")
-	wardrobe.connect("opened", self, "_on_Wardrobe_opened")
 	
 	lookbook.connect("backToHome", self, "_on_backToHome")
 	
 	characterSelection.connect("character_selected", self, "_on_CharacterSelection_character_selected")
-	homeScreen.connect("resetCharacterSelection", self, "resetCharacter")
 	
 	characterSelection.show()
 	
 	
 func _on_Wardrobe_changed_color(colorName):
 	activeWardrobeColor = colorName
-	
-	
-func _on_Wardrobe_closed():
-	buttonMute.rect_position.y = 78
-	
-func _on_Wardrobe_opened():
-	buttonMute.rect_position.y = 254
 
 func _on_CharacterSelection_character_selected(characterName):
 	selectedCharacter = characterName

@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://assets/characterfemale1.png" type="Texture" id=1]
+[ext_resource path="res://assets/btn_characterfemale1.png" type="Texture" id=1]
 [ext_resource path="res://Figur.gd" type="Script" id=2]
 [ext_resource path="res://assets/sounds/shutter.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/sounds/plop.wav" type="AudioStream" id=4]
@@ -29,11 +29,9 @@
 [ext_resource path="res://assets/wardrobe/special/heart.png" type="Texture" id=27]
 
 [node name="Figur" type="TextureRect"]
-editor/display_folded = true
-margin_left = 18.0
-margin_top = 75.0
-margin_right = 997.0
-margin_bottom = 1470.0
+anchor_bottom = 1.0
+margin_right = 421.0
+margin_bottom = -346.0
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
@@ -47,39 +45,40 @@ volume_db = -7.0
 pitch_scale = 0.9
 
 [node name="Pants" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 37.194, -24.792 )
 script = ExtResource( 5 )
 
 [node name="PantsLong1" type="TextureButton" parent="Pants"]
 visible = false
-margin_left = 316.806
-margin_top = 846.792
-margin_right = 576.806
-margin_bottom = 1276.79
+margin_left = 42.806
+margin_top = 715.792
+margin_right = 302.806
+margin_bottom = 1145.79
 texture_normal = ExtResource( 6 )
 
 [node name="PantsLong2" type="TextureButton" parent="Pants"]
 visible = false
-margin_left = 316.806
-margin_top = 846.792
-margin_right = 577.806
-margin_bottom = 1276.79
+margin_left = 42.806
+margin_top = 715.792
+margin_right = 303.806
+margin_bottom = 1145.79
 texture_normal = ExtResource( 7 )
 
 [node name="PantsShort1" type="TextureButton" parent="Pants"]
 visible = false
-margin_left = 316.806
-margin_top = 846.792
-margin_right = 581.806
-margin_bottom = 1084.79
+margin_left = 42.806
+margin_top = 715.792
+margin_right = 307.806
+margin_bottom = 953.792
 texture_normal = ExtResource( 8 )
 
 [node name="PantsShort2" type="TextureButton" parent="Pants"]
 visible = false
-margin_left = 314.806
-margin_top = 846.792
-margin_right = 579.806
-margin_bottom = 1084.79
+margin_left = 40.806
+margin_top = 715.792
+margin_right = 305.806
+margin_bottom = 953.792
 texture_normal = ExtResource( 9 )
 
 [node name="Tops" type="Node2D" parent="."]
@@ -88,34 +87,34 @@ script = ExtResource( 5 )
 
 [node name="Top1" type="TextureButton" parent="Tops"]
 visible = false
-margin_left = 370.0
-margin_top = 516.0
-margin_right = 605.0
-margin_bottom = 852.0
+margin_left = 94.0
+margin_top = 384.0
+margin_right = 329.0
+margin_bottom = 720.0
 texture_normal = ExtResource( 10 )
 
 [node name="Tshirt1" type="TextureButton" parent="Tops"]
 visible = false
-margin_left = 300.0
-margin_top = 516.0
-margin_right = 672.0
-margin_bottom = 853.0
+margin_left = 25.0
+margin_top = 385.0
+margin_right = 397.0
+margin_bottom = 722.0
 texture_normal = ExtResource( 11 )
 
 [node name="Tshirt2" type="TextureButton" parent="Tops"]
 visible = false
-margin_left = 300.0
-margin_top = 516.0
-margin_right = 672.0
-margin_bottom = 853.0
+margin_left = 24.0
+margin_top = 384.0
+margin_right = 396.0
+margin_bottom = 721.0
 texture_normal = ExtResource( 12 )
 
 [node name="Pullover1" type="TextureButton" parent="Tops"]
 visible = false
-margin_left = 268.0
-margin_top = 518.0
-margin_right = 703.0
-margin_bottom = 865.0
+margin_left = -7.0
+margin_top = 385.0
+margin_right = 428.0
+margin_bottom = 732.0
 texture_normal = ExtResource( 13 )
 
 [node name="Dresses" type="Node2D" parent="."]
@@ -125,34 +124,34 @@ script = ExtResource( 5 )
 
 [node name="Dress1" type="TextureButton" parent="Dresses"]
 visible = false
-margin_left = 843.5
-margin_top = 1213.5
-margin_right = 1110.5
-margin_bottom = 1777.5
+margin_left = 567.5
+margin_top = 1082.5
+margin_right = 834.5
+margin_bottom = 1646.5
 texture_normal = ExtResource( 14 )
 
 [node name="Dress2" type="TextureButton" parent="Dresses"]
 visible = false
-margin_left = 801.5
-margin_top = 1213.5
-margin_right = 1159.5
-margin_bottom = 1836.5
+margin_left = 526.5
+margin_top = 1082.5
+margin_right = 884.5
+margin_bottom = 1705.5
 texture_normal = ExtResource( 15 )
 
 [node name="Dress3" type="TextureButton" parent="Dresses"]
 visible = false
-margin_left = 801.5
-margin_top = 1213.5
-margin_right = 1158.5
-margin_bottom = 1746.5
+margin_left = 525.5
+margin_top = 1082.5
+margin_right = 882.5
+margin_bottom = 1615.5
 texture_normal = ExtResource( 16 )
 
 [node name="Dress4" type="TextureButton" parent="Dresses"]
 visible = false
-margin_left = 787.5
-margin_top = 1213.5
-margin_right = 1167.5
-margin_bottom = 1754.5
+margin_left = 512.5
+margin_top = 1082.5
+margin_right = 892.5
+margin_bottom = 1623.5
 texture_normal = ExtResource( 17 )
 
 [node name="Shoes" type="Node2D" parent="."]
@@ -162,87 +161,86 @@ script = ExtResource( 5 )
 
 [node name="Shoes1" type="TextureButton" parent="Shoes"]
 visible = false
-margin_left = 755.904
-margin_top = 2013.41
-margin_right = 1197.9
-margin_bottom = 2087.41
+margin_left = 479.904
+margin_top = 1880.41
+margin_right = 921.9
+margin_bottom = 1956.41
 texture_normal = ExtResource( 18 )
 
 [node name="Shoes2" type="TextureButton" parent="Shoes"]
 visible = false
-margin_left = 759.904
-margin_top = 2019.41
-margin_right = 1200.9
-margin_bottom = 2091.41
+margin_left = 485.904
+margin_top = 1887.41
+margin_right = 926.9
+margin_bottom = 1959.41
 texture_normal = ExtResource( 19 )
 
 [node name="Shoes3" type="TextureButton" parent="Shoes"]
 visible = false
-margin_left = 755.904
-margin_top = 1969.41
-margin_right = 1196.9
-margin_bottom = 2089.41
+margin_left = 479.904
+margin_top = 1837.41
+margin_right = 920.904
+margin_bottom = 1957.41
 texture_normal = ExtResource( 20 )
 
 [node name="Shoes4" type="TextureButton" parent="Shoes"]
 visible = false
-margin_left = 761.904
-margin_top = 2011.41
-margin_right = 1202.9
-margin_bottom = 2089.41
+margin_left = 485.904
+margin_top = 1879.41
+margin_right = 926.9
+margin_bottom = 1957.41
 texture_normal = ExtResource( 21 )
 
 [node name="Special" type="Node2D" parent="."]
-editor/display_folded = true
-position = Vector2( -489.904, -763.409 )
+position = Vector2( -501, -512 )
 script = ExtResource( 5 )
 
 [node name="Amerindian" type="TextureButton" parent="Special"]
 visible = false
-margin_left = 799.904
-margin_top = 807.409
-margin_right = 1150.9
-margin_bottom = 1913.41
+margin_left = 536.0
+margin_top = 424.0
+margin_right = 887.0
+margin_bottom = 1530.0
 texture_normal = ExtResource( 22 )
 
 [node name="Fairy" type="TextureButton" parent="Special"]
 visible = false
-margin_left = 499.904
-margin_top = 1051.41
-margin_right = 1454.9
-margin_bottom = 1821.42
+margin_left = 237.0
+margin_top = 669.0
+margin_right = 1192.0
+margin_bottom = 1439.01
 texture_normal = ExtResource( 23 )
 
 [node name="Astronaut" type="TextureButton" parent="Special"]
 visible = false
-margin_left = 751.904
-margin_top = 871.409
-margin_right = 1207.91
-margin_bottom = 2087.41
+margin_left = 487.0
+margin_top = 488.0
+margin_right = 943.006
+margin_bottom = 1704.0
 texture_normal = ExtResource( 24 )
 
 [node name="PeterPan" type="TextureButton" parent="Special"]
 visible = false
-margin_left = 781.904
-margin_top = 1281.41
-margin_right = 1168.9
-margin_bottom = 2016.41
+margin_left = 518.0
+margin_top = 897.0
+margin_right = 905.0
+margin_bottom = 1632.0
 texture_normal = ExtResource( 25 )
 
 [node name="Star" type="TextureButton" parent="Special"]
 visible = false
-margin_left = 1203.9
-margin_top = 961.409
-margin_right = 1427.9
-margin_bottom = 1174.41
+margin_left = 938.996
+margin_top = 578.0
+margin_right = 1163.0
+margin_bottom = 791.001
 texture_normal = ExtResource( 26 )
 
 [node name="Heart" type="TextureButton" parent="Special"]
 visible = false
-margin_left = 527.904
-margin_top = 1135.41
-margin_right = 746.904
-margin_bottom = 1318.41
+margin_left = 263.0
+margin_top = 752.001
+margin_right = 482.0
+margin_bottom = 935.001
 texture_normal = ExtResource( 27 )
 [connection signal="delete_item" from="Pants" to="." method="toggleItemVisability"]
 [connection signal="delete_item" from="Tops" to="." method="toggleItemVisability"]

@@ -1,4 +1,4 @@
-extends TextureRect
+extends VBoxContainer
 
 # warning-ignore:unused_class_variable
 export var isColored : bool
@@ -9,7 +9,8 @@ signal colorSelected
 
 func _ready():
 	for child in get_children():
-		child.connect("pressed", self, "_on_buttonPressed", [self, child.get_name()])
+		var button = child.get_children()[0]
+		button.connect("pressed", self, "_on_buttonPressed", [self, child.get_name()])
 		
 		
 func _on_buttonPressed(category, itemName):

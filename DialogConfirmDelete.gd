@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Control
 
 signal dialog_confirmed
 

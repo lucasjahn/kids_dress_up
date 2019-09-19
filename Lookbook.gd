@@ -1,4 +1,4 @@
-extends Node2D
+extends MarginContainer
 
 signal backToHome
 
@@ -7,16 +7,16 @@ var lookbookFilePath = "user://lookbook.save"
 var activePicture = null
 var buttonTextures = []
 
-onready var pictureFrames = $PictureFrames
+onready var pictureFrames = $VBoxContainer/PictureFrameWrapper/PictureFrames
 onready var dialgConfirmationDelete = $DialogConfirmationDelete
-onready var header = $Header
-onready var deleteButton = $Header/ButtonDelete
-onready var background = $Background
-onready var pictureDetailControls = $PictureDetailControls
-onready var pictureDetailBackButton = $PictureDetailControls/ButtonBack
+onready var header = $VBoxContainer/Header
+onready var deleteButton = $VBoxContainer/Header/ButtonRightContainer/ButtonDelete
+onready var pictureDetailHeaderControls = $VBoxContainer/PictureDetailHeaderControls
+onready var pictureDetailFooterControls = $VBoxContainer/PictureDetailFooterControls
+onready var buttonBack = $VBoxContainer/PictureDetailHeaderControls/ButtonLeftContainer/ButtonBack
 onready var dialogConfirmationDeleteDetail = $DialogConfirmationDeleteDetail
 onready var clickSfx = $Click
-onready var addToLookbookButton = get_parent().get_node('Wardrobe/ContextualButtons/ButtonOpenLookbook') if get_parent().has_node('Wardrobe/ContextualButtons/ButtonOpenLookbook') else null
+onready var addToLookbookButton = get_parent().get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook') if get_parent().has_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook') else null
 
 func _ready():
 	buttonTextures = [
@@ -57,7 +57,7 @@ func load_lookbook():
 	var lookbookLength = len(lookbook)
 	
 	addToLookbookButton.load_texture(lookbookLength)
-	pictureDetailBackButton.texture_normal = buttonTextures[lookbookLength]
+	buttonBack.texture_normal = buttonTextures[lookbookLength]
 	
 func render_looks():
 	var pictureSingleFrames = pictureFrames.get_children()
@@ -126,16 +126,10 @@ func showPictureDetail(node, index):
 				pictureFrame.hide()
 				
 		header.hide()
-		background.rect_scale.y = 1.44
-		
-		node.rect_position.x = 652
-		node.rect_position.y = 219
-		
-		node.rect_scale.x = 1.25
-		node.rect_scale.y = 1.25
 		
 		playClick()
-		pictureDetailControls.show()
+		pictureDetailHeaderControls.show()
+		pictureDetailFooterControls.show()
 
 
 func _on_ButtonDeleteDetail_pressed():
@@ -168,8 +162,8 @@ func _on_ButtonBack_pressed():
 		pictureFrame.show()
 	
 	header.show()
-	pictureDetailControls.hide()
-	background.reset()
+	pictureDetailHeaderControls.hide()
+	pictureDetailFooterControls.hide()
 		
 
 func _on_DialogConfirmationDeleteDetail_dialog_confirmed(status):

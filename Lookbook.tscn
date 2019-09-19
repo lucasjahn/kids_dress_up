@@ -1,246 +1,255 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Lookbook.gd" type="Script" id=1]
-[ext_resource path="res://assets/bg_room.png" type="Texture" id=2]
+[ext_resource path="res://assets/bg_room_lookbook.png" type="Texture" id=2]
 [ext_resource path="res://Background.gd" type="Script" id=3]
-[ext_resource path="res://assets/lookbook_title.png" type="Texture" id=4]
-[ext_resource path="res://assets/btn_back.png" type="Texture" id=5]
+[ext_resource path="res://assets/btn_back.png" type="Texture" id=4]
+[ext_resource path="res://assets/lookbook_title.png" type="Texture" id=5]
 [ext_resource path="res://assets/btn_delete.png" type="Texture" id=6]
-[ext_resource path="res://PictureFrames.gd" type="Script" id=7]
-[ext_resource path="res://assets/picture_frame.png" type="Texture" id=8]
-[ext_resource path="res://PictureFrame.gd" type="Script" id=9]
-[ext_resource path="res://Figur.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/nav_arrow.png" type="Texture" id=11]
-[ext_resource path="res://assets/page_1.png" type="Texture" id=12]
-[ext_resource path="res://assets/page_2.png" type="Texture" id=13]
-[ext_resource path="res://assets/page_3.png" type="Texture" id=14]
-[ext_resource path="res://assets/btn_lookbook_small.png" type="Texture" id=15]
-[ext_resource path="res://DialogConfirmationDeleteLookbook.tscn" type="PackedScene" id=16]
-[ext_resource path="res://DialogConfirmationDeleteLookbookDetail.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=18]
+[ext_resource path="res://assets/btn_lookbook_small.png" type="Texture" id=7]
+[ext_resource path="res://PictureFrames.gd" type="Script" id=8]
+[ext_resource path="res://assets/picture_frame.png" type="Texture" id=9]
+[ext_resource path="res://PictureFrame.gd" type="Script" id=10]
+[ext_resource path="res://Figur.tscn" type="PackedScene" id=11]
+[ext_resource path="res://DialogConfirmationDeleteLookbook.tscn" type="PackedScene" id=12]
+[ext_resource path="res://DialogConfirmationDeleteLookbookDetail.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=14]
 
-[node name="Lookbook" type="Node2D"]
+[node name="Lookbook" type="MarginContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 79.0, -78.0 ],
-"_edit_vertical_guides_": [ 38.0, 1970.0, 1024.0 ]
+"_edit_horizontal_guides_": [ -21.0, -117.0 ],
+"_edit_vertical_guides_": [ 39.0, 2010.0 ]
 }
 
 [node name="Background" type="TextureRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
 margin_right = 2048.0
 margin_bottom = 1536.0
-rect_scale = Vector2( 1, 1.28 )
+rect_min_size = Vector2( 2048, 1536 )
 texture = ExtResource( 2 )
+expand = true
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="Header" type="Node2D" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 2048.0
+margin_bottom = 1536.0
 
-[node name="TitleSign" type="TextureRect" parent="Header"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 821.0
-margin_top = -35.0
-margin_right = 1247.0
-margin_bottom = 312.0
-rect_pivot_offset = Vector2( 206, 172 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Header" type="HBoxContainer" parent="VBoxContainer"]
+editor/display_folded = true
+margin_right = 2048.0
+margin_bottom = 304.0
+size_flags_vertical = 0
 
-[node name="ButtonHome" type="TextureButton" parent="Header"]
+[node name="ButtonLeftContainer" type="MarginContainer" parent="VBoxContainer/Header"]
+editor/display_folded = true
+margin_right = 197.0
+margin_bottom = 304.0
+custom_constants/margin_top = 38
+custom_constants/margin_left = 38
+
+[node name="ButtonHome" type="TextureButton" parent="VBoxContainer/Header/ButtonLeftContainer"]
 margin_left = 38.0
-margin_top = 78.0
-margin_right = 202.0
-margin_bottom = 239.0
-texture_normal = ExtResource( 5 )
+margin_top = 38.0
+margin_right = 197.0
+margin_bottom = 304.0
+texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ButtonDelete" type="TextureButton" parent="Header"]
-margin_left = 1811.0
-margin_top = 78.0
-margin_right = 1975.0
-margin_bottom = 239.0
+[node name="TitleSignContainer" type="CenterContainer" parent="VBoxContainer/Header"]
+editor/display_folded = true
+margin_left = 201.0
+margin_right = 1847.0
+margin_bottom = 304.0
+size_flags_horizontal = 3
+
+[node name="TitleSign" type="TextureRect" parent="VBoxContainer/Header/TitleSignContainer"]
+margin_left = 610.0
+margin_right = 1036.0
+margin_bottom = 304.0
+rect_pivot_offset = Vector2( 206, 172 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ButtonRightContainer" type="MarginContainer" parent="VBoxContainer/Header"]
+editor/display_folded = true
+margin_left = 1851.0
+margin_right = 2048.0
+margin_bottom = 304.0
+custom_constants/margin_right = 38
+custom_constants/margin_top = 38
+
+[node name="ButtonDelete" type="TextureButton" parent="VBoxContainer/Header/ButtonRightContainer"]
+margin_top = 38.0
+margin_right = 159.0
+margin_bottom = 304.0
 texture_normal = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PictureFrames" type="Node2D" parent="."]
-position = Vector2( -1, -5 )
-script = ExtResource( 7 )
-
-[node name="PictureFrame1" type="TextureButton" parent="PictureFrames"]
+[node name="PictureDetailHeaderControls" type="HBoxContainer" parent="VBoxContainer"]
 editor/display_folded = true
-margin_left = 37.0
-margin_top = 480.0
-margin_right = 634.0
-margin_bottom = 1200.0
-texture_normal = ExtResource( 8 )
-script = ExtResource( 9 )
+visible = false
+margin_top = 308.0
+margin_right = 2048.0
+margin_bottom = 507.0
+
+[node name="ButtonLeftContainer" type="MarginContainer" parent="VBoxContainer/PictureDetailHeaderControls"]
+margin_right = 202.0
+margin_bottom = 199.0
+custom_constants/margin_top = 38
+custom_constants/margin_left = 38
+
+[node name="ButtonBack" type="TextureButton" parent="VBoxContainer/PictureDetailHeaderControls/ButtonLeftContainer"]
+margin_left = 38.0
+margin_top = 38.0
+margin_right = 202.0
+margin_bottom = 199.0
+texture_normal = ExtResource( 7 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="Figur" parent="PictureFrames/PictureFrame1" instance=ExtResource( 10 )]
+[node name="PictureFrameWrapper" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 308.0
+margin_right = 2048.0
+margin_bottom = 1417.0
+size_flags_vertical = 3
+
+[node name="PictureFrames" type="HBoxContainer" parent="VBoxContainer/PictureFrameWrapper"]
+margin_left = 38.0
+margin_top = 194.0
+margin_right = 2009.0
+margin_bottom = 914.0
+size_flags_horizontal = 2
+size_flags_vertical = 3
+custom_constants/separation = 90
+script = ExtResource( 8 )
+
+[node name="PictureFrame1" type="TextureButton" parent="VBoxContainer/PictureFrameWrapper/PictureFrames"]
+margin_right = 597.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 9 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Figur" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame1" instance=ExtResource( 11 )]
 visible = false
-margin_left = 92.0
-margin_top = 72.0
-margin_right = 1071.0
-margin_bottom = 1467.0
+margin_right = 979.0
+margin_bottom = 1395.0
 rect_scale = Vector2( 0.4, 0.4 )
 
-[node name="Overlay" type="TextureRect" parent="PictureFrames/PictureFrame1"]
+[node name="Overlay" type="TextureRect" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame1"]
 margin_left = 62.0
 margin_top = 62.0
 margin_right = 527.0
 margin_bottom = 652.0
 
-[node name="PictureFrame2" type="TextureButton" parent="PictureFrames"]
-editor/display_folded = true
-margin_left = 728.0
-margin_top = 480.0
-margin_right = 1325.0
-margin_bottom = 1200.0
-texture_normal = ExtResource( 8 )
-script = ExtResource( 9 )
+[node name="PictureFrame2" type="TextureButton" parent="VBoxContainer/PictureFrameWrapper/PictureFrames"]
+margin_left = 687.0
+margin_right = 1284.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 9 )
+script = ExtResource( 10 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
-[node name="Figur" parent="PictureFrames/PictureFrame2" instance=ExtResource( 10 )]
+[node name="Figur" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame2" instance=ExtResource( 11 )]
 visible = false
-margin_left = 92.0
-margin_top = 72.0
-margin_right = 1071.0
-margin_bottom = 1467.0
+margin_right = 979.0
+margin_bottom = 1395.0
 rect_scale = Vector2( 0.4, 0.4 )
 
-[node name="Overlay" type="TextureRect" parent="PictureFrames/PictureFrame2"]
+[node name="Overlay" type="TextureRect" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame2"]
 margin_left = 58.0
 margin_top = 62.0
 margin_right = 523.0
 margin_bottom = 652.0
 
-[node name="PictureFrame3" type="TextureButton" parent="PictureFrames"]
-editor/display_folded = true
-margin_left = 1394.0
-margin_top = 480.0
-margin_right = 1991.0
-margin_bottom = 1200.0
-texture_normal = ExtResource( 8 )
-script = ExtResource( 9 )
+[node name="PictureFrame3" type="TextureButton" parent="VBoxContainer/PictureFrameWrapper/PictureFrames"]
+margin_left = 1374.0
+margin_right = 1971.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 9 )
+script = ExtResource( 10 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
-[node name="Figur" parent="PictureFrames/PictureFrame3" instance=ExtResource( 10 )]
+[node name="Figur" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame3" instance=ExtResource( 11 )]
 visible = false
-margin_left = 92.0
-margin_top = 72.0
-margin_right = 1071.0
-margin_bottom = 1467.0
+margin_right = 979.0
+margin_bottom = 1395.0
 rect_scale = Vector2( 0.4, 0.4 )
 
-[node name="Overlay" type="TextureRect" parent="PictureFrames/PictureFrame3"]
+[node name="Overlay" type="TextureRect" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame3"]
 margin_left = 57.0
 margin_top = 62.0
 margin_right = 522.0
 margin_bottom = 652.0
 
-[node name="Pager" type="Node2D" parent="."]
+[node name="PictureDetailFooterControls" type="CenterContainer" parent="VBoxContainer"]
 editor/display_folded = true
 visible = false
-position = Vector2( 0, -3 )
+margin_top = 1235.0
+margin_right = 2048.0
+margin_bottom = 1443.0
 
-[node name="ButtonPrevious" type="TextureButton" parent="Pager"]
-margin_left = 38.0
-margin_top = 580.5
-margin_right = 231.0
-margin_bottom = 755.5
-rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 11 )
-
-[node name="ButtonNext" type="TextureButton" parent="Pager"]
-margin_left = 986.0
-margin_top = 667.5
-margin_right = 1179.0
-margin_bottom = 842.5
-rect_rotation = 179.864
-rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 11 )
-
-[node name="TextureButton" type="TextureButton" parent="Pager"]
-margin_left = 377.0
-margin_top = 575.0
-margin_right = 468.0
-margin_bottom = 769.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 12 )
-
-[node name="TextureButton2" type="TextureButton" parent="Pager"]
-margin_left = 481.0
-margin_top = 575.0
-margin_right = 603.0
-margin_bottom = 769.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 13 )
-
-[node name="TextureButton3" type="TextureButton" parent="Pager"]
-margin_left = 585.0
-margin_top = 575.0
-margin_right = 713.0
-margin_bottom = 769.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 14 )
-
-[node name="PictureDetailControls" type="Node2D" parent="."]
-visible = false
-
-[node name="ButtonDeleteDetail" type="TextureButton" parent="PictureDetailControls"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PictureDetailFooterControls"]
 margin_left = 944.0
-margin_top = 1278.0
-margin_right = 1108.0
-margin_bottom = 1439.0
+margin_right = 1103.0
+margin_bottom = 208.0
+custom_constants/margin_bottom = 50
+
+[node name="ButtonDeleteDetail" type="TextureButton" parent="VBoxContainer/PictureDetailFooterControls/MarginContainer"]
+margin_right = 159.0
+margin_bottom = 158.0
 texture_normal = ExtResource( 6 )
 
-[node name="ButtonBack" type="TextureButton" parent="PictureDetailControls"]
-margin_left = 38.0
-margin_top = 78.0
-margin_right = 202.0
-margin_bottom = 239.0
-texture_normal = ExtResource( 15 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Spacer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 1421.0
+margin_right = 2048.0
+margin_bottom = 1536.0
+custom_constants/margin_top = 115
 
-[node name="DialogConfirmationDelete" parent="." instance=ExtResource( 16 )]
+[node name="DialogConfirmationDelete" parent="." instance=ExtResource( 12 )]
 visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 2048.0
+margin_bottom = 1536.0
 
-[node name="DialogConfirmationDeleteDetail" parent="." instance=ExtResource( 17 )]
+[node name="DialogConfirmationDeleteDetail" parent="." instance=ExtResource( 13 )]
 visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 2048.0
+margin_bottom = 1536.0
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
+stream = ExtResource( 14 )
 volume_db = -5.0
 pitch_scale = 0.7
-[connection signal="pressed" from="Header/ButtonHome" to="." method="_on_ButtonHome_pressed"]
-[connection signal="pressed" from="Header/ButtonDelete" to="." method="_on_ButtonDelete_pressed"]
-[connection signal="pictureClicked" from="PictureFrames" to="." method="showPictureDetail"]
-[connection signal="pressed" from="PictureDetailControls/ButtonDeleteDetail" to="." method="_on_ButtonDeleteDetail_pressed"]
-[connection signal="pressed" from="PictureDetailControls/ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="pressed" from="VBoxContainer/Header/ButtonLeftContainer/ButtonHome" to="." method="_on_ButtonHome_pressed"]
+[connection signal="pressed" from="VBoxContainer/Header/ButtonRightContainer/ButtonDelete" to="." method="_on_ButtonDelete_pressed"]
+[connection signal="pressed" from="VBoxContainer/PictureDetailHeaderControls/ButtonLeftContainer/ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="pictureClicked" from="VBoxContainer/PictureFrameWrapper/PictureFrames" to="." method="showPictureDetail"]
+[connection signal="pressed" from="VBoxContainer/PictureDetailFooterControls/MarginContainer/ButtonDeleteDetail" to="." method="_on_ButtonDeleteDetail_pressed"]
 [connection signal="dialog_confirmed" from="DialogConfirmationDelete" to="." method="_on_DialogConfirmationDelete_dialog_confirmed"]
 [connection signal="dialog_confirmed" from="DialogConfirmationDeleteDetail" to="." method="_on_DialogConfirmationDeleteDetail_dialog_confirmed"]

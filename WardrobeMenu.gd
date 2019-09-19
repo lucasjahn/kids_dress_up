@@ -1,14 +1,17 @@
-extends Node2D
+extends VBoxContainer
 
 signal categorySelected
 signal resetCharacterSelection
 signal showLookbook
 
-onready var clickSfx = get_tree().get_root().get_node('Main').get_node('Sfx/Click')
+onready var clickSfx = get_tree().get_root().get_node('Main/Sfx/Click')
 
 func _ready():
 	for child in get_children():
-		child.connect("pressed", self, "_on_buttonPressed", [child.get_name()])
+		var buttons = child.get_children()
+		
+		for button in buttons:
+			button.connect("pressed", self, "_on_buttonPressed", [button.get_name()])
 		
 		
 func _on_buttonPressed(nodeName):
