@@ -5,7 +5,7 @@ signal closed
 signal opened
 
 const assetRootPath = 'res://assets/wardrobe'
-var currentCategory : VBoxContainer = null
+var currentCategory = null
 var currentColor = 'blue'
 
 onready var sceneRoot = get_tree().get_root().get_node('Main')

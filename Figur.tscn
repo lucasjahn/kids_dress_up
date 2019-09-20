@@ -34,6 +34,9 @@ margin_right = 421.0
 margin_bottom = -346.0
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Shutter" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
@@ -52,33 +55,33 @@ script = ExtResource( 5 )
 [node name="PantsLong1" type="TextureButton" parent="Pants"]
 visible = false
 margin_left = 42.806
-margin_top = 715.792
+margin_top = 714.792
 margin_right = 302.806
-margin_bottom = 1145.79
+margin_bottom = 1144.79
 texture_normal = ExtResource( 6 )
 
 [node name="PantsLong2" type="TextureButton" parent="Pants"]
 visible = false
 margin_left = 42.806
-margin_top = 715.792
+margin_top = 713.792
 margin_right = 303.806
-margin_bottom = 1145.79
+margin_bottom = 1143.79
 texture_normal = ExtResource( 7 )
 
 [node name="PantsShort1" type="TextureButton" parent="Pants"]
 visible = false
-margin_left = 42.806
-margin_top = 715.792
-margin_right = 307.806
-margin_bottom = 953.792
+margin_left = 41.806
+margin_top = 712.792
+margin_right = 306.806
+margin_bottom = 950.792
 texture_normal = ExtResource( 8 )
 
 [node name="PantsShort2" type="TextureButton" parent="Pants"]
 visible = false
 margin_left = 40.806
-margin_top = 715.792
+margin_top = 712.792
 margin_right = 305.806
-margin_bottom = 953.792
+margin_bottom = 950.792
 texture_normal = ExtResource( 9 )
 
 [node name="Tops" type="Node2D" parent="."]
@@ -192,6 +195,7 @@ margin_bottom = 1957.41
 texture_normal = ExtResource( 21 )
 
 [node name="Special" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -501, -512 )
 script = ExtResource( 5 )
 
@@ -242,6 +246,10 @@ margin_top = 752.001
 margin_right = 482.0
 margin_bottom = 935.001
 texture_normal = ExtResource( 27 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
 [connection signal="delete_item" from="Pants" to="." method="toggleItemVisability"]
 [connection signal="delete_item" from="Tops" to="." method="toggleItemVisability"]
 [connection signal="delete_item" from="Dresses" to="." method="toggleItemVisability"]

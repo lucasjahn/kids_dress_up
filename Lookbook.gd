@@ -7,6 +7,8 @@ var lookbookFilePath = "user://lookbook.save"
 var activePicture = null
 var buttonTextures = []
 
+var scaleFactor = 1.3
+
 onready var pictureFrames = $VBoxContainer/PictureFrameWrapper/PictureFrames
 onready var dialgConfirmationDelete = $DialogConfirmationDelete
 onready var header = $VBoxContainer/Header
@@ -89,6 +91,7 @@ func render_looks():
 				characterNode.show()
 				pictureFrameNode.isPictureLoaded = true
 				
+				
 			counter += 1
 		
 		deleteButton.show()
@@ -117,7 +120,9 @@ func _on_DialogConfirmationDelete_dialog_confirmed(status):
 	
 	
 func showPictureDetail(node, index):
-	if node.isPictureLoaded:
+	var characterNode = node.get_node('Figur')
+	
+	if node.isPictureLoaded and not node.isActive:
 		node.isActive = true
 		activePicture = index
 		
@@ -125,6 +130,12 @@ func showPictureDetail(node, index):
 			if not pictureFrame.isActive:
 				pictureFrame.hide()
 				
+		node.set_custom_minimum_size(Vector2(node.rect_size.x*scaleFactor, node.rect_size.y*scaleFactor))
+		node.expand = true
+		
+		characterNode.rect_scale = Vector2(characterNode.rect_scale.x*scaleFactor, characterNode.rect_scale.y*scaleFactor)
+		characterNode.rect_position = Vector2(characterNode.rect_position.x*scaleFactor, characterNode.rect_position.y*scaleFactor)
+		
 		header.hide()
 		
 		playClick()

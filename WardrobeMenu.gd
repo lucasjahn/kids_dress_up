@@ -5,6 +5,8 @@ signal resetCharacterSelection
 signal showLookbook
 
 onready var clickSfx = get_tree().get_root().get_node('Main/Sfx/Click')
+onready var deleteButton = get_tree().get_root().get_node('Main/MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBottom/ButtonDelete')
+onready var addToLookbookButton = get_tree().get_root().get_node('Main/MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook')
 
 func _ready():
 	for child in get_children():
@@ -22,6 +24,9 @@ func _on_buttonPressed(nodeName):
 	
 	if selectedCategory == 'CharacterSelection':
 		emit_signal("resetCharacterSelection")
+		deleteButton.hide()
+		addToLookbookButton.hide()
+		
 	elif selectedCategory == 'Lookbook':
 		emit_signal("showLookbook")
 	else:

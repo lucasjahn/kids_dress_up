@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends GridContainer
 
 # warning-ignore:unused_class_variable
 export var isColored : bool
@@ -17,7 +17,6 @@ func _ready():
 		
 func _on_buttonPressed(category, itemName):
 	emit_signal("colorSelected", category, itemName)
-
 
 func _set_min_size(node): 
 	node.set_custom_minimum_size(Vector2(node.rect_size.x*scaleFactor, node.rect_size.y*scaleFactor))

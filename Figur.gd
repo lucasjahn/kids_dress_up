@@ -25,8 +25,8 @@ onready var addToLookbookButton = sceneRoot.get_node('MainSceneContainer/ButtonL
 onready var openLookbookButton = sceneRoot.get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook') if sceneRoot.has_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook') else null
 onready var wardrobeHome = sceneRoot.get_node('MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu') if sceneRoot.has_node('MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu') else null
 onready var pictureFrameWrapper = sceneRoot.get_node('PictureFrameWrapper') if sceneRoot.has_node('PictureFrameWrapper') else null
-onready var pictureFrame = sceneRoot.get_node('PictureFrameWrapper/PictureFrame') if sceneRoot.has_node('PictureFrameWrapper/PictureFrame') else null
-onready var pictureFrameAnimation = sceneRoot.get_node('PictureFrameWrapper/PictureFrame/Animation') if sceneRoot.has_node('PictureFrameWrapper/PictureFrame/Animation') else null
+onready var pictureFrame = sceneRoot.get_node('PictureFrameWrapper/Node2D/PictureFrame') if sceneRoot.has_node('PictureFrameWrapper/Node2D/PictureFrame') else null
+onready var pictureFrameAnimation = sceneRoot.get_node('PictureFrameWrapper/Node2D/PictureFrame/Animation') if sceneRoot.has_node('PictureFrameWrapper/Node2D/PictureFrame/Animation') else null
 
 func _ready():
 	if deleteConfirmationScene:
@@ -41,10 +41,6 @@ func resetClothes():
 		if dressedItems[category]:
 			dressedItems[category].hide()
 			dressedItems[category] = null
-			
-	if deleteButton and addToLookbookButton and openLookbookButton:
-		deleteButton.hide()
-		addToLookbookButton.hide()
 
 func getTexture(category, itemName):
 	return load("%s/%s/%s.png" % [assetRootPath, category, itemName])
@@ -185,15 +181,13 @@ func save_to_lookbook():
 	
 func _duplicate_character(currentNode, targetNode):
 	var characterDuplicate = currentNode.duplicate()
-	var existingCharacter = targetNode.get_node('Figur') if targetNode.has_node('Figur') else null
+	var existingCharacter = targetNode.get_node('Character') if targetNode.has_node('Character') else null
 	
 	if existingCharacter:
 		targetNode.remove_child(existingCharacter)
 		existingCharacter.queue_free()
 
-	characterDuplicate.rect_position.x = 95
-	characterDuplicate.rect_position.y = 73
-	characterDuplicate.rect_scale.x = 0.4
-	characterDuplicate.rect_scale.y = 0.4
+	characterDuplicate.rect_position = Vector2(203, 123)
+	characterDuplicate.rect_scale = Vector2(0.4, 0.4)
 	
 	targetNode.add_child(characterDuplicate)

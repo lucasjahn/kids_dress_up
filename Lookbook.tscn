@@ -41,17 +41,22 @@ margin_right = 2048.0
 margin_bottom = 1536.0
 
 [node name="Header" type="HBoxContainer" parent="VBoxContainer"]
-editor/display_folded = true
 margin_right = 2048.0
 margin_bottom = 304.0
 size_flags_vertical = 0
 
 [node name="ButtonLeftContainer" type="MarginContainer" parent="VBoxContainer/Header"]
-editor/display_folded = true
 margin_right = 197.0
 margin_bottom = 304.0
 custom_constants/margin_top = 38
 custom_constants/margin_left = 38
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Header/ButtonLeftContainer"]
+margin_left = 38.0
+margin_top = 38.0
+margin_right = 197.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 159, 10 )
 
 [node name="ButtonHome" type="TextureButton" parent="VBoxContainer/Header/ButtonLeftContainer"]
 margin_left = 38.0
@@ -81,12 +86,17 @@ __meta__ = {
 }
 
 [node name="ButtonRightContainer" type="MarginContainer" parent="VBoxContainer/Header"]
-editor/display_folded = true
 margin_left = 1851.0
 margin_right = 2048.0
 margin_bottom = 304.0
 custom_constants/margin_right = 38
 custom_constants/margin_top = 38
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Header/ButtonRightContainer"]
+margin_top = 38.0
+margin_right = 159.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 159, 10 )
 
 [node name="ButtonDelete" type="TextureButton" parent="VBoxContainer/Header/ButtonRightContainer"]
 margin_top = 38.0
@@ -148,8 +158,12 @@ __meta__ = {
 
 [node name="Figur" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame1" instance=ExtResource( 11 )]
 visible = false
-margin_right = 979.0
-margin_bottom = 1395.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_top = 119.0
+margin_right = 621.0
+margin_bottom = 1309.0
+rect_min_size = Vector2( 168.4, 476 )
 rect_scale = Vector2( 0.4, 0.4 )
 
 [node name="Overlay" type="TextureRect" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame1"]
@@ -159,6 +173,7 @@ margin_right = 527.0
 margin_bottom = 652.0
 
 [node name="PictureFrame2" type="TextureButton" parent="VBoxContainer/PictureFrameWrapper/PictureFrames"]
+editor/display_folded = true
 margin_left = 687.0
 margin_right = 1284.0
 margin_bottom = 720.0
@@ -171,14 +186,18 @@ __meta__ = {
 
 [node name="Figur" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame2" instance=ExtResource( 11 )]
 visible = false
-margin_right = 979.0
-margin_bottom = 1395.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_top = 119.0
+margin_right = 621.0
+margin_bottom = 1309.0
+rect_min_size = Vector2( 168.4, 476 )
 rect_scale = Vector2( 0.4, 0.4 )
 
 [node name="Overlay" type="TextureRect" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame2"]
-margin_left = 58.0
+margin_left = 62.0
 margin_top = 62.0
-margin_right = 523.0
+margin_right = 527.0
 margin_bottom = 652.0
 
 [node name="PictureFrame3" type="TextureButton" parent="VBoxContainer/PictureFrameWrapper/PictureFrames"]
@@ -194,18 +213,21 @@ __meta__ = {
 
 [node name="Figur" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame3" instance=ExtResource( 11 )]
 visible = false
-margin_right = 979.0
-margin_bottom = 1395.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_top = 119.0
+margin_right = 621.0
+margin_bottom = 1309.0
+rect_min_size = Vector2( 168.4, 476 )
 rect_scale = Vector2( 0.4, 0.4 )
 
 [node name="Overlay" type="TextureRect" parent="VBoxContainer/PictureFrameWrapper/PictureFrames/PictureFrame3"]
-margin_left = 57.0
+margin_left = 62.0
 margin_top = 62.0
-margin_right = 522.0
+margin_right = 527.0
 margin_bottom = 652.0
 
 [node name="PictureDetailFooterControls" type="CenterContainer" parent="VBoxContainer"]
-editor/display_folded = true
 visible = false
 margin_top = 1235.0
 margin_right = 2048.0

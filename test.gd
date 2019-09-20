@@ -13,18 +13,21 @@ onready var wardrobe = mainSceneContainer.get_node('Wardrobe')
 onready var character = mainSceneContainer.get_node('CharacterContainer/Character')
 onready var clickSfx = $Sfx/Click
 onready var buttonMute = mainSceneContainer.get_node('ButtonLeftContainer/VBoxContainer/ButtonsTop/ButtonMute')
+onready var buttonMuteCharacterSelection = $CharacterSelection/MuteButtonWrapper/MuteButton
 onready var lookbook = $Lookbook
 
 func _ready():
 	characterTextures = {
-		'CharacterFemale1': preload("res://assets/characterfemale1.png"),
-		'CharacterFemale2': preload("res://assets/characterfemale2.png"),
-		'CharacterMale1': preload("res://assets/charactermale1.png"),
+		'CharacterFemale1': preload("res://assets/btn_characterfemale1.png"),
+		'CharacterFemale2': preload("res://assets/btn_characterfemale2.png"),
+		'CharacterMale1': preload("res://assets/btn_charactermale1.png"),
 	}
 	
 	wardrobe.connect("changed_color", self, "_on_Wardrobe_changed_color")
 	
 	lookbook.connect("backToHome", self, "_on_backToHome")
+	
+	buttonMuteCharacterSelection.connect("pressed", self, "_on_ButtonMute_pressed")
 	
 	characterSelection.connect("character_selected", self, "_on_CharacterSelection_character_selected")
 	
@@ -70,8 +73,10 @@ func _on_ButtonMute_pressed():
 	
 	if toggleGameSounds():
 		buttonMute.texture_normal = load(buttonTextures.mute)
+		buttonMuteCharacterSelection.texture_normal = load(buttonTextures.mute)
 	else:
 		buttonMute.texture_normal = load(buttonTextures.unmute)
+		buttonMuteCharacterSelection.texture_normal = load(buttonTextures.unmute)
 
 
 func _on_ButtonLookbook_pressed():
