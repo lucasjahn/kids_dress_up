@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://TimerSettings.gd" type="Script" id=1]
 [ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=2]
@@ -7,10 +7,13 @@
 [ext_resource path="res://assets/timer_icon.png" type="Texture" id=5]
 [ext_resource path="res://assets/graham.tres" type="DynamicFont" id=6]
 [ext_resource path="res://assets/timer_ten_min.png" type="Texture" id=7]
-[ext_resource path="res://TimeoutBtn.gd" type="Script" id=8]
-[ext_resource path="res://assets/timer_twenty_min.png" type="Texture" id=9]
-[ext_resource path="res://assets/timer_thirty_min.png" type="Texture" id=10]
-[ext_resource path="res://assets/close_scene.png" type="Texture" id=11]
+[ext_resource path="res://assets/timer_pressed_10.png" type="Texture" id=8]
+[ext_resource path="res://TimeoutBtn.gd" type="Script" id=9]
+[ext_resource path="res://assets/timer_twenty_min.png" type="Texture" id=10]
+[ext_resource path="res://assets/timer_pressed_20.png" type="Texture" id=11]
+[ext_resource path="res://assets/timer_thirty_min.png" type="Texture" id=12]
+[ext_resource path="res://assets/timer_pressed_30.png" type="Texture" id=13]
+[ext_resource path="res://assets/close_scene.png" type="Texture" id=14]
 
 [node name="TimerSettings" type="MarginContainer"]
 margin_right = 2048.0
@@ -102,23 +105,26 @@ margin_left = 230.0
 margin_right = 548.0
 margin_bottom = 234.0
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+script = ExtResource( 9 )
 wait_time = 600
 
 [node name="Twenty" type="TextureButton" parent="TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer"]
 margin_left = 628.0
 margin_right = 945.0
 margin_bottom = 234.0
-texture_normal = ExtResource( 9 )
-script = ExtResource( 8 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+script = ExtResource( 9 )
 wait_time = 1200
 
 [node name="Thirty" type="TextureButton" parent="TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer"]
 margin_left = 1025.0
 margin_right = 1342.0
 margin_bottom = 234.0
-texture_normal = ExtResource( 10 )
-script = ExtResource( 8 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+script = ExtResource( 9 )
 wait_time = 1800
 
 [node name="Close" type="TextureButton" parent="TextureRect/CenterContainer/TextureRect"]
@@ -126,7 +132,7 @@ margin_left = 1385.35
 margin_top = 77.5992
 margin_right = 1487.35
 margin_bottom = 178.599
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 14 )
 [connection signal="pressed" from="TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer/Ten" to="." method="_on_Ten_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer/Twenty" to="." method="_on_Twenty_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer/Thirty" to="." method="_on_Thirty_pressed"]

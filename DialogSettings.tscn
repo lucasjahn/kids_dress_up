@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://DialogSettings.gd" type="Script" id=1]
 [ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=2]
@@ -8,11 +8,16 @@
 [ext_resource path="res://assets/icon_settings.png" type="Texture" id=6]
 [ext_resource path="res://assets/graham.tres" type="DynamicFont" id=7]
 [ext_resource path="res://assets/btn_1.png" type="Texture" id=8]
-[ext_resource path="res://assets/btn_2.png" type="Texture" id=9]
-[ext_resource path="res://assets/btn_3.png" type="Texture" id=10]
-[ext_resource path="res://assets/btn_4.png" type="Texture" id=11]
-[ext_resource path="res://assets/btn_5.png" type="Texture" id=12]
-[ext_resource path="res://assets/close_scene.png" type="Texture" id=13]
+[ext_resource path="res://assets/btn_pressed_1.png" type="Texture" id=9]
+[ext_resource path="res://assets/btn_2.png" type="Texture" id=10]
+[ext_resource path="res://assets/btn_pressed_2.png" type="Texture" id=11]
+[ext_resource path="res://assets/btn_3.png" type="Texture" id=12]
+[ext_resource path="res://assets/btn_pressed_3.png" type="Texture" id=13]
+[ext_resource path="res://assets/btn_4.png" type="Texture" id=14]
+[ext_resource path="res://assets/btn_pressed_4.png" type="Texture" id=15]
+[ext_resource path="res://assets/btn_5.png" type="Texture" id=16]
+[ext_resource path="res://assets/btn_pressed_5.png" type="Texture" id=17]
+[ext_resource path="res://assets/close_scene.png" type="Texture" id=18]
 
 [sub_resource type="Animation" id=1]
 resource_name = "WobbleWindow"
@@ -168,7 +173,6 @@ custom_colors/font_color = Color( 0.666667, 0.4, 0.647059, 1 )
 text = "FÜNF"
 
 [node name="CodeButtons" type="MarginContainer" parent="TextureRect/CenterContainer/TextureRect/VBoxContainer"]
-editor/display_folded = true
 margin_top = 766.0
 margin_right = 1572.0
 margin_bottom = 1021.0
@@ -186,37 +190,42 @@ margin_left = 131.0
 margin_right = 361.0
 margin_bottom = 230.0
 texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
 
 [node name="ZWEI" type="TextureButton" parent="TextureRect/CenterContainer/TextureRect/VBoxContainer/CodeButtons/HBoxContainer"]
 margin_left = 401.0
 margin_right = 631.0
 margin_bottom = 230.0
-texture_normal = ExtResource( 9 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
 
 [node name="DREI" type="TextureButton" parent="TextureRect/CenterContainer/TextureRect/VBoxContainer/CodeButtons/HBoxContainer"]
 margin_left = 671.0
 margin_right = 901.0
 margin_bottom = 230.0
-texture_normal = ExtResource( 10 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
 
 [node name="VIER" type="TextureButton" parent="TextureRect/CenterContainer/TextureRect/VBoxContainer/CodeButtons/HBoxContainer"]
 margin_left = 941.0
 margin_right = 1171.0
 margin_bottom = 230.0
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
 
 [node name="FÜNF" type="TextureButton" parent="TextureRect/CenterContainer/TextureRect/VBoxContainer/CodeButtons/HBoxContainer"]
 margin_left = 1211.0
 margin_right = 1441.0
 margin_bottom = 230.0
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
 
 [node name="Close" type="TextureButton" parent="TextureRect/CenterContainer/TextureRect"]
 margin_left = 1385.35
 margin_top = 77.5992
 margin_right = 1487.35
 margin_bottom = 178.599
-texture_normal = ExtResource( 13 )
+texture_normal = ExtResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/CenterContainer/TextureRect"]
 anims/WobbleWindow = SubResource( 1 )
