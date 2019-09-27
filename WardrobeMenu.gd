@@ -5,7 +5,7 @@ signal resetCharacterSelection
 signal showLookbook
 
 onready var clickSfx = get_tree().get_root().get_node('Main/Sfx/Click')
-onready var deleteButton = get_tree().get_root().get_node('Main/MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBottom/ButtonDelete')
+onready var deleteButton = get_tree().get_root().get_node('Main/MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBotton/ButtonDelete')
 onready var addToLookbookButton = get_tree().get_root().get_node('Main/MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook')
 
 func _ready():

@@ -1,0 +1,88 @@
+extends MarginContainer
+
+
+var code_list = ["EINS", "ZWEI", "DREI", "VIER", "FÜNF"]
+var code_sequence = []
+var press_count = 0
+var pressed_btns_sequence = [] 
+var dialog_text = {
+	"type_code":"Dieser Bereich ist geschützt\nBitte tippen Sie ein:",
+	"timed_out":"Die Spielzeit ist abgelaufen\nZum Verlängern tippen Sie ein:"
+}
+
+onready var label_list = $TextureRect/CenterContainer/TextureRect/VBoxContainer/CodeSequence/HBoxCodeSequence
+onready var btn_list = $TextureRect/CenterContainer/TextureRect/VBoxContainer/CodeButtons/HBoxContainer
+onready var animation_player = $TextureRect/CenterContainer/TextureRect/AnimationPlayer
+onready var timer = self.get_parent().get_node("TimerSettings")
+onready var close_btn = $TextureRect/CenterContainer/TextureRect/Close
+onready var dialog_box = $TextureRect/CenterContainer/TextureRect
+onready var label = $TextureRect/CenterContainer/TextureRect/VBoxContainer/Text/MarginContainer/Label
+
+func _ready():
+	for btn in btn_list.get_children():
+		btn.connect("pressed", self, "_on_buttonPressed", [btn.get_name()])
+
+
+func _on_buttonPressed(btn_name):
+	press_count += 1
+	
+	pressed_btns_sequence.append(btn_name)
+	
+	if press_count == 4:
+		check_code()	
+		
+
+func check_code():
+	press_count = 0
+
+	if pressed_btns_sequence == code_sequence:
+		self.hide()
+		timer.show()
+	else: 
+		animation_player.play("WobbleWindow")
+
+
+func open_scene():
+	_reset_code()
+	generate_codes()
+	
+	if timer.is_timed_out:
+		label.text = dialog_text.timed_out
+		close_btn.hide()
+	else:
+		label.text = dialog_text.type_code
+		close_btn.show()
+	
+	self.show()
+	
+	
+func generate_codes():
+	for label in label_list.get_children(): 
+		_write_code_to_label(label, _generate_single_code())
+
+
+func _generate_single_code():
+	var code = null
+	randomize()
+	code = code_list[randi() % code_list.size()]
+	code_sequence.append(code)
+	return code
+	
+	
+func _write_code_to_label(label_node,code):
+	label_node.text = code
+
+func _reset_code():
+	code_sequence = []
+	pressed_btns_sequence = []
+	press_count = 0
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	animation_player.stop(true)
+	_reset_code()
+	generate_codes()
+
+
+func _on_Close_pressed():
+	_reset_code()
+	self.hide()
