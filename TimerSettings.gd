@@ -25,6 +25,7 @@ func _on_buttonPressed(wait_time):
 func _on_timeout():
 	is_timed_out = true
 	self.get_parent().get_node("DialogSettings").open_scene()
+	self.hide()
 	
 	
 func _on_Close_pressed():

@@ -48,7 +48,7 @@ func check_code():
 		animation_player.play("WobbleWindow")
 
 
-func open_scene(play_sound):
+func open_scene(play_sound=false):
 	if play_sound:
 		clickSfx.play(0)
 		
