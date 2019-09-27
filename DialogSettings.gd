@@ -10,6 +10,8 @@ var dialog_text = {
 	"timed_out":"Die Spielzeit ist abgelaufen\nZum Verlängern tippen Sie ein:"
 }
 
+onready var clickSfx = $Sfx/Click
+onready var wrongSfx = $Sfx/Wrong
 onready var label_list = $TextureRect/CenterContainer/TextureRect/VBoxContainer/CodeSequence/HBoxCodeSequence
 onready var btn_list = $TextureRect/CenterContainer/TextureRect/VBoxContainer/CodeButtons/HBoxContainer
 onready var animation_player = $TextureRect/CenterContainer/TextureRect/AnimationPlayer
@@ -30,19 +32,26 @@ func _on_buttonPressed(btn_name):
 	
 	if press_count == 4:
 		check_code()	
+	else: 
+		clickSfx.play(0)
 		
 
 func check_code():
 	press_count = 0
 
 	if pressed_btns_sequence == code_sequence:
+		clickSfx.play(0)
 		self.hide()
 		timer.show()
 	else: 
+		wrongSfx.play(0)
 		animation_player.play("WobbleWindow")
 
 
-func open_scene():
+func open_scene(play_sound):
+	if play_sound:
+		clickSfx.play(0)
+		
 	_reset_code()
 	generate_codes()
 	
@@ -84,5 +93,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 
 func _on_Close_pressed():
+	clickSfx.play(0)
 	_reset_code()
 	self.hide()

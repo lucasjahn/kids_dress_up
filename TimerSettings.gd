@@ -3,6 +3,7 @@ extends MarginContainer
 var timer = null
 var is_timed_out = false
 
+onready var clickSfx = $Sfx/Click
 onready var timer_btn_list = $TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer
 
 func _ready():
@@ -14,6 +15,7 @@ func _ready():
 		timer_btn.connect("pressed", self, "_on_buttonPressed", [timer_btn.wait_time])
 		
 func _on_buttonPressed(wait_time):
+	clickSfx.play(0)
 	is_timed_out = false
 	timer.set_wait_time(wait_time)
 	timer.start()
@@ -26,6 +28,7 @@ func _on_timeout():
 	
 	
 func _on_Close_pressed():
+	clickSfx.play(0)
 	is_timed_out = false
 	self.hide()
 	

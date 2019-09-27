@@ -192,7 +192,6 @@ __meta__ = {
 }
 
 [node name="Sfx" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 2 )
@@ -233,6 +232,7 @@ margin_bottom = 1498.0
 size_flags_horizontal = 0
 
 [node name="ButtonsTop" type="VBoxContainer" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer"]
+editor/display_folded = true
 margin_right = 164.0
 margin_bottom = 1295.0
 size_flags_vertical = 3
@@ -250,6 +250,7 @@ margin_bottom = 158.0
 texture_normal = ExtResource( 6 )
 
 [node name="ButtonsBottom" type="VBoxContainer" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer"]
+editor/display_folded = true
 margin_top = 1299.0
 margin_right = 164.0
 margin_bottom = 1460.0
@@ -292,7 +293,6 @@ size_flags_horizontal = 13
 size_flags_vertical = 13
 
 [node name="ButtonRightContainer" type="MarginContainer" parent="MainSceneContainer"]
-editor/display_folded = true
 margin_left = 806.0
 margin_right = 1003.0
 margin_bottom = 1536.0
@@ -1179,6 +1179,7 @@ texture = ExtResource( 56 )
 expand = true
 
 [node name="Node2D" type="Node2D" parent="PictureFrameWrapper"]
+editor/display_folded = true
 visible = false
 
 [node name="PictureFrame" type="TextureRect" parent="PictureFrameWrapper/Node2D"]
@@ -1208,7 +1209,7 @@ margin_bottom = 1536.0
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook" to="." method="_on_ButtonLookbook_pressed"]
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook" to="MainSceneContainer/CharacterContainer/Character" method="save_to_lookbook"]
 [connection signal="lookbook_is_full" from="MainSceneContainer/CharacterContainer/Character" to="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook" method="show_lookbook_full"]
-[connection signal="pressed" from="MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsTop/ButtonSettings" to="DialogSettings" method="open_scene"]
+[connection signal="pressed" from="MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsTop/ButtonSettings" to="DialogSettings" method="open_scene" binds= [ true ]]
 [connection signal="pressed" from="MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBotton/ButtonDelete" to="MainSceneContainer/CharacterContainer/Character" method="_on_ButtonDelete_pressed"]
 [connection signal="categorySelected" from="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu" to="MainSceneContainer/Wardrobe" method="openWardrobe"]
 [connection signal="pressed" from="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol4/ButtonCharacterSelection" to="." method="resetCharacter"]

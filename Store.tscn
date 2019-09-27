@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/btn_close_store.png" type="Texture" id=5]
 
 [node name="Store" type="MarginContainer"]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
