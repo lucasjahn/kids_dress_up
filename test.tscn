@@ -1199,7 +1199,6 @@ anims/PictureFrameAnimation = SubResource( 2 )
 visible = false
 
 [node name="Store" parent="." instance=ExtResource( 59 )]
-visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 2048.0
