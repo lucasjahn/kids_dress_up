@@ -1,13 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Store.gd" type="Script" id=1]
 [ext_resource path="res://assets/black_overlay_bg.png" type="Texture" id=2]
 [ext_resource path="res://assets/in_app_purchases.png" type="Texture" id=3]
 [ext_resource path="res://assets/btn_buy.png" type="Texture" id=4]
-[ext_resource path="res://BuyButton.gd" type="Script" id=5]
-[ext_resource path="res://assets/btn_close_store.png" type="Texture" id=6]
+[ext_resource path="res://assets/btn_close_store.png" type="Texture" id=5]
 
 [node name="Store" type="MarginContainer"]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -25,56 +25,66 @@ margin_right = 2048.0
 margin_bottom = 1536.0
 
 [node name="StoreRect" type="TextureRect" parent="StoreWrapper"]
-margin_left = 146.0
-margin_top = 146.0
-margin_right = 1902.0
-margin_bottom = 1390.0
+margin_left = 53.0
+margin_top = 190.0
+margin_right = 1994.0
+margin_bottom = 1345.0
 texture = ExtResource( 3 )
 
 [node name="Container" type="MarginContainer" parent="StoreWrapper/StoreRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_right = 280
-custom_constants/margin_top = 920
-custom_constants/margin_left = 505
+custom_constants/margin_right = 190
+custom_constants/margin_top = 820
+custom_constants/margin_left = 400
 
 [node name="ButtonsContainer" type="HBoxContainer" parent="StoreWrapper/StoreRect/Container"]
-margin_left = 505.0
-margin_top = 920.0
-margin_right = 1476.0
-margin_bottom = 1244.0
+margin_left = 400.0
+margin_top = 820.0
+margin_right = 1751.0
+margin_bottom = 1155.0
 
 [node name="ButtonPackage1" type="MarginContainer" parent="StoreWrapper/StoreRect/Container/ButtonsContainer"]
-margin_right = 756.0
+editor/display_folded = true
+margin_right = 566.0
 margin_bottom = 124.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 
 [node name="TextureButton" type="TextureButton" parent="StoreWrapper/StoreRect/Container/ButtonsContainer/ButtonPackage1"]
-margin_right = 211.0
+margin_right = 566.0
 margin_bottom = 124.0
-size_flags_horizontal = 0
 texture_normal = ExtResource( 4 )
-script = ExtResource( 5 )
-product_id = "de.krautnerds.dressup.package1"
 
 [node name="ButtonPackage2" type="MarginContainer" parent="StoreWrapper/StoreRect/Container/ButtonsContainer"]
-margin_left = 760.0
-margin_right = 971.0
+editor/display_folded = true
+margin_left = 570.0
+margin_right = 1136.0
 margin_bottom = 124.0
+size_flags_horizontal = 3
 size_flags_vertical = 0
 
 [node name="TextureButton2" type="TextureButton" parent="StoreWrapper/StoreRect/Container/ButtonsContainer/ButtonPackage2"]
+margin_right = 566.0
+margin_bottom = 124.0
+texture_normal = ExtResource( 4 )
+
+[node name="ButtonPackage3" type="MarginContainer" parent="StoreWrapper/StoreRect/Container/ButtonsContainer"]
+editor/display_folded = true
+margin_left = 1140.0
+margin_right = 1351.0
+margin_bottom = 124.0
+size_flags_vertical = 0
+
+[node name="TextureButton3" type="TextureButton" parent="StoreWrapper/StoreRect/Container/ButtonsContainer/ButtonPackage3"]
 margin_right = 211.0
 margin_bottom = 124.0
 texture_normal = ExtResource( 4 )
-script = ExtResource( 5 )
-product_id = "de.krautnerds.dressup.package2"
 
 [node name="CloseButton" type="TextureButton" parent="StoreWrapper/StoreRect"]
-margin_left = 1616.0
+margin_left = 1800.01
 margin_top = -23.7487
-margin_right = 1775.0
+margin_right = 1959.01
 margin_bottom = 135.251
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 5 )
 [connection signal="pressed" from="StoreWrapper/StoreRect/CloseButton" to="." method="_on_CloseButton_pressed"]

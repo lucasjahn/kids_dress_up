@@ -1,64 +1,78 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://assets/sounds/background_music.ogg" type="AudioStream" id=2]
 [ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/bg_room.png" type="Texture" id=4]
 [ext_resource path="res://assets/btn_home.png" type="Texture" id=5]
-[ext_resource path="res://assets/btn_mute.png" type="Texture" id=6]
-[ext_resource path="res://assets/btn_lookbook_small.png" type="Texture" id=7]
-[ext_resource path="res://ButtonOpenLookbook.gd" type="Script" id=8]
-[ext_resource path="res://assets/sounds/Bad Answer 13.wav" type="AudioStream" id=9]
-[ext_resource path="res://assets/btn_save_look.png" type="Texture" id=10]
-[ext_resource path="res://Figur.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/btn_settings.png" type="Texture" id=12]
-[ext_resource path="res://assets/btn_delete.png" type="Texture" id=13]
-[ext_resource path="res://Kleiderschrank.gd" type="Script" id=14]
-[ext_resource path="res://assets/bg_schrank.png" type="Texture" id=15]
-[ext_resource path="res://WardrobeMenu.gd" type="Script" id=16]
-[ext_resource path="res://assets/btn_cat_dresses.png" type="Texture" id=17]
-[ext_resource path="res://assets/btn_cat_shoes.png" type="Texture" id=18]
-[ext_resource path="res://assets/btn_cat_tops.png" type="Texture" id=19]
-[ext_resource path="res://assets/btn_cat_pants.png" type="Texture" id=20]
-[ext_resource path="res://assets/btn_cat_special.png" type="Texture" id=21]
-[ext_resource path="res://assets/btn_choose_character.png" type="Texture" id=22]
-[ext_resource path="res://assets/btn_lookbook.png" type="Texture" id=23]
-[ext_resource path="res://assets/wardrobe_open_bg.png" type="Texture" id=24]
-[ext_resource path="res://Tops.gd" type="Script" id=25]
-[ext_resource path="res://assets/wardrobe/dresses/blue/dress1.png" type="Texture" id=26]
-[ext_resource path="res://assets/wardrobe/dresses/blue/dress2.png" type="Texture" id=27]
-[ext_resource path="res://assets/wardrobe/dresses/blue/dress3.png" type="Texture" id=28]
-[ext_resource path="res://assets/wardrobe/tops/blue/top1.png" type="Texture" id=29]
-[ext_resource path="res://assets/wardrobe/tops/blue/tshirt1.png" type="Texture" id=30]
-[ext_resource path="res://assets/wardrobe/tops/blue/tshirt2.png" type="Texture" id=31]
-[ext_resource path="res://assets/wardrobe/tops/blue/pullover1.png" type="Texture" id=32]
-[ext_resource path="res://assets/wardrobe/pants/blue/pantslong1.png" type="Texture" id=33]
-[ext_resource path="res://assets/wardrobe/pants/blue/pantslong2.png" type="Texture" id=34]
-[ext_resource path="res://assets/wardrobe/pants/blue/pantsshort1.png" type="Texture" id=35]
-[ext_resource path="res://assets/wardrobe/pants/blue/pantsshort2.png" type="Texture" id=36]
-[ext_resource path="res://assets/wardrobe/shoes/blue/btn_shoes1.png" type="Texture" id=37]
-[ext_resource path="res://assets/wardrobe/shoes/blue/btn_shoes2.png" type="Texture" id=38]
-[ext_resource path="res://assets/wardrobe/shoes/blue/btn_shoes3.png" type="Texture" id=39]
-[ext_resource path="res://assets/wardrobe/shoes/blue/btn_shoes4.png" type="Texture" id=40]
-[ext_resource path="res://assets/wardrobe/special/star.png" type="Texture" id=41]
-[ext_resource path="res://assets/wardrobe/special/heart.png" type="Texture" id=42]
-[ext_resource path="res://assets/wardrobe/special/amerindian.png" type="Texture" id=43]
-[ext_resource path="res://assets/wardrobe/special/fairy.png" type="Texture" id=44]
-[ext_resource path="res://assets/wardrobe/special/astronaut.png" type="Texture" id=45]
-[ext_resource path="res://assets/wardrobe/special/peterpan.png" type="Texture" id=46]
-[ext_resource path="res://SidebarMenu.gd" type="Script" id=47]
-[ext_resource path="res://assets/btn_color.png" type="Texture" id=48]
-[ext_resource path="res://assets/wardrobe/dresses/blue/dress4.png" type="Texture" id=49]
-[ext_resource path="res://CategorySelection.gd" type="Script" id=50]
-[ext_resource path="res://CharacterSelection.tscn" type="PackedScene" id=51]
-[ext_resource path="res://ColorPicker.tscn" type="PackedScene" id=52]
-[ext_resource path="res://Lookbook.tscn" type="PackedScene" id=53]
-[ext_resource path="res://DialogConfirmationDelete.tscn" type="PackedScene" id=54]
-[ext_resource path="res://DialogSettings.tscn" type="PackedScene" id=55]
-[ext_resource path="res://assets/black_overlay_bg.png" type="Texture" id=56]
-[ext_resource path="res://assets/picture_frame.png" type="Texture" id=57]
-[ext_resource path="res://TimerSettings.tscn" type="PackedScene" id=58]
-[ext_resource path="res://Store.tscn" type="PackedScene" id=59]
+[ext_resource path="res://assets/btn_home_pressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/btn_mute.png" type="Texture" id=7]
+[ext_resource path="res://assets/btn_mute_pressed.png" type="Texture" id=8]
+[ext_resource path="res://assets/btn_lookbook_small.png" type="Texture" id=9]
+[ext_resource path="res://assets/btn_lookbook_small_pressed.png" type="Texture" id=10]
+[ext_resource path="res://ButtonOpenLookbook.gd" type="Script" id=11]
+[ext_resource path="res://assets/sounds/Bad Answer 13.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/btn_save_look.png" type="Texture" id=13]
+[ext_resource path="res://assets/btn_save_look_pressed.png" type="Texture" id=14]
+[ext_resource path="res://Figur.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/btn_settings.png" type="Texture" id=16]
+[ext_resource path="res://assets/btn_settings_pressed.png" type="Texture" id=17]
+[ext_resource path="res://assets/btn_delete.png" type="Texture" id=18]
+[ext_resource path="res://assets/btn_delete_pressed.png" type="Texture" id=19]
+[ext_resource path="res://Kleiderschrank.gd" type="Script" id=20]
+[ext_resource path="res://assets/bg_schrank.png" type="Texture" id=21]
+[ext_resource path="res://WardrobeMenu.gd" type="Script" id=22]
+[ext_resource path="res://assets/btn_cat_dresses.png" type="Texture" id=23]
+[ext_resource path="res://assets/btn_cat_dresses_pressed.png" type="Texture" id=24]
+[ext_resource path="res://assets/btn_cat_shoes.png" type="Texture" id=25]
+[ext_resource path="res://assets/btn_cat_shoes_pressed.png" type="Texture" id=26]
+[ext_resource path="res://assets/btn_cat_tops.png" type="Texture" id=27]
+[ext_resource path="res://assets/btn_cat_tops_pressed.png" type="Texture" id=28]
+[ext_resource path="res://assets/btn_cat_pants.png" type="Texture" id=29]
+[ext_resource path="res://assets/btn_cat_pants_pressed.png" type="Texture" id=30]
+[ext_resource path="res://assets/btn_cat_special.png" type="Texture" id=31]
+[ext_resource path="res://assets/btn_cat_special_pressed.png" type="Texture" id=32]
+[ext_resource path="res://assets/btn_choose_character.png" type="Texture" id=33]
+[ext_resource path="res://assets/btn_choose_character_pressed.png" type="Texture" id=34]
+[ext_resource path="res://assets/btn_lookbook.png" type="Texture" id=35]
+[ext_resource path="res://assets/btn_lookbook_pressed.png" type="Texture" id=36]
+[ext_resource path="res://assets/wardrobe_open_bg.png" type="Texture" id=37]
+[ext_resource path="res://Tops.gd" type="Script" id=38]
+[ext_resource path="res://assets/wardrobe/dresses/blue/dress1.png" type="Texture" id=39]
+[ext_resource path="res://assets/wardrobe/dresses/blue/dress2.png" type="Texture" id=40]
+[ext_resource path="res://assets/wardrobe/dresses/blue/dress3.png" type="Texture" id=41]
+[ext_resource path="res://assets/wardrobe/tops/blue/top1.png" type="Texture" id=42]
+[ext_resource path="res://assets/wardrobe/tops/blue/tshirt1.png" type="Texture" id=43]
+[ext_resource path="res://assets/wardrobe/tops/blue/tshirt2.png" type="Texture" id=44]
+[ext_resource path="res://assets/wardrobe/tops/blue/pullover1.png" type="Texture" id=45]
+[ext_resource path="res://assets/wardrobe/pants/blue/pantslong1.png" type="Texture" id=46]
+[ext_resource path="res://assets/wardrobe/pants/blue/pantslong2.png" type="Texture" id=47]
+[ext_resource path="res://assets/wardrobe/pants/blue/pantsshort1.png" type="Texture" id=48]
+[ext_resource path="res://assets/wardrobe/pants/blue/pantsshort2.png" type="Texture" id=49]
+[ext_resource path="res://assets/wardrobe/shoes/blue/btn_shoes1.png" type="Texture" id=50]
+[ext_resource path="res://assets/wardrobe/shoes/blue/btn_shoes2.png" type="Texture" id=51]
+[ext_resource path="res://assets/wardrobe/shoes/blue/btn_shoes3.png" type="Texture" id=52]
+[ext_resource path="res://assets/wardrobe/shoes/blue/btn_shoes4.png" type="Texture" id=53]
+[ext_resource path="res://assets/wardrobe/special/star.png" type="Texture" id=54]
+[ext_resource path="res://assets/wardrobe/special/heart.png" type="Texture" id=55]
+[ext_resource path="res://assets/wardrobe/special/amerindian.png" type="Texture" id=56]
+[ext_resource path="res://assets/wardrobe/special/fairy.png" type="Texture" id=57]
+[ext_resource path="res://assets/wardrobe/special/astronaut.png" type="Texture" id=58]
+[ext_resource path="res://assets/wardrobe/special/peterpan.png" type="Texture" id=59]
+[ext_resource path="res://SidebarMenu.gd" type="Script" id=60]
+[ext_resource path="res://assets/btn_color.png" type="Texture" id=61]
+[ext_resource path="res://assets/btn_color_pressed.png" type="Texture" id=62]
+[ext_resource path="res://assets/wardrobe/dresses/blue/dress4.png" type="Texture" id=63]
+[ext_resource path="res://CategorySelection.gd" type="Script" id=64]
+[ext_resource path="res://CharacterSelection.tscn" type="PackedScene" id=65]
+[ext_resource path="res://ColorPicker.tscn" type="PackedScene" id=66]
+[ext_resource path="res://Lookbook.tscn" type="PackedScene" id=67]
+[ext_resource path="res://DialogConfirmationDelete.tscn" type="PackedScene" id=68]
+[ext_resource path="res://DialogSettings.tscn" type="PackedScene" id=69]
+[ext_resource path="res://assets/black_overlay_bg.png" type="Texture" id=70]
+[ext_resource path="res://assets/picture_frame.png" type="Texture" id=71]
+[ext_resource path="res://TimerSettings.tscn" type="PackedScene" id=72]
+[ext_resource path="res://Store.tscn" type="PackedScene" id=73]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Wobble"
@@ -84,7 +98,7 @@ tracks/1/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource( 9 )
+"stream": ExtResource( 12 )
 } ],
 "times": PoolRealArray( 0 )
 }
@@ -216,7 +230,6 @@ margin_right = 2048.0
 margin_bottom = 1536.0
 
 [node name="ButtonLeftContainer" type="MarginContainer" parent="MainSceneContainer"]
-editor/display_folded = true
 margin_right = 202.0
 margin_bottom = 1536.0
 rect_min_size = Vector2( 202, 0 )
@@ -227,14 +240,13 @@ custom_constants/margin_bottom = 38
 [node name="VBoxContainer" type="VBoxContainer" parent="MainSceneContainer/ButtonLeftContainer"]
 margin_left = 38.0
 margin_top = 38.0
-margin_right = 202.0
+margin_right = 197.0
 margin_bottom = 1498.0
 size_flags_horizontal = 0
 
 [node name="ButtonsTop" type="VBoxContainer" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer"]
-editor/display_folded = true
-margin_right = 164.0
-margin_bottom = 1295.0
+margin_right = 159.0
+margin_bottom = 1297.0
 size_flags_vertical = 3
 custom_constants/separation = 18
 
@@ -243,30 +255,32 @@ visible = false
 margin_right = 164.0
 margin_bottom = 158.0
 texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
 
 [node name="ButtonMute" type="TextureButton" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsTop"]
-margin_right = 164.0
-margin_bottom = 158.0
-texture_normal = ExtResource( 6 )
+margin_right = 159.0
+margin_bottom = 159.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
 [node name="ButtonsBottom" type="VBoxContainer" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer"]
-editor/display_folded = true
-margin_top = 1299.0
-margin_right = 164.0
+margin_top = 1301.0
+margin_right = 159.0
 margin_bottom = 1460.0
 custom_constants/separation = 18
 
 [node name="ButtonOpenLookbook" type="TextureButton" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom"]
-margin_right = 164.0
-margin_bottom = 161.0
-texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
+margin_right = 159.0
+margin_bottom = 159.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+script = ExtResource( 11 )
 
 [node name="Animation" type="AnimationPlayer" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook"]
 anims/Wobble = SubResource( 1 )
 
 [node name="WrongSfx" type="AudioStreamPlayer" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook"]
-stream = ExtResource( 9 )
+stream = ExtResource( 12 )
 volume_db = -5.0
 
 [node name="ButtonSaveToLookbook" type="TextureButton" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom"]
@@ -274,7 +288,8 @@ visible = false
 margin_top = 179.0
 margin_right = 164.0
 margin_bottom = 337.0
-texture_normal = ExtResource( 10 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
 
 [node name="CharacterContainer" type="CenterContainer" parent="MainSceneContainer"]
 editor/display_folded = true
@@ -283,7 +298,7 @@ margin_right = 802.0
 margin_bottom = 1536.0
 size_flags_horizontal = 3
 
-[node name="Character" parent="MainSceneContainer/CharacterContainer" instance=ExtResource( 11 )]
+[node name="Character" parent="MainSceneContainer/CharacterContainer" instance=ExtResource( 15 )]
 anchor_bottom = 0.0
 margin_left = 87.0
 margin_top = 173.0
@@ -310,36 +325,39 @@ alignment = 2
 
 [node name="ButtonsTop" type="VBoxContainer" parent="MainSceneContainer/ButtonRightContainer/VBoxContainer"]
 margin_right = 159.0
-margin_bottom = 1298.0
+margin_bottom = 1456.0
 size_flags_vertical = 3
 
 [node name="ButtonSettings" type="TextureButton" parent="MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsTop"]
 margin_right = 159.0
 margin_bottom = 159.0
-texture_normal = ExtResource( 12 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
 
 [node name="ButtonsBotton" type="VBoxContainer" parent="MainSceneContainer/ButtonRightContainer/VBoxContainer"]
-margin_top = 1302.0
+margin_top = 1460.0
 margin_right = 159.0
 margin_bottom = 1460.0
 custom_constants/separation = 18
 
 [node name="ButtonDelete" type="TextureButton" parent="MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBotton"]
+visible = false
 margin_right = 159.0
-margin_bottom = 158.0
-texture_normal = ExtResource( 13 )
+margin_bottom = 159.0
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 19 )
 
 [node name="Wardrobe" type="MarginContainer" parent="MainSceneContainer"]
 editor/display_folded = true
 margin_left = 1007.0
 margin_right = 2048.0
 margin_bottom = 1536.0
-script = ExtResource( 14 )
+script = ExtResource( 20 )
 
 [node name="WardrobeBackground" type="TextureRect" parent="MainSceneContainer/Wardrobe"]
 margin_right = 1041.0
 margin_bottom = 1536.0
-texture = ExtResource( 15 )
+texture = ExtResource( 21 )
 
 [node name="WardrobeMenuContainer" type="MarginContainer" parent="MainSceneContainer/Wardrobe"]
 editor/display_folded = true
@@ -349,86 +367,89 @@ custom_constants/margin_top = 38
 custom_constants/margin_bottom = 38
 
 [node name="WardrobeMenu" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer"]
-editor/display_folded = true
 margin_top = 38.0
 margin_right = 1041.0
 margin_bottom = 1498.0
-script = ExtResource( 16 )
+script = ExtResource( 22 )
 
 [node name="WardrobeMenuContainerCol" type="HBoxContainer" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu"]
-editor/display_folded = true
 margin_right = 1041.0
-margin_bottom = 367.0
+margin_bottom = 364.0
 size_flags_vertical = 3
 custom_constants/separation = 150
 alignment = 1
 
 [node name="ButtonDresses" type="TextureButton" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol"]
-margin_left = 92.0
+margin_left = 89.0
 margin_right = 445.0
-margin_bottom = 367.0
-texture_normal = ExtResource( 17 )
+margin_bottom = 364.0
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
 
 [node name="ButtonShoes" type="TextureButton" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol"]
 margin_left = 595.0
-margin_right = 948.0
-margin_bottom = 367.0
-texture_normal = ExtResource( 18 )
+margin_right = 951.0
+margin_bottom = 364.0
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 26 )
 
 [node name="WardrobeMenuContainerCol2" type="HBoxContainer" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu"]
-editor/display_folded = true
-margin_top = 371.0
+margin_top = 368.0
 margin_right = 1041.0
-margin_bottom = 738.0
+margin_bottom = 732.0
 size_flags_vertical = 3
 custom_constants/separation = 150
 alignment = 1
 
 [node name="ButtonTops" type="TextureButton" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol2"]
-margin_left = 92.0
+margin_left = 89.0
 margin_right = 445.0
-margin_bottom = 367.0
-texture_normal = ExtResource( 19 )
+margin_bottom = 364.0
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 28 )
 
 [node name="ButtonPants" type="TextureButton" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol2"]
 margin_left = 595.0
-margin_right = 948.0
-margin_bottom = 367.0
-texture_normal = ExtResource( 20 )
+margin_right = 951.0
+margin_bottom = 364.0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 30 )
 
 [node name="WardrobeMenuContainerCol3" type="HBoxContainer" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu"]
-editor/display_folded = true
-margin_top = 742.0
+margin_top = 736.0
 margin_right = 1041.0
-margin_bottom = 1109.0
+margin_bottom = 1100.0
 size_flags_vertical = 3
 custom_constants/separation = 150
 alignment = 1
 
 [node name="ButtonSpecial" type="TextureButton" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol3"]
-margin_left = 343.0
-margin_right = 697.0
-margin_bottom = 367.0
-texture_normal = ExtResource( 21 )
+margin_left = 342.0
+margin_right = 698.0
+margin_bottom = 364.0
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 32 )
 
 [node name="WardrobeMenuContainerCol4" type="HBoxContainer" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu"]
-margin_top = 1113.0
+margin_top = 1104.0
 margin_right = 1041.0
-margin_bottom = 1459.0
+margin_bottom = 1460.0
 custom_constants/separation = 150
 alignment = 1
 
 [node name="ButtonCharacterSelection" type="TextureButton" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol4"]
-margin_left = 92.0
+margin_left = 89.0
 margin_right = 445.0
-margin_bottom = 346.0
-texture_normal = ExtResource( 22 )
+margin_bottom = 356.0
+texture_normal = ExtResource( 33 )
+texture_pressed = ExtResource( 34 )
 
 [node name="ButtonLookbook" type="TextureButton" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol4"]
 margin_left = 595.0
-margin_right = 948.0
-margin_bottom = 346.0
-texture_normal = ExtResource( 23 )
+margin_right = 951.0
+margin_bottom = 356.0
+texture_normal = ExtResource( 35 )
+texture_pressed = ExtResource( 36 )
 
 [node name="OpenWardrobeContainer" type="MarginContainer" parent="MainSceneContainer/Wardrobe"]
 visible = false
@@ -456,7 +477,7 @@ margin_left = 16.0
 margin_top = 491.0
 margin_right = 685.0
 margin_bottom = 1951.0
-texture = ExtResource( 24 )
+texture = ExtResource( 37 )
 stretch_mode = 5
 
 [node name="Categories" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe"]
@@ -474,7 +495,7 @@ margin_bottom = 980.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_constants/separation = 120
-script = ExtResource( 25 )
+script = ExtResource( 38 )
 isColored = true
 
 [node name="Dress1" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Dresses"]
@@ -487,7 +508,7 @@ margin_right = 312.0
 margin_bottom = 564.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 26 )
+texture_normal = ExtResource( 39 )
 stretch_mode = 4
 
 [node name="Dress2" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Dresses"]
@@ -500,7 +521,7 @@ margin_right = 358.0
 margin_bottom = 623.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 27 )
+texture_normal = ExtResource( 40 )
 stretch_mode = 4
 
 [node name="Dress3" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Dresses"]
@@ -513,7 +534,7 @@ margin_right = 357.0
 margin_bottom = 533.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 28 )
+texture_normal = ExtResource( 41 )
 stretch_mode = 4
 
 [node name="Tops" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories"]
@@ -526,7 +547,7 @@ margin_bottom = 630.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_constants/separation = 120
-script = ExtResource( 25 )
+script = ExtResource( 38 )
 isColored = true
 scaleFactor = 0.8
 
@@ -541,7 +562,7 @@ margin_right = 335.0
 margin_bottom = 336.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 29 )
+texture_normal = ExtResource( 42 )
 stretch_mode = 4
 
 [node name="Tshirt1" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Tops"]
@@ -556,7 +577,7 @@ margin_right = 403.0
 margin_bottom = 337.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 30 )
+texture_normal = ExtResource( 43 )
 stretch_mode = 4
 
 [node name="Tshirt2" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Tops"]
@@ -572,7 +593,7 @@ margin_right = 403.0
 margin_bottom = 337.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 31 )
+texture_normal = ExtResource( 44 )
 stretch_mode = 4
 
 [node name="Pullover1" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Tops"]
@@ -586,7 +607,7 @@ margin_right = 435.0
 margin_bottom = 347.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 32 )
+texture_normal = ExtResource( 45 )
 stretch_mode = 4
 
 [node name="Pants" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories"]
@@ -599,7 +620,7 @@ margin_bottom = 668.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_constants/separation = 120
-script = ExtResource( 25 )
+script = ExtResource( 38 )
 isColored = true
 scaleFactor = 0.8
 
@@ -614,7 +635,7 @@ margin_right = 262.0
 margin_bottom = 430.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 33 )
+texture_normal = ExtResource( 46 )
 stretch_mode = 4
 
 [node name="PantsLong2" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Pants"]
@@ -628,7 +649,7 @@ margin_right = 263.0
 margin_bottom = 428.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 34 )
+texture_normal = ExtResource( 47 )
 stretch_mode = 4
 
 [node name="PantsShort1" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Pants"]
@@ -643,7 +664,7 @@ margin_right = 265.0
 margin_bottom = 238.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 35 )
+texture_normal = ExtResource( 48 )
 stretch_mode = 4
 
 [node name="PantsShort2" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Pants"]
@@ -656,7 +677,7 @@ margin_right = 265.0
 margin_bottom = 238.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 36 )
+texture_normal = ExtResource( 49 )
 stretch_mode = 4
 
 [node name="Shoes" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories"]
@@ -669,7 +690,7 @@ margin_bottom = 290.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_constants/separation = 180
-script = ExtResource( 25 )
+script = ExtResource( 38 )
 isColored = true
 texturePrefix = "btn_"
 scaleFactor = 1.0
@@ -684,7 +705,7 @@ margin_right = 440.0
 margin_bottom = 74.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 37 )
+texture_normal = ExtResource( 50 )
 stretch_mode = 4
 
 [node name="Shoes2" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Shoes"]
@@ -699,7 +720,7 @@ margin_right = 431.0
 margin_bottom = 72.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 38 )
+texture_normal = ExtResource( 51 )
 stretch_mode = 4
 
 [node name="Shoes3" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Shoes"]
@@ -714,7 +735,7 @@ margin_right = 440.0
 margin_bottom = 124.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 39 )
+texture_normal = ExtResource( 52 )
 stretch_mode = 4
 
 [node name="Shoes4" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Shoes"]
@@ -729,7 +750,7 @@ margin_right = 432.0
 margin_bottom = 75.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 40 )
+texture_normal = ExtResource( 53 )
 stretch_mode = 4
 
 [node name="Special" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories"]
@@ -740,7 +761,7 @@ margin_top = -1221.0
 margin_right = 228.0
 margin_bottom = 1221.0
 custom_constants/separation = 120
-script = ExtResource( 25 )
+script = ExtResource( 38 )
 scaleFactor = 0.5
 
 [node name="Star" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Special"]
@@ -755,7 +776,7 @@ margin_right = 287.0
 margin_bottom = 213.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 41 )
+texture_normal = ExtResource( 54 )
 stretch_mode = 4
 
 [node name="Heart" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Special"]
@@ -772,7 +793,7 @@ margin_right = 337.0
 margin_bottom = 198.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 42 )
+texture_normal = ExtResource( 55 )
 stretch_mode = 4
 
 [node name="Amerindian" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Special"]
@@ -787,7 +808,7 @@ margin_right = 351.0
 margin_bottom = 1161.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 43 )
+texture_normal = ExtResource( 56 )
 stretch_mode = 4
 
 [node name="Fairy" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Special"]
@@ -803,7 +824,7 @@ margin_right = 955.0
 margin_bottom = 770.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture_normal = ExtResource( 44 )
+texture_normal = ExtResource( 57 )
 stretch_mode = 4
 
 [node name="Astronaut" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Special"]
@@ -818,7 +839,7 @@ margin_right = 456.0
 margin_bottom = 1216.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 45 )
+texture_normal = ExtResource( 58 )
 stretch_mode = 4
 
 [node name="PeterPan" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/Special"]
@@ -834,11 +855,10 @@ margin_right = 387.0
 margin_bottom = 735.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-texture_normal = ExtResource( 46 )
+texture_normal = ExtResource( 59 )
 stretch_mode = 4
 
 [node name="SidebarContainer" type="MarginContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols"]
-editor/display_folded = true
 margin_left = 751.0
 margin_right = 978.0
 margin_bottom = 2442.0
@@ -849,13 +869,14 @@ margin_top = 2.0
 margin_right = 227.0
 margin_bottom = 2442.0
 custom_constants/separation = 20
-script = ExtResource( 47 )
+script = ExtResource( 60 )
 
 [node name="ButtonDresses" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/SidebarContainer/Sidebar"]
 margin_right = 227.0
 margin_bottom = 227.0
 rect_min_size = Vector2( 227, 227 )
-texture_normal = ExtResource( 17 )
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
 expand = true
 stretch_mode = 4
 
@@ -864,7 +885,8 @@ margin_top = 247.0
 margin_right = 227.0
 margin_bottom = 474.0
 rect_min_size = Vector2( 227, 227 )
-texture_normal = ExtResource( 18 )
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 26 )
 expand = true
 stretch_mode = 4
 
@@ -873,7 +895,8 @@ margin_top = 494.0
 margin_right = 227.0
 margin_bottom = 721.0
 rect_min_size = Vector2( 227, 227 )
-texture_normal = ExtResource( 19 )
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 28 )
 expand = true
 stretch_mode = 4
 
@@ -882,7 +905,8 @@ margin_top = 741.0
 margin_right = 227.0
 margin_bottom = 968.0
 rect_min_size = Vector2( 227, 227 )
-texture_normal = ExtResource( 20 )
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 30 )
 expand = true
 stretch_mode = 4
 
@@ -891,7 +915,8 @@ margin_top = 988.0
 margin_right = 227.0
 margin_bottom = 1215.0
 rect_min_size = Vector2( 227, 227 )
-texture_normal = ExtResource( 21 )
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 32 )
 expand = true
 stretch_mode = 4
 
@@ -900,7 +925,8 @@ margin_top = 1235.0
 margin_right = 227.0
 margin_bottom = 1462.0
 rect_min_size = Vector2( 227, 227 )
-texture_normal = ExtResource( 48 )
+texture_normal = ExtResource( 61 )
+texture_pressed = ExtResource( 62 )
 expand = true
 stretch_mode = 4
 
@@ -917,7 +943,7 @@ editor/display_folded = true
 margin_left = 1007.0
 margin_right = 2048.0
 margin_bottom = 1536.0
-texture = ExtResource( 15 )
+texture = ExtResource( 21 )
 
 [node name="Categories" type="Node2D" parent="OLD GAME/Wardrobe"]
 position = Vector2( 0, 35 )
@@ -928,7 +954,7 @@ margin_left = 1076.0
 margin_top = 32.0
 margin_right = 1789.0
 margin_bottom = 1443.0
-texture = ExtResource( 24 )
+texture = ExtResource( 37 )
 
 [node name="Dress4" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Dresses"]
 visible = false
@@ -937,7 +963,7 @@ margin_top = 518.0
 margin_right = 744.0
 margin_bottom = 1059.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 49 )
+texture_normal = ExtResource( 63 )
 
 [node name="Tops" type="TextureRect" parent="OLD GAME/Wardrobe/Categories"]
 visible = false
@@ -945,7 +971,7 @@ margin_left = 1076.0
 margin_top = 32.0
 margin_right = 1747.0
 margin_bottom = 1437.0
-texture = ExtResource( 24 )
+texture = ExtResource( 37 )
 
 [node name="Top1" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Tops"]
 margin_left = 268.0
@@ -953,7 +979,7 @@ margin_top = 229.0
 margin_right = 503.0
 margin_bottom = 565.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 29 )
+texture_normal = ExtResource( 42 )
 
 [node name="Tshirt1" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Tops"]
 margin_left = 224.0
@@ -961,7 +987,7 @@ margin_top = 585.0
 margin_right = 596.0
 margin_bottom = 922.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 30 )
+texture_normal = ExtResource( 43 )
 
 [node name="Tshirt2" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Tops"]
 visible = false
@@ -970,7 +996,7 @@ margin_top = 428.0
 margin_right = 440.0
 margin_bottom = 765.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 31 )
+texture_normal = ExtResource( 44 )
 
 [node name="Pullover1" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Tops"]
 margin_left = 206.0
@@ -978,7 +1004,7 @@ margin_top = 941.0
 margin_right = 641.0
 margin_bottom = 1288.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 32 )
+texture_normal = ExtResource( 45 )
 
 [node name="Pants" type="TextureRect" parent="OLD GAME/Wardrobe/Categories"]
 editor/display_folded = true
@@ -986,7 +1012,7 @@ visible = false
 margin_top = -35.0
 margin_right = 2048.0
 margin_bottom = 1505.0
-texture = ExtResource( 24 )
+texture = ExtResource( 37 )
 
 [node name="PantsLong1" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Pants"]
 margin_left = 259.0
@@ -994,7 +1020,7 @@ margin_top = 207.0
 margin_right = 519.0
 margin_bottom = 637.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 33 )
+texture_normal = ExtResource( 46 )
 
 [node name="PantsLong2" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Pants"]
 margin_left = 259.0
@@ -1002,7 +1028,7 @@ margin_top = 640.0
 margin_right = 520.0
 margin_bottom = 1070.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 34 )
+texture_normal = ExtResource( 47 )
 
 [node name="PantsShort1" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Pants"]
 visible = false
@@ -1011,7 +1037,7 @@ margin_top = 510.0
 margin_right = 371.0
 margin_bottom = 748.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 35 )
+texture_normal = ExtResource( 48 )
 
 [node name="PantsShort2" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Pants"]
 margin_left = 257.0
@@ -1019,7 +1045,7 @@ margin_top = 1062.0
 margin_right = 522.0
 margin_bottom = 1300.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 36 )
+texture_normal = ExtResource( 49 )
 
 [node name="Shoes" type="TextureRect" parent="OLD GAME/Wardrobe/Categories"]
 editor/display_folded = true
@@ -1027,21 +1053,21 @@ visible = false
 margin_top = -35.0
 margin_right = 2048.0
 margin_bottom = 1505.0
-texture = ExtResource( 24 )
+texture = ExtResource( 37 )
 
 [node name="Shoes1" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Shoes"]
 margin_left = 114.0
 margin_top = 439.0
 margin_right = 554.0
 margin_bottom = 513.0
-texture_normal = ExtResource( 37 )
+texture_normal = ExtResource( 50 )
 
 [node name="Shoes2" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Shoes"]
 margin_left = 126.0
 margin_top = 662.0
 margin_right = 549.0
 margin_bottom = 734.0
-texture_normal = ExtResource( 38 )
+texture_normal = ExtResource( 51 )
 
 [node name="Shoes3" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Shoes"]
 visible = false
@@ -1049,21 +1075,21 @@ margin_left = 124.0
 margin_top = 538.0
 margin_right = 564.0
 margin_bottom = 662.0
-texture_normal = ExtResource( 39 )
+texture_normal = ExtResource( 52 )
 
 [node name="Shoes4" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Shoes"]
 margin_left = 125.0
 margin_top = 866.0
 margin_right = 549.0
 margin_bottom = 941.0
-texture_normal = ExtResource( 40 )
+texture_normal = ExtResource( 53 )
 
 [node name="Special" type="TextureRect" parent="OLD GAME/Wardrobe/Categories"]
 visible = false
 margin_top = -35.0
 margin_right = 2048.0
 margin_bottom = 1505.0
-texture = ExtResource( 24 )
+texture = ExtResource( 37 )
 
 [node name="Amerindian" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Special"]
 margin_left = 263.0
@@ -1071,7 +1097,7 @@ margin_top = 88.0001
 margin_right = 614.0
 margin_bottom = 1194.0
 rect_scale = Vector2( 0.4, 0.4 )
-texture_normal = ExtResource( 43 )
+texture_normal = ExtResource( 56 )
 
 [node name="Fairy" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Special"]
 visible = false
@@ -1080,7 +1106,7 @@ margin_top = 166.0
 margin_right = 1213.0
 margin_bottom = 936.0
 rect_scale = Vector2( 0.4, 0.4 )
-texture_normal = ExtResource( 44 )
+texture_normal = ExtResource( 57 )
 
 [node name="Astronaut" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Special"]
 margin_left = 240.0
@@ -1088,7 +1114,7 @@ margin_top = 602.0
 margin_right = 696.0
 margin_bottom = 1818.0
 rect_scale = Vector2( 0.4, 0.4 )
-texture_normal = ExtResource( 45 )
+texture_normal = ExtResource( 58 )
 
 [node name="PeterPan" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Special"]
 visible = false
@@ -1097,7 +1123,7 @@ margin_top = 168.0
 margin_right = 441.0
 margin_bottom = 903.0
 rect_scale = Vector2( 0.4, 0.4 )
-texture_normal = ExtResource( 46 )
+texture_normal = ExtResource( 59 )
 
 [node name="Star" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Special"]
 margin_left = 131.0
@@ -1105,7 +1131,7 @@ margin_top = 1175.0
 margin_right = 355.0
 margin_bottom = 1388.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 41 )
+texture_normal = ExtResource( 54 )
 
 [node name="Heart" type="TextureButton" parent="OLD GAME/Wardrobe/Categories/Special"]
 margin_left = 403.0
@@ -1113,7 +1139,7 @@ margin_top = 1195.0
 margin_right = 622.0
 margin_bottom = 1378.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 42 )
+texture_normal = ExtResource( 55 )
 
 [node name="ContextualButtons" type="Node2D" parent="OLD GAME/Wardrobe"]
 __meta__ = {
@@ -1123,37 +1149,37 @@ __meta__ = {
 [node name="Home" type="Node2D" parent="OLD GAME/Wardrobe"]
 visible = false
 position = Vector2( 1007, 0 )
-script = ExtResource( 50 )
+script = ExtResource( 64 )
 
 [node name="Sidebar" type="Node2D" parent="OLD GAME/Wardrobe"]
 position = Vector2( 1007, 9 )
-script = ExtResource( 50 )
+script = ExtResource( 64 )
 
-[node name="CharacterSelection" parent="." instance=ExtResource( 51 )]
+[node name="CharacterSelection" parent="." instance=ExtResource( 65 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 2048.0
 margin_bottom = 1536.0
 
-[node name="ColorPicker" parent="." instance=ExtResource( 52 )]
+[node name="ColorPicker" parent="." instance=ExtResource( 66 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 2048.0
 margin_bottom = 1536.0
 
-[node name="Lookbook" parent="." instance=ExtResource( 53 )]
+[node name="Lookbook" parent="." instance=ExtResource( 67 )]
 visible = false
 margin_right = 2048.0
 margin_bottom = 1536.0
 
-[node name="DialogConfirmationDelete" parent="." instance=ExtResource( 54 )]
+[node name="DialogConfirmationDelete" parent="." instance=ExtResource( 68 )]
 visible = false
 margin_right = 2048.0
 margin_bottom = 1536.0
 
-[node name="DialogSettings" parent="." instance=ExtResource( 55 )]
+[node name="DialogSettings" parent="." instance=ExtResource( 69 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -1175,7 +1201,7 @@ margin_bottom = 1536.0
 rect_min_size = Vector2( 2048, 1536 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 56 )
+texture = ExtResource( 70 )
 expand = true
 
 [node name="Node2D" type="Node2D" parent="PictureFrameWrapper"]
@@ -1190,15 +1216,16 @@ margin_top = 1200.0
 margin_right = 2134.0
 margin_bottom = 2736.0
 rect_scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 57 )
+texture = ExtResource( 71 )
 
 [node name="Animation" type="AnimationPlayer" parent="PictureFrameWrapper/Node2D/PictureFrame"]
 anims/PictureFrameAnimation = SubResource( 2 )
 
-[node name="TimerSettings" parent="." instance=ExtResource( 58 )]
+[node name="TimerSettings" parent="." instance=ExtResource( 72 )]
 visible = false
 
-[node name="Store" parent="." instance=ExtResource( 59 )]
+[node name="Store" parent="." instance=ExtResource( 73 )]
+visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 2048.0
