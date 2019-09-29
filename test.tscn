@@ -532,7 +532,6 @@ margin_top = 50.0
 margin_bottom = 50.0
 
 [node name="Dresses" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
-editor/display_folded = true
 visible = false
 margin_left = -190.0
 margin_top = -1311.0
@@ -574,6 +573,7 @@ texture_normal = ExtResource( 40 )
 stretch_mode = 4
 
 [node name="Dress3" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses"]
+editor/display_folded = true
 margin_top = 1427.0
 margin_right = 380.0
 margin_bottom = 1960.0
@@ -593,7 +593,6 @@ margin_top = 2080.0
 margin_right = 380.0
 margin_bottom = 2621.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package1"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses/Dress4"]
 margin_right = 380.0
@@ -604,7 +603,6 @@ texture_normal = ExtResource( 43 )
 stretch_mode = 4
 
 [node name="Tops" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
-editor/display_folded = true
 visible = false
 margin_left = -218.0
 margin_top = -859.0
@@ -652,7 +650,6 @@ margin_top = 913.0
 margin_right = 435.0
 margin_bottom = 1250.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package1"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Tops/Tshirt2"]
 margin_left = 31.0
@@ -678,7 +675,6 @@ texture_normal = ExtResource( 47 )
 stretch_mode = 4
 
 [node name="Pants" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
-editor/display_folded = true
 visible = false
 margin_left = -133.0
 margin_top = -847.0
@@ -726,7 +722,6 @@ margin_top = 1098.0
 margin_right = 265.0
 margin_bottom = 1336.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Pants/PantsShort1"]
 margin_right = 265.0
@@ -751,7 +746,6 @@ texture_normal = ExtResource( 51 )
 stretch_mode = 4
 
 [node name="Shoes" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
-editor/display_folded = true
 visible = false
 margin_left = -220.0
 margin_top = -443.0
@@ -800,7 +794,6 @@ margin_top = 506.0
 margin_right = 440.0
 margin_bottom = 630.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Shoes/Shoes3"]
 margin_right = 440.0
@@ -902,7 +895,6 @@ margin_top = 2562.0
 margin_right = 955.0
 margin_bottom = 3332.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package1"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Fairy"]
 show_behind_parent = true
@@ -919,7 +911,6 @@ margin_top = 3452.0
 margin_right = 955.0
 margin_bottom = 4187.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package1"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/PeterPan"]
 margin_left = 284.0
@@ -936,7 +927,6 @@ margin_top = 4307.0
 margin_right = 955.0
 margin_bottom = 4861.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Doctor"]
 margin_left = 257.0
@@ -953,7 +943,6 @@ margin_top = 4981.0
 margin_right = 955.0
 margin_bottom = 5540.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Adventurer"]
 margin_left = 284.0
@@ -970,7 +959,6 @@ margin_top = 5660.0
 margin_right = 955.0
 margin_bottom = 6879.0
 script = ExtResource( 42 )
-product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Builder"]
 margin_left = 295.0
