@@ -2,6 +2,8 @@ extends MarginContainer
 
 var InAppStore = Engine.get_singleton("InAppStore")
 
+onready var sceneRoot : MarginContainer = get_tree().get_root().get_node('Main')
+onready var clickSfx = sceneRoot.get_node('Sfx/Click')
 onready var button_list = $StoreWrapper/StoreRect/Container/ButtonsContainer
 
 func _ready():
@@ -11,6 +13,8 @@ func _ready():
 	
 	
 func _on_buy_clicked(product_id):
+	clickSfx.play(0)
+	
 	var result = InAppStore.purchase( { "product_id": product_id } )
 	
 	if result == OK:
@@ -21,4 +25,5 @@ func _on_buy_clicked(product_id):
 
 
 func _on_CloseButton_pressed():
+	clickSfx.play(0)
 	self.hide()

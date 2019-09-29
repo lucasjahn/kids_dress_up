@@ -13,6 +13,7 @@ var dressedItems = {
 	'Special': null
 }
 
+# warning-ignore:unused_class_variable
 export var isTouchable = false
 
 onready var sceneRoot = get_tree().get_root().get_node('Main')

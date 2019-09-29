@@ -17,7 +17,6 @@ onready var btn_list = $TextureRect/CenterContainer/TextureRect/VBoxContainer/Co
 onready var animation_player = $TextureRect/CenterContainer/TextureRect/AnimationPlayer
 onready var timer = self.get_parent().get_node("TimerSettings")
 onready var close_btn = $TextureRect/CenterContainer/TextureRect/Close
-onready var dialog_box = $TextureRect/CenterContainer/TextureRect
 onready var label = $TextureRect/CenterContainer/TextureRect/VBoxContainer/Text/MarginContainer/Label
 
 func _ready():

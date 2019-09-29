@@ -9,6 +9,7 @@ export var scaleFactor : float = 0.6
 
 
 onready var sceneRoot : MarginContainer = get_tree().get_root().get_node('Main')
+onready var clickSfx = sceneRoot.get_node('Sfx/Click')
 onready var storeDialog : MarginContainer = sceneRoot.get_node('Store')
 onready var lockTexture : Texture = preload("res://assets/lock.png")
 signal colorSelected
@@ -35,15 +36,23 @@ func _connect_to_store(buttonContainer : CenterContainer, button : TextureButton
 	var lockWrapper = CenterContainer.new()
 	var lockNode = TextureRect.new()
 	
+	# set lock texture and disable mous events
 	lockNode.texture = lockTexture
-	lockWrapper.add_child(lockNode)
+	lockNode.set_mouse_filter(MOUSE_FILTER_IGNORE)
 	
+	# add lock to the sorrounding center container and disable mouse events as well
+	lockWrapper.add_child(lockNode)
+	lockWrapper.set_mouse_filter(MOUSE_FILTER_IGNORE)
+	
+	# change opacity to 40% of button and add lock as a child of button container
 	button.modulate.a = 0.4
 	buttonContainer.add_child(lockWrapper)
+	
 	button.connect("pressed", self, "_open_store")
 	
 	
 func _open_store():
+	clickSfx.play(0)
 	storeDialog.show()
 	
 func _on_buttonPressed(category, itemName):
