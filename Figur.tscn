@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/btn_characterfemale1.png" type="Texture" id=1]
 [ext_resource path="res://Figur.gd" type="Script" id=2]
@@ -25,9 +25,12 @@
 [ext_resource path="res://assets/wardrobe/special/fairy.png" type="Texture" id=23]
 [ext_resource path="res://assets/wardrobe/special/astronaut.png" type="Texture" id=24]
 [ext_resource path="res://assets/wardrobe/special/peterpan.png" type="Texture" id=25]
-[ext_resource path="res://assets/wardrobe/special/star.png" type="Texture" id=26]
-[ext_resource path="res://assets/wardrobe/special/heart.png" type="Texture" id=27]
-[ext_resource path="res://assets/sparkle.png" type="Texture" id=28]
+[ext_resource path="res://assets/wardrobe/special/builder.png" type="Texture" id=26]
+[ext_resource path="res://assets/wardrobe/special/adventurer.png" type="Texture" id=27]
+[ext_resource path="res://assets/wardrobe/special/doctor.png" type="Texture" id=28]
+[ext_resource path="res://assets/wardrobe/special/star.png" type="Texture" id=29]
+[ext_resource path="res://assets/wardrobe/special/heart.png" type="Texture" id=30]
+[ext_resource path="res://assets/sparkle.png" type="Texture" id=31]
 
 [sub_resource type="Animation" id=1]
 resource_name = "SparkleAnimation"
@@ -223,6 +226,7 @@ margin_bottom = 732.0
 texture_normal = ExtResource( 13 )
 
 [node name="Dresses" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( -489.5, -697.5 )
 script = ExtResource( 5 )
 
@@ -332,13 +336,37 @@ margin_right = 905.0
 margin_bottom = 1632.0
 texture_normal = ExtResource( 25 )
 
+[node name="Builder" type="TextureButton" parent="Special"]
+visible = false
+margin_left = 521.0
+margin_top = 419.0
+margin_right = 908.0
+margin_bottom = 1638.0
+texture_normal = ExtResource( 26 )
+
+[node name="Adventurer" type="TextureButton" parent="Special"]
+visible = false
+margin_left = 518.0
+margin_top = 893.0
+margin_right = 905.0
+margin_bottom = 1628.0
+texture_normal = ExtResource( 27 )
+
+[node name="Doctor" type="TextureButton" parent="Special"]
+visible = false
+margin_left = 490.0
+margin_top = 886.0
+margin_right = 930.0
+margin_bottom = 1621.0
+texture_normal = ExtResource( 28 )
+
 [node name="Star" type="TextureButton" parent="Special"]
 visible = false
 margin_left = 938.996
 margin_top = 578.0
 margin_right = 1163.0
 margin_bottom = 791.001
-texture_normal = ExtResource( 26 )
+texture_normal = ExtResource( 29 )
 
 [node name="Heart" type="TextureButton" parent="Special"]
 visible = false
@@ -346,13 +374,14 @@ margin_left = 263.0
 margin_top = 752.001
 margin_right = 482.0
 margin_bottom = 935.001
-texture_normal = ExtResource( 27 )
+texture_normal = ExtResource( 30 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Sparkle" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Sparkle1" type="TextureRect" parent="Sparkle"]
 margin_left = -30.1467
@@ -361,7 +390,7 @@ margin_right = 195.853
 margin_bottom = 569.895
 rect_scale = Vector2( 0, 0 )
 rect_pivot_offset = Vector2( 114.509, 111.595 )
-texture = ExtResource( 28 )
+texture = ExtResource( 31 )
 
 [node name="Sparkle2" type="TextureRect" parent="Sparkle"]
 margin_left = 202.714
@@ -370,7 +399,7 @@ margin_right = 428.714
 margin_bottom = 601.739
 rect_scale = Vector2( 0, 0 )
 rect_pivot_offset = Vector2( 114.509, 111.595 )
-texture = ExtResource( 28 )
+texture = ExtResource( 31 )
 
 [node name="Sparkle3" type="TextureRect" parent="Sparkle"]
 margin_left = 104.313
@@ -379,7 +408,7 @@ margin_right = 330.313
 margin_bottom = 716.069
 rect_scale = Vector2( 0, 0 )
 rect_pivot_offset = Vector2( 114.509, 111.595 )
-texture = ExtResource( 28 )
+texture = ExtResource( 31 )
 
 [node name="Sparkle4" type="TextureRect" parent="Sparkle"]
 margin_left = 220.142
@@ -388,7 +417,7 @@ margin_right = 446.142
 margin_bottom = 829.641
 rect_scale = Vector2( 0, 0 )
 rect_pivot_offset = Vector2( 114.509, 111.595 )
-texture = ExtResource( 28 )
+texture = ExtResource( 31 )
 
 [node name="Sparkle5" type="TextureRect" parent="Sparkle"]
 margin_left = -35.3964
@@ -397,7 +426,7 @@ margin_right = 190.604
 margin_bottom = 893.108
 rect_scale = Vector2( 0, 0 )
 rect_pivot_offset = Vector2( 114.509, 111.595 )
-texture = ExtResource( 28 )
+texture = ExtResource( 31 )
 
 [node name="SparkleAnimation" type="AnimationPlayer" parent="Sparkle"]
 anims/SparkleAnimation = SubResource( 1 )
