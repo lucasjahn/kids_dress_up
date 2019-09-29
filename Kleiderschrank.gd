@@ -12,7 +12,7 @@ onready var sceneRoot = get_tree().get_root().get_node('Main')
 onready var contextualButtons = {
 	'back': sceneRoot.get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsTop/ButtonBack'),
 	'color': sceneRoot.get_node('MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/SidebarContainer/Sidebar/ButtonColor'),
-	'trash': sceneRoot.get_node('MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBottom/ButtonDelete'),
+	'trash': sceneRoot.get_node('MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBotton/ButtonDelete'),
 	'lookbook': sceneRoot.get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook')
 }
 onready var home = sceneRoot.get_node('MainSceneContainer/Wardrobe/WardrobeMenuContainer')
@@ -42,7 +42,7 @@ func openWardrobe(category):
 	home.hide()
 	openWardrobeNode.show()
 	
-	var newCategory = get_node('OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/Categories/%s' % category)
+	var newCategory = get_node('OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/%s' % category)
 	
 	load_category(newCategory)
 	currentCategory = newCategory

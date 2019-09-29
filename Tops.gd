@@ -6,15 +6,46 @@ export var isColored : bool
 export var texturePrefix : String
 export var scaleFactor : float = 0.6
 
+
+
+onready var sceneRoot : MarginContainer = get_tree().get_root().get_node('Main')
+onready var storeDialog : MarginContainer = sceneRoot.get_node('Store')
+onready var lockTexture : Texture = preload("res://assets/lock.png")
 signal colorSelected
 
 func _ready():
 	for child in get_children():
 		var button = child.get_children()[0]
-		button.connect("pressed", self, "_on_buttonPressed", [self, child.get_name()])
 		_set_min_size(button)
 		
+		if 'product_id' in child and child.product_id:
+			if child.purchased:
+				_connect_to_wardrobe(button, child.get_name())
+			else:
+				_connect_to_store(child, button)
+		else:
+			_connect_to_wardrobe(button, child.get_name())
+	
 		
+func _connect_to_wardrobe(node, name):
+	node.connect("pressed", self, "_on_buttonPressed", [self, name])
+	
+	
+func _connect_to_store(buttonContainer : CenterContainer, button : TextureButton):
+	var lockWrapper = CenterContainer.new()
+	var lockNode = TextureRect.new()
+	
+	lockNode.texture = lockTexture
+	lockWrapper.add_child(lockNode)
+	
+	button.modulate.a = 0.4
+	buttonContainer.add_child(lockWrapper)
+	button.connect("pressed", self, "_open_store")
+	
+	
+func _open_store():
+	storeDialog.show()
+	
 func _on_buttonPressed(category, itemName):
 	emit_signal("colorSelected", category, itemName)
 
