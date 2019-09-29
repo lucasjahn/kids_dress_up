@@ -107,6 +107,8 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 )
 }
 
+[sub_resource type="StyleBoxEmpty" id=2]
+
 [sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=4]
@@ -115,20 +117,18 @@ tracks/1/keys = {
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
-[sub_resource type="StyleBoxEmpty" id=7]
-
-[sub_resource type="Theme" id=8]
+[sub_resource type="Theme" id=7]
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/increment = null
 VScrollBar/icons/increment_highlight = null
-VScrollBar/styles/grabber = SubResource( 3 )
-VScrollBar/styles/grabber_highlight = SubResource( 4 )
-VScrollBar/styles/grabber_pressed = SubResource( 5 )
-VScrollBar/styles/scroll = SubResource( 6 )
-VScrollBar/styles/scroll_focus = SubResource( 7 )
+VScrollBar/styles/grabber = SubResource( 2 )
+VScrollBar/styles/grabber_highlight = SubResource( 3 )
+VScrollBar/styles/grabber_pressed = SubResource( 4 )
+VScrollBar/styles/scroll = SubResource( 5 )
+VScrollBar/styles/scroll_focus = SubResource( 6 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=8]
 length = 2.4
 step = 0.05
 tracks/0/type = "value"
@@ -243,7 +243,7 @@ volume_db = -5.0
 pitch_scale = 0.7
 
 [node name="Background" type="TextureRect" parent="."]
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -251,7 +251,7 @@ texture = ExtResource( 4 )
 expand = true
 
 [node name="MainSceneContainer" type="HBoxContainer" parent="."]
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="ButtonLeftContainer" type="MarginContainer" parent="MainSceneContainer"]
@@ -321,22 +321,23 @@ texture_pressed = ExtResource( 14 )
 
 [node name="CharacterContainer" type="CenterContainer" parent="MainSceneContainer"]
 margin_left = 206.0
-margin_right = 881.0
+margin_right = 802.0
 margin_bottom = 1540.0
 size_flags_horizontal = 3
 
 [node name="Character" parent="MainSceneContainer/CharacterContainer" instance=ExtResource( 15 )]
 anchor_bottom = 0.0
-margin_left = 127.0
+margin_left = 87.0
 margin_top = 175.0
-margin_right = 548.0
+margin_right = 508.0
 margin_bottom = 1365.0
 size_flags_horizontal = 13
 size_flags_vertical = 13
 
 [node name="ButtonRightContainer" type="MarginContainer" parent="MainSceneContainer"]
-margin_left = 885.0
-margin_right = 1082.0
+editor/display_folded = true
+margin_left = 806.0
+margin_right = 1003.0
 margin_bottom = 1540.0
 rect_min_size = Vector2( 197, 0 )
 custom_constants/margin_right = 38
@@ -344,6 +345,7 @@ custom_constants/margin_top = 38
 custom_constants/margin_bottom = 38
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainSceneContainer/ButtonRightContainer"]
+editor/display_folded = true
 margin_top = 38.0
 margin_right = 159.0
 margin_bottom = 1502.0
@@ -375,8 +377,8 @@ texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 19 )
 
 [node name="Wardrobe" type="MarginContainer" parent="MainSceneContainer"]
-margin_left = 1086.0
-margin_right = 2127.0
+margin_left = 1007.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 script = ExtResource( 20 )
 
@@ -394,6 +396,7 @@ custom_constants/margin_top = 38
 custom_constants/margin_bottom = 38
 
 [node name="WardrobeMenu" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer"]
+editor/display_folded = true
 margin_top = 38.0
 margin_right = 1041.0
 margin_bottom = 1502.0
@@ -421,6 +424,7 @@ texture_normal = ExtResource( 25 )
 texture_pressed = ExtResource( 26 )
 
 [node name="WardrobeMenuContainerCol2" type="HBoxContainer" parent="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu"]
+editor/display_folded = true
 margin_top = 369.0
 margin_right = 1041.0
 margin_bottom = 734.0
@@ -515,7 +519,7 @@ margin_bottom = 1446.0
 [node name="ScrollContainer" type="ScrollContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer"]
 margin_bottom = 1428.0
 rect_min_size = Vector2( 0, 1428 )
-theme = SubResource( 8 )
+theme = SubResource( 7 )
 scroll_horizontal_enabled = false
 
 [node name="MarginContainer" type="MarginContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer"]
@@ -570,7 +574,6 @@ texture_normal = ExtResource( 40 )
 stretch_mode = 4
 
 [node name="Dress3" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses"]
-editor/display_folded = true
 margin_top = 1427.0
 margin_right = 380.0
 margin_bottom = 1960.0
@@ -979,6 +982,7 @@ texture_normal = ExtResource( 64 )
 stretch_mode = 4
 
 [node name="SidebarContainer" type="MarginContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols"]
+editor/display_folded = true
 margin_left = 751.0
 margin_right = 978.0
 margin_bottom = 1464.0
@@ -1053,7 +1057,7 @@ stretch_mode = 4
 [node name="OLD GAME" type="Control" parent="."]
 editor/display_folded = true
 visible = false
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="Wardrobe" type="Node2D" parent="OLD GAME"]
@@ -1279,44 +1283,44 @@ script = ExtResource( 68 )
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="ColorPicker" parent="." instance=ExtResource( 70 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="Lookbook" parent="." instance=ExtResource( 71 )]
 visible = false
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="DialogConfirmationDelete" parent="." instance=ExtResource( 72 )]
 visible = false
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="DialogSettings" parent="." instance=ExtResource( 73 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="PictureFrameWrapper" type="MarginContainer" parent="."]
 editor/display_folded = true
 visible = false
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Background" type="TextureRect" parent="PictureFrameWrapper"]
 modulate = Color( 1, 1, 1, 0 )
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 rect_min_size = Vector2( 2048, 1536 )
 size_flags_horizontal = 3
@@ -1339,18 +1343,17 @@ rect_scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 75 )
 
 [node name="Animation" type="AnimationPlayer" parent="PictureFrameWrapper/Node2D/PictureFrame"]
-anims/PictureFrameAnimation = SubResource( 2 )
+anims/PictureFrameAnimation = SubResource( 8 )
 
 [node name="TimerSettings" parent="." instance=ExtResource( 76 )]
 visible = false
-margin_right = 2127.0
 margin_bottom = 1540.0
 
 [node name="Store" parent="." instance=ExtResource( 77 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsTop/ButtonBack" to="MainSceneContainer/Wardrobe" method="_on_Button_Back_pressed"]
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsTop/ButtonMute" to="." method="_on_ButtonMute_pressed"]
@@ -1363,6 +1366,7 @@ margin_bottom = 1540.0
 [connection signal="pressed" from="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol4/ButtonCharacterSelection" to="." method="resetCharacter"]
 [connection signal="pressed" from="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol4/ButtonLookbook" to="." method="_on_ButtonLookbook_pressed"]
 [connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]
+[connection signal="pressed" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses/Dress3/Button" to="MainSceneContainer/CharacterContainer/Character" method="_on_Button_pressed"]
 [connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Tops" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]
 [connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Pants" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]
 [connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Shoes" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]

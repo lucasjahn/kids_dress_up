@@ -192,3 +192,6 @@ func _duplicate_character(currentNode, targetNode):
 	characterDuplicate.rect_scale = Vector2(0.4, 0.4)
 	
 	targetNode.add_child(characterDuplicate)
+
+func _on_Button_pressed():
+	$Sparkle/SparkleAnimation.play("SparkleAnimation")
