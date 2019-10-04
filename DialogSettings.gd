@@ -40,6 +40,7 @@ func check_code():
 	press_count = 0
 
 	if pressed_btns_sequence == code_sequence:
+		clickSfx.play(0)
 		self.hide()
 		
 		target_node.show()
