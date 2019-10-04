@@ -381,7 +381,6 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Sparkle" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Sparkle1" type="TextureRect" parent="Sparkle"]
 margin_left = -30.1467

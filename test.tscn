@@ -346,7 +346,6 @@ custom_constants/margin_top = 38
 custom_constants/margin_bottom = 38
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainSceneContainer/ButtonRightContainer"]
-editor/display_folded = true
 margin_top = 38.0
 margin_right = 159.0
 margin_bottom = 1502.0
@@ -530,11 +529,11 @@ custom_constants/margin_top = 50
 custom_constants/margin_bottom = 50
 
 [node name="Categories" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer"]
-editor/display_folded = true
 margin_top = 50.0
 margin_bottom = 50.0
 
 [node name="Dresses" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
+editor/display_folded = true
 visible = false
 margin_left = -190.0
 margin_top = -1311.0
@@ -576,7 +575,6 @@ texture_normal = ExtResource( 41 )
 stretch_mode = 4
 
 [node name="Dress3" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses"]
-editor/display_folded = true
 margin_top = 1427.0
 margin_right = 380.0
 margin_bottom = 1960.0
@@ -591,11 +589,11 @@ texture_normal = ExtResource( 42 )
 stretch_mode = 4
 
 [node name="Dress4" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses"]
-editor/display_folded = true
 margin_top = 2080.0
 margin_right = 380.0
 margin_bottom = 2621.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package1"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses/Dress4"]
 margin_right = 380.0
@@ -606,6 +604,7 @@ texture_normal = ExtResource( 44 )
 stretch_mode = 4
 
 [node name="Tops" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
+editor/display_folded = true
 visible = false
 margin_left = -218.0
 margin_top = -859.0
@@ -648,11 +647,11 @@ texture_normal = ExtResource( 46 )
 stretch_mode = 4
 
 [node name="Tshirt2" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Tops"]
-editor/display_folded = true
 margin_top = 913.0
 margin_right = 435.0
 margin_bottom = 1250.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package1"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Tops/Tshirt2"]
 margin_left = 31.0
@@ -678,6 +677,7 @@ texture_normal = ExtResource( 48 )
 stretch_mode = 4
 
 [node name="Pants" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
+editor/display_folded = true
 visible = false
 margin_left = -133.0
 margin_top = -847.0
@@ -725,6 +725,7 @@ margin_top = 1098.0
 margin_right = 265.0
 margin_bottom = 1336.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Pants/PantsShort1"]
 margin_right = 265.0
@@ -792,11 +793,11 @@ texture_normal = ExtResource( 54 )
 stretch_mode = 4
 
 [node name="Shoes3" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Shoes"]
-editor/display_folded = true
 margin_top = 506.0
 margin_right = 440.0
 margin_bottom = 630.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Shoes/Shoes3"]
 margin_right = 440.0
@@ -822,6 +823,7 @@ texture_normal = ExtResource( 56 )
 stretch_mode = 4
 
 [node name="Special" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
+editor/display_folded = true
 visible = false
 margin_left = -478.0
 margin_top = -3440.0
@@ -893,11 +895,11 @@ texture_normal = ExtResource( 60 )
 stretch_mode = 4
 
 [node name="Fairy" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special"]
-editor/display_folded = true
 margin_top = 2562.0
 margin_right = 955.0
 margin_bottom = 3332.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package1"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Fairy"]
 show_behind_parent = true
@@ -914,6 +916,7 @@ margin_top = 3452.0
 margin_right = 955.0
 margin_bottom = 4187.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package1"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/PeterPan"]
 margin_left = 284.0
@@ -925,11 +928,11 @@ texture_normal = ExtResource( 62 )
 stretch_mode = 4
 
 [node name="Doctor" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special"]
-editor/display_folded = true
 margin_top = 4307.0
 margin_right = 955.0
 margin_bottom = 4861.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Doctor"]
 margin_left = 257.0
@@ -941,11 +944,11 @@ texture_normal = ExtResource( 63 )
 stretch_mode = 4
 
 [node name="Adventurer" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special"]
-editor/display_folded = true
 margin_top = 4981.0
 margin_right = 955.0
 margin_bottom = 5540.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Adventurer"]
 margin_left = 284.0
@@ -957,11 +960,11 @@ texture_normal = ExtResource( 64 )
 stretch_mode = 4
 
 [node name="Builder" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special"]
-editor/display_folded = true
 margin_top = 5660.0
 margin_right = 955.0
 margin_bottom = 6879.0
 script = ExtResource( 43 )
+product_id = "de.krautnerds.dressup.package2"
 
 [node name="Button" type="TextureButton" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Builder"]
 margin_left = 295.0
@@ -1351,17 +1354,17 @@ margin_bottom = 1540.0
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook" to="." method="_on_ButtonLookbook_pressed"]
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook" to="MainSceneContainer/CharacterContainer/Character" method="save_to_lookbook"]
 [connection signal="lookbook_is_full" from="MainSceneContainer/CharacterContainer/Character" to="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook" method="show_lookbook_full"]
-[connection signal="pressed" from="MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsTop/ButtonSettings" to="DialogSettings" method="open_scene" binds= [ true ]]
+[connection signal="pressed" from="MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsTop/ButtonSettings" to="DialogSettings" method="open_scene" binds= [ true, "TimerSettings" ]]
 [connection signal="pressed" from="MainSceneContainer/ButtonRightContainer/VBoxContainer/ButtonsBotton/ButtonDelete" to="MainSceneContainer/CharacterContainer/Character" method="_on_ButtonDelete_pressed"]
 [connection signal="categorySelected" from="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu" to="MainSceneContainer/Wardrobe" method="openWardrobe"]
 [connection signal="pressed" from="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol4/ButtonCharacterSelection" to="." method="resetCharacter"]
 [connection signal="pressed" from="MainSceneContainer/Wardrobe/WardrobeMenuContainer/WardrobeMenu/WardrobeMenuContainerCol4/ButtonLookbook" to="." method="_on_ButtonLookbook_pressed"]
-[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]
+[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses" to="MainSceneContainer/CharacterContainer/Character" method="toggleItemVisability"]
 [connection signal="pressed" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Dresses/Dress3/Button" to="MainSceneContainer/CharacterContainer/Character" method="_on_Button_pressed"]
-[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Tops" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]
-[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Pants" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]
-[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Shoes" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]
-[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special" to="MainSceneContainer/CharacterContainer/Character" method="_on_item_pressed"]
+[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Tops" to="MainSceneContainer/CharacterContainer/Character" method="toggleItemVisability"]
+[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Pants" to="MainSceneContainer/CharacterContainer/Character" method="toggleItemVisability"]
+[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Shoes" to="MainSceneContainer/CharacterContainer/Character" method="toggleItemVisability"]
+[connection signal="colorSelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special" to="MainSceneContainer/CharacterContainer/Character" method="toggleItemVisability"]
 [connection signal="categorySelected" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/SidebarContainer/Sidebar" to="MainSceneContainer/Wardrobe" method="openWardrobe"]
 [connection signal="pressed" from="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/SidebarContainer/Sidebar/ButtonColor" to="MainSceneContainer/Wardrobe" method="_on_ButtonColor_pressed"]
 [connection signal="categorySelected" from="OLD GAME/Wardrobe/Home" to="OLD GAME/Wardrobe" method="openWardrobe"]

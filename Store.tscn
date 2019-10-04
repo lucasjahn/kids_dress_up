@@ -56,6 +56,7 @@ margin_bottom = 124.0
 size_flags_horizontal = 0
 texture_normal = ExtResource( 4 )
 script = ExtResource( 5 )
+product_id = "de.krautnerds.dressup.package1"
 
 [node name="ButtonPackage2" type="MarginContainer" parent="StoreWrapper/StoreRect/Container/ButtonsContainer"]
 margin_left = 760.0
@@ -68,6 +69,7 @@ margin_right = 211.0
 margin_bottom = 124.0
 texture_normal = ExtResource( 4 )
 script = ExtResource( 5 )
+product_id = "de.krautnerds.dressup.package2"
 
 [node name="CloseButton" type="TextureButton" parent="StoreWrapper/StoreRect"]
 margin_left = 1622.0
