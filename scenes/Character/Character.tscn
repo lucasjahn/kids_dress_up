@@ -1,10 +1,10 @@
 [gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/btn_characterfemale1.png" type="Texture" id=1]
-[ext_resource path="res://Figur.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Character/Character.gd" type="Script" id=2]
 [ext_resource path="res://assets/sounds/shutter.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/sounds/plop.wav" type="AudioStream" id=4]
-[ext_resource path="res://ClothesCategory.gd" type="Script" id=5]
+[ext_resource path="res://scripts/ClothesCategory.gd" type="Script" id=5]
 [ext_resource path="res://assets/wardrobe/pants/blue/pantslong1.png" type="Texture" id=6]
 [ext_resource path="res://assets/wardrobe/pants/blue/pantslong2.png" type="Texture" id=7]
 [ext_resource path="res://assets/wardrobe/pants/blue/pantsshort1.png" type="Texture" id=8]
@@ -31,6 +31,7 @@
 [ext_resource path="res://assets/wardrobe/special/star.png" type="Texture" id=29]
 [ext_resource path="res://assets/wardrobe/special/heart.png" type="Texture" id=30]
 [ext_resource path="res://assets/sparkle.png" type="Texture" id=31]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "SparkleAnimation"

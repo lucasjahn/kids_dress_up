@@ -8,11 +8,12 @@ export var scaleFactor : float = 0.6
 
 var boughtProducts = []
 
-onready var sceneRoot : MarginContainer = get_tree().get_root().get_node('Main')
-onready var clickSfx = sceneRoot.get_node('Sfx/Click')
-onready var storeDialog : MarginContainer = sceneRoot.get_node('Store')
+onready var clickSfx = Elements.sfx.click
+onready var storeDialog = Elements.store
 onready var lockTexture : Texture = preload("res://assets/lock.png")
+
 signal colorSelected
+
 
 func _ready():
 	load_and_resize_items()
@@ -34,8 +35,8 @@ func load_and_resize_items(shouldResisze=true):
 				_connect_to_store(child, button)
 		else:
 			_connect_to_wardrobe(button, child.get_name())
-	
-	
+
+
 func _connect_to_wardrobe(node, name):
 	var nodeContainer = node.get_parent()
 	
@@ -52,8 +53,8 @@ func _connect_to_wardrobe(node, name):
 	
 	if not node.is_connected("pressed", self, "_on_buttonPressed"):
 		node.connect("pressed", self, "_on_buttonPressed", [self, name])
-	
-	
+
+
 func _was_bought(node):
 	if node.product_id and len(boughtProducts) > 0 and node.product_id in boughtProducts:
 		node.purchased = true
@@ -61,7 +62,8 @@ func _was_bought(node):
 	else: 
 		node.purchased = false
 		return false
-	
+
+
 func _connect_to_store(buttonContainer : CenterContainer, button : TextureButton):
 	if not button.is_connected("pressed", self, "_open_store"):
 		var lockWrapper = CenterContainer.new()
@@ -80,14 +82,16 @@ func _connect_to_store(buttonContainer : CenterContainer, button : TextureButton
 		buttonContainer.add_child(lockWrapper)
 	
 		button.connect("pressed", self, "_open_store")
-	
-	
+
+
+
 func _open_store():
 	clickSfx.play(0)
 	storeDialog.show()
-	
+
+
 func _on_buttonPressed(category, itemName):
-	emit_signal("colorSelected", category, itemName)
+	Events.emit_signal("clothes_selected", category, itemName)
 
 
 func _set_min_size(node): 

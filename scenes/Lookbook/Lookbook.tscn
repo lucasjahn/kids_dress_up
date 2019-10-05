@@ -12,10 +12,11 @@
 [ext_resource path="res://PictureFrames.gd" type="Script" id=10]
 [ext_resource path="res://assets/picture_frame.png" type="Texture" id=11]
 [ext_resource path="res://PictureFrame.gd" type="Script" id=12]
-[ext_resource path="res://Figur.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Character/Figur.tscn" type="PackedScene" id=13]
 [ext_resource path="res://DialogConfirmationDeleteLookbook.tscn" type="PackedScene" id=14]
 [ext_resource path="res://DialogConfirmationDeleteLookbookDetail.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=16]
+
 
 [node name="Lookbook" type="MarginContainer"]
 size_flags_horizontal = 3

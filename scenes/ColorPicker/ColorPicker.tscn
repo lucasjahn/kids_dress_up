@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://ColorPicker.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ColorPicker/ColorPicker.gd" type="Script" id=1]
 [ext_resource path="res://assets/black_overlay_bg.png" type="Texture" id=2]
 [ext_resource path="res://assets/opened_color_picker.png" type="Texture" id=3]
 [ext_resource path="res://assets/btn_blue.png" type="Texture" id=4]
@@ -17,8 +17,8 @@ size_flags_vertical = 3
 script = ExtResource( 1 )
 
 [node name="Background" type="TextureRect" parent="."]
-margin_right = 2049.0
-margin_bottom = 1537.0
+margin_right = 2048.0
+margin_bottom = 1536.0
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -26,8 +26,8 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 2049.0
-margin_bottom = 1537.0
+margin_right = 2048.0
+margin_bottom = 1536.0
 
 [node name="ColorPickerWrapper" type="TextureRect" parent="CenterContainer"]
 margin_left = 645.0

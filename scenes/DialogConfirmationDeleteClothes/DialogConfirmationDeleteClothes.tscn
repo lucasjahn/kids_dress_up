@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://DialogConfirmDelete.gd" type="Script" id=1]
+[ext_resource path="res://scenes/DialogConfirmationDeleteClothes/DialogConfirmDelete.gd" type="Script" id=1]
 [ext_resource path="res://assets/black_overlay_bg.png" type="Texture" id=2]
 [ext_resource path="res://assets/overlay_delete.png" type="Texture" id=3]
 [ext_resource path="res://assets/btn_ok.png" type="Texture" id=4]
