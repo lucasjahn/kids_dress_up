@@ -31,6 +31,7 @@ onready var wardrobeMenu : MarginContainer = mainRoot.get_node("MainSceneContain
 onready var categories : CenterContainer = mainRoot.get_node("MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories")
 onready var animatedPictureFrame : MarginContainer = mainRoot.get_node("PictureFrameWrapper")
 
+
 # Sfx
 onready var sfx : Dictionary = {
 	"click": mainRoot.get_node("Sfx/Click")

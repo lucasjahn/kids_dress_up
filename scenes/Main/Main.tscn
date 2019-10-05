@@ -253,6 +253,7 @@ texture = ExtResource( 4 )
 expand = true
 
 [node name="MainSceneContainer" type="HBoxContainer" parent="."]
+editor/display_folded = true
 margin_right = 2048.0
 margin_bottom = 1540.0
 

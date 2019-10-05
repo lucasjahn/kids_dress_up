@@ -10,6 +10,7 @@ signal delete_clothes_confirmed
 signal clothes_selected(category, itemName)
 signal lookbook_is_full
 
+
 # Navigation
 signal home_clicked
 signal open_lookbook_clicked
