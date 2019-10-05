@@ -21,6 +21,9 @@ onready var clickSfx = $Click
 onready var addToLookbookButton = get_parent().get_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook') if get_parent().has_node('MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook') else null
 
 func _ready():
+	if not Events.is_connected("delete_clothes_confirmed", self, "_on_DialogConfirmationDelete_dialog_confirmed"):
+		Events.connect("delete_clothes_confirmed", self, "_on_DialogConfirmationDelete_dialog_confirmed")
+	
 	buttonTextures = [
 		preload("res://assets/btn_lookbook_small.png"),
 		preload("res://assets/btn_lookbook_small_1.png"),

@@ -272,7 +272,6 @@ margin_bottom = 1502.0
 size_flags_horizontal = 0
 
 [node name="ButtonsTop" type="VBoxContainer" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer"]
-editor/display_folded = true
 margin_right = 159.0
 margin_bottom = 1301.0
 size_flags_vertical = 3
@@ -293,14 +292,12 @@ texture_pressed = ExtResource( 8 )
 script = ExtResource( 9 )
 
 [node name="ButtonsBottom" type="VBoxContainer" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer"]
-editor/display_folded = true
 margin_top = 1305.0
 margin_right = 159.0
 margin_bottom = 1464.0
 custom_constants/separation = 18
 
 [node name="ButtonOpenLookbook" type="TextureButton" parent="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom"]
-editor/display_folded = true
 margin_right = 159.0
 margin_bottom = 159.0
 texture_normal = ExtResource( 10 )
@@ -364,6 +361,7 @@ texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 18 )
 
 [node name="ButtonsBotton" type="VBoxContainer" parent="MainSceneContainer/ButtonRightContainer/VBoxContainer"]
+editor/display_folded = true
 margin_top = 1464.0
 margin_right = 159.0
 margin_bottom = 1464.0

@@ -1,7 +1,5 @@
 extends TextureRect
 
-signal lookbook_is_full
-
 const ASSET_ROOT_PATH = 'res://assets/wardrobe'
 
 var dressedItems = {
@@ -31,7 +29,7 @@ onready var pictureFrameAnimation = pictureFrameWrapper.get_node('Node2D/Picture
 
 func _ready():
 	Events.connect("clothes_selected", self, "toggleItemVisability")
-	
+
 	if deleteConfirmationScene:
 		Events.connect("delete_clothes_confirmed", self, "_on_deleteConfirmation_confirmed")
 
@@ -148,7 +146,7 @@ func save_to_lookbook():
 	var lookbookData = load_lookbook() if load_lookbook() else []
 
 	if len(lookbookData) == 3:
-		emit_signal("lookbook_is_full")
+		Events.emit_signal("lookbook_is_full")
 		return
 
 	var lookbookItem = {

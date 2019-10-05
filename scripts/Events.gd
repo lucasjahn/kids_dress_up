@@ -8,7 +8,7 @@ signal character_selected(characterName)
 signal reset_character_selection
 signal delete_clothes_confirmed
 signal clothes_selected(category, itemName)
-
+signal lookbook_is_full
 
 # Navigation
 signal home_clicked

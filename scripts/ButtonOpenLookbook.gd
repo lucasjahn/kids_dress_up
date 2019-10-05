@@ -5,6 +5,8 @@ onready var animationPlayer = $Animation
 var buttonTextures = null
 
 func _ready():
+	Events.connect("lookbook_is_full", self, "show_lookbook_full")
+	
 	buttonTextures = [
 		preload("res://assets/btn_lookbook_small.png"),
 		preload("res://assets/btn_lookbook_small_1.png"),

@@ -17,7 +17,6 @@
 [ext_resource path="res://scenes/Lookbook/DialogConfirmationDeleteLookbookDetail.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=16]
 
-
 [node name="Lookbook" type="MarginContainer"]
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -279,5 +278,4 @@ pitch_scale = 0.7
 [connection signal="pressed" from="VBoxContainer/PictureDetailHeaderControls/ButtonLeftContainer/ButtonBack" to="." method="_on_ButtonBack_pressed"]
 [connection signal="pictureClicked" from="VBoxContainer/PictureFrameWrapper/PictureFrames" to="." method="showPictureDetail"]
 [connection signal="pressed" from="VBoxContainer/PictureDetailFooterControls/MarginContainer/ButtonDeleteDetail" to="." method="_on_ButtonDeleteDetail_pressed"]
-[connection signal="dialog_confirmed" from="DialogConfirmationDelete" to="." method="_on_DialogConfirmationDelete_dialog_confirmed"]
 [connection signal="dialog_confirmed" from="DialogConfirmationDeleteDetail" to="." method="_on_DialogConfirmationDeleteDetail_dialog_confirmed"]
