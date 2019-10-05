@@ -13,7 +13,6 @@
 [ext_resource path="res://scripts/ButtonMute.gd" type="Script" id=11]
 [ext_resource path="res://assets/sounds/click.wav" type="AudioStream" id=12]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "ChooseAnmiation"
 length = 6.0
@@ -102,6 +101,7 @@ tracks/6/keys = {
 }
 
 [node name="CharacterSelection" type="Control"]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
