@@ -8,9 +8,11 @@ onready var clickSfx = sceneRoot.get_node('Sfx/Click')
 onready var button_list = $StoreWrapper/StoreRect/Container/ButtonsContainer
 onready var dialogSettings = sceneRoot.get_node('DialogSettings')
 onready var categories = sceneRoot.get_node('MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories')
-
+onready var timer = $Timer
 
 func _ready():
+	timer.connect("timeout", self, "_check_events")
+	
 	for button in button_list.get_children(): 
 		var buttonNode = button.get_child(0)
 		buttonNode.connect('pressed', self, '_on_buy_clicked', [buttonNode.product_id])
@@ -33,15 +35,26 @@ func buy_item():
 		var result = InAppStore.purchase( { "product_id": selectedProduct } )
 
 		if result == OK:
-			_save_bought_product(selectedProduct)
-			_rerender_items()
-			
-			selectedProduct = ''
-			self.hide()
+			timer.start()
 		else:
 			selectedProduct = ''
 			self.hide()
+
+
+func _check_events():
+	while InAppStore.get_pending_event_count() > 0:
+		var event = InAppStore.pop_pending_event()
 		
+		if event.type == "purchase":
+			if event.result == "ok":
+				_save_bought_product(selectedProduct)
+				_rerender_items()
+				
+				selectedProduct = ''
+				self.hide()
+			else:
+				selectedProduct = ''
+				self.hide()
 		
 func _on_CloseButton_pressed():
 	clickSfx.play(0)
