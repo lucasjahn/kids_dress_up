@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://scenes/Main/Main.gd" type="Script" id=1]
 [ext_resource path="res://assets/sounds/background_music.ogg" type="AudioStream" id=2]
@@ -78,6 +78,8 @@
 [ext_resource path="res://scenes/DialogSettings/DialogSettings.tscn" type="PackedScene" id=76]
 [ext_resource path="res://scenes/TimerSettings/TimerSettings.tscn" type="PackedScene" id=77]
 [ext_resource path="res://scenes/Store/Store.tscn" type="PackedScene" id=78]
+[ext_resource path="res://scenes/InfoDialog/InfoDialog.tscn" type="PackedScene" id=79]
+[ext_resource path="res://scenes/InfoDialog/InfoDialog.gd" type="Script" id=80]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Wobble"
@@ -228,7 +230,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [  ]
+"_edit_horizontal_guides_": [ -237.0 ],
+"_edit_vertical_guides_": [ 1024.0 ]
 }
 
 [node name="Sfx" type="Node" parent="."]
@@ -1122,6 +1125,10 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 2048.0
 margin_bottom = 1540.0
+
+[node name="InfoDialog" parent="." instance=ExtResource( 79 )]
+visible = false
+script = ExtResource( 80 )
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsTop/ButtonBack" to="MainSceneContainer/Wardrobe" method="_on_Button_Back_pressed"]
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook" to="." method="_on_open_lookbook_clicked"]
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook" to="MainSceneContainer/CharacterContainer/Character" method="save_to_lookbook"]

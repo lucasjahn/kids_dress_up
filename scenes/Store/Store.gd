@@ -1,13 +1,16 @@
 extends MarginContainer
 
+const PURCHASE_PROCESSING = "Dein Kauf wird bearbeitet..."
+
 var InAppStore = Engine.get_singleton("InAppStore")
 var selectedProduct
 
 onready var sceneRoot : MarginContainer = get_tree().get_root().get_node('Main')
-onready var clickSfx = sceneRoot.get_node('Sfx/Click')
+onready var clickSfx = Elements.sfx.click
 onready var button_list = $StoreWrapper/StoreRect/Container/ButtonsContainer
-onready var dialogSettings = sceneRoot.get_node('DialogSettings')
-onready var categories = sceneRoot.get_node('MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories')
+onready var dialogSettings = Elements.dialogSettings
+onready var categories = Elements.categories
+onready var dialogInfo = Elements.infoDialog
 onready var timer = $Timer
 
 func _ready():
@@ -35,9 +38,11 @@ func buy_item():
 		var result = InAppStore.purchase( { "product_id": selectedProduct } )
 
 		if result == OK:
+			Events.emit_signal("loading_start", PURCHASE_PROCESSING)
 			timer.start()
 		else:
 			selectedProduct = ''
+			Events.emit_signal("loading_end")
 			self.hide()
 
 
@@ -51,10 +56,13 @@ func _check_events():
 				_rerender_items()
 
 				selectedProduct = ''
+				Events.emit_signal("loading_end")
 				self.hide()
 			else:
 				selectedProduct = ''
+				Events.emit_signal("loading_end")
 				self.hide()
+
 
 func _on_CloseButton_pressed():
 	clickSfx.play(0)

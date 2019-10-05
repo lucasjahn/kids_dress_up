@@ -7,7 +7,6 @@
 [ext_resource path="res://scripts/BuyButton.gd" type="Script" id=5]
 [ext_resource path="res://assets/btn_close_store.png" type="Texture" id=6]
 
-
 [node name="Store" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -13,6 +13,7 @@ onready var dialogConfirmationDelete : MarginContainer = mainRoot.get_node("Dial
 onready var dialogSettings : MarginContainer = mainRoot.get_node("DialogSettings")
 onready var timerSettings : MarginContainer = mainRoot.get_node("TimerSettings")
 onready var store : MarginContainer = mainRoot.get_node("Store")
+onready var infoDialog : MarginContainer = mainRoot.get_node("InfoDialog")
 
 
 # Controls
