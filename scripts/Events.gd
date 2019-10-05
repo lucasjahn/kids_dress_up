@@ -9,8 +9,9 @@ signal reset_character_selection
 signal delete_clothes_confirmed
 signal clothes_selected(category, itemName)
 signal lookbook_is_full
-signal loading_start(infoText)
-signal loading_end(infoText)
+
+signal show_info_dialog(infoText, showLoadingSpinner)
+signal hide_info_dialog
 
 
 # Navigation

@@ -38,11 +38,11 @@ func buy_item():
 		var result = InAppStore.purchase( { "product_id": selectedProduct } )
 
 		if result == OK:
-			Events.emit_signal("loading_start", PURCHASE_PROCESSING)
+			Events.emit_signal("show_info_dialog", PURCHASE_PROCESSING, true)
 			timer.start()
 		else:
 			selectedProduct = ''
-			Events.emit_signal("loading_end")
+			Events.emit_signal("hide_info_dialog")
 			self.hide()
 
 
@@ -56,11 +56,11 @@ func _check_events():
 				_rerender_items()
 
 				selectedProduct = ''
-				Events.emit_signal("loading_end")
+				Events.emit_signal("hide_info_dialog")
 				self.hide()
 			else:
 				selectedProduct = ''
-				Events.emit_signal("loading_end")
+				Events.emit_signal("hide_info_dialog")
 				self.hide()
 
 

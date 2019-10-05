@@ -102,7 +102,6 @@ texture = ExtResource( 1 )
 expand = true
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-editor/display_folded = true
 margin_right = 2048.0
 margin_bottom = 1540.0
 
@@ -114,11 +113,10 @@ margin_bottom = 1226.0
 texture = ExtResource( 2 )
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/DialogBackground"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/DialogBackground/CenterContainer"]
+[node name="LabelContainer" type="MarginContainer" parent="CenterContainer/DialogBackground/CenterContainer"]
 margin_left = 145.0
 margin_top = 191.0
 margin_right = 1144.0
@@ -127,7 +125,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_top = 400
 
-[node name="Label" type="Label" parent="CenterContainer/DialogBackground/CenterContainer/MarginContainer"]
+[node name="Label" type="Label" parent="CenterContainer/DialogBackground/CenterContainer/LabelContainer"]
 margin_top = 400.0
 margin_right = 999.0
 margin_bottom = 529.0
@@ -135,8 +133,8 @@ custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.419608, 0.298039, 0.219608, 1 )
 text = "Dein Kauf wird bearbeitet..."
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="CenterContainer/DialogBackground"]
+[node name="LoadingSpinner" type="AnimatedSprite" parent="CenterContainer/DialogBackground"]
 position = Vector2( 644, 344 )
 frames = SubResource( 1 )
-frame = 54
+frame = 9
 playing = true
