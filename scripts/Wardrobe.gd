@@ -82,8 +82,6 @@ func load_category(category = currentCategory):
 
 		if category.isColored:
 			categoryItem.get_node('Button').texture_normal = getColorTexture(category.get_name().to_lower(), currentColor, itemName)
-		else:
-			categoryItem.get_node('Button').texture_normal = getTexture(category.get_name().to_lower(), itemName)
 
 		category.show()
 		contextualButtons.color.hide()

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/astronaut.png-1dc71cd39bfb5733adbd7fc11c305902.stex"
+path="res://.import/necklace.png-96a8a694a384efefa3c4baf1899d4432.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wardrobe/special/astronaut.png"
-dest_files=[ "res://.import/astronaut.png-1dc71cd39bfb5733adbd7fc11c305902.stex" ]
+source_file="res://assets/wardrobe/special/necklace.png"
+dest_files=[ "res://.import/necklace.png-96a8a694a384efefa3c4baf1899d4432.stex" ]
 
 [params]
 

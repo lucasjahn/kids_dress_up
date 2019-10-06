@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/astronaut.png-1dc71cd39bfb5733adbd7fc11c305902.stex"
+path="res://.import/arrow_down.png-ec32f4596f4d8e4784ea093d6d898d53.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wardrobe/special/astronaut.png"
-dest_files=[ "res://.import/astronaut.png-1dc71cd39bfb5733adbd7fc11c305902.stex" ]
+source_file="res://assets/wardrobe/special/arrow_down.png"
+dest_files=[ "res://.import/arrow_down.png-ec32f4596f4d8e4784ea093d6d898d53.stex" ]
 
 [params]
 

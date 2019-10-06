@@ -39,6 +39,7 @@ custom_constants/margin_top = 915
 custom_constants/margin_left = 505
 
 [node name="ButtonsContainer" type="HBoxContainer" parent="StoreWrapper/StoreRect/Container"]
+editor/display_folded = true
 margin_left = 505.0
 margin_top = 915.0
 margin_right = 1476.0

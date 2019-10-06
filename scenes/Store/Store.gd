@@ -36,14 +36,16 @@ func _rerender_items():
 func buy_item():
 	if selectedProduct:
 		var result = InAppStore.purchase( { "product_id": selectedProduct } )
-
+		
 		if result == OK:
-			Events.emit_signal("show_info_dialog", PURCHASE_PROCESSING, true)
+			self.hide()
+			Events.emit_signal("show_info_dialog", PURCHASE_PROCESSING, true, false)
 			timer.start()
 		else:
-			selectedProduct = ''
-			Events.emit_signal("hide_info_dialog")
 			self.hide()
+			selectedProduct = ''
+			
+			Events.emit_signal("show_info_dialog", 'Leider ist ein\nFehler aufgetreten.', false)
 
 
 func _check_events():
@@ -52,16 +54,19 @@ func _check_events():
 
 		if event.type == "purchase":
 			if event.result == "ok":
+				self.hide()
+				
 				_save_bought_product(selectedProduct)
 				_rerender_items()
-
 				selectedProduct = ''
-				Events.emit_signal("hide_info_dialog")
-				self.hide()
+				
+				Events.emit_signal("show_info_dialog", 'Kauf erfolgreich\nAbgeschlossen!', false)
 			else:
-				selectedProduct = ''
-				Events.emit_signal("hide_info_dialog")
 				self.hide()
+				selectedProduct = ''
+				
+				Events.emit_signal("show_info_dialog", 'Leider ist ein\nFehler aufgetreten.', false)
+				
 
 
 func _on_CloseButton_pressed():

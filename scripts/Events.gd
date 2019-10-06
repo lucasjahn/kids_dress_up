@@ -7,7 +7,7 @@ signal mute_clicked
 signal character_selected(characterName)
 signal reset_character_selection
 signal delete_clothes_confirmed
-signal clothes_selected(category, itemName)
+signal clothes_selected(category, itemName, isStackable)
 signal lookbook_is_full
 
 signal show_info_dialog(infoText, showLoadingSpinner)

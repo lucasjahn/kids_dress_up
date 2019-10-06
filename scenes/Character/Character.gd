@@ -9,7 +9,8 @@ var dressedItems = {
 	'Tops': null,
 	'Shorts': null,
 	'Pullover': null,
-	'Special': null
+	'Special': null,
+	'Stack': [],
 }
 
 # warning-ignore:unused_class_variable
@@ -40,8 +41,14 @@ func _ready():
 func resetClothes():
 	for category in dressedItems:
 		if dressedItems[category]:
-			dressedItems[category].hide()
-			dressedItems[category] = null
+			if not category == 'Stack':
+				dressedItems[category].hide()
+				dressedItems[category] = null
+			else:
+				for stackItem in dressedItems[category]:
+					stackItem.node.hide()
+					
+				dressedItems[category] = []
 
 
 func getTexture(category, itemName):
@@ -52,11 +59,25 @@ func getColorTexture(category, color, itemName):
 	return load("%s/%s/%s/%s.png" % [ASSET_ROOT_PATH, category, color, itemName])
 
 
-func toggleItemVisability(category, itemName, shouldDelete = false):
+func _getStackItemIndex(itemName) -> int:
+	var returnIndex = -1 
+	
+	if not len(dressedItems['Stack']):
+		return returnIndex
+	else:
+		for index in len(dressedItems['Stack']):
+			if dressedItems['Stack'][index].itemName == itemName:
+				returnIndex = index
+				
+		return returnIndex
+
+
+func toggleItemVisability(category, itemName, shouldDelete = false, isStackable: = false):
 	var activeWardrobeColor = get_tree().get_root().get_node('Main').activeWardrobeColor
 	var categoryName = category.get_name()
 	var targetNode = get_node('%s/%s' % [categoryName, itemName])
-	var dressedItem = dressedItems[categoryName]
+	var dressedItem = null if isStackable else dressedItems[categoryName]
+	var dressedStackItemIndex = _getStackItemIndex(itemName)
 	var targetTexture = null
 
 	if category.get("isColored") and category.isColored:
@@ -64,9 +85,12 @@ func toggleItemVisability(category, itemName, shouldDelete = false):
 	else:
 		targetTexture = getTexture(categoryName.to_lower(), itemName.to_lower())
 
-	if shouldDelete or (dressedItem && targetTexture.resource_path == dressedItem.texture_normal.resource_path):
+	if shouldDelete or (not isStackable && dressedItem && targetTexture.resource_path == dressedItem.texture_normal.resource_path):
 		targetNode.hide()
 		dressedItems[categoryName] = null
+	elif isStackable and dressedStackItemIndex > -1:
+		targetNode.hide()
+		dressedItems['Stack'].remove(dressedStackItemIndex)
 	else:
 		if dressedItem:
 			dressedItem.hide()
@@ -79,7 +103,13 @@ func toggleItemVisability(category, itemName, shouldDelete = false):
 		deleteButton.show()
 		addToLookbookButton.show()
 
-		dressedItems[categoryName] = targetNode
+		if isStackable:
+			dressedItems['Stack'].append({
+				"itemName": itemName,
+				"node": targetNode
+			})
+		else:
+			dressedItems[categoryName] = targetNode
 
 	#TODO REFACTOR!
 	var isNaked = true
@@ -99,7 +129,13 @@ func showItemTexture(category, targetNodeName, texturePath):
 	targetNode.texture_normal = load(texturePath)
 	targetNode.show()
 
-	dressedItems[category] = targetNode
+	if category == 'Stack':
+		dressedItems['Stack'].append({
+			"itemName": targetNode.get_name(),
+			"node": targetNode
+		})
+	else:
+		dressedItems[category] = targetNode
 
 
 func _on_item_pressed(category, itemName):
@@ -156,13 +192,27 @@ func save_to_lookbook():
 
 	for category in dressedItems:
 		if dressedItems[category]:
-			var texturePath = dressedItems[category].texture_normal.resource_path
-			var nodePath = "%s/%s" % [category, dressedItems[category].get_name()]
-
-			lookbookItem.dressedItems[category] =  {
-				"nodePath": nodePath,
-				"texturePath": texturePath
-			}
+			if not category == 'Stack':
+				var texturePath = dressedItems[category].texture_normal.resource_path
+				var nodePath = "%s/%s" % [category, dressedItems[category].get_name()]
+	
+				lookbookItem.dressedItems[category] =  {
+					"nodePath": nodePath,
+					"texturePath": texturePath
+				}
+			else:
+				lookbookItem.dressedItems['Stack'] = []
+				
+				if len(dressedItems[category]) > 0:
+					for stackItem in dressedItems[category]:
+						var texturePath = stackItem.node.texture_normal.resource_path
+						var nodePath = "%s/%s" % ['Special', stackItem.node.get_name()]
+			
+						lookbookItem.dressedItems['Stack'].append({
+							"nodePath": nodePath,
+							"texturePath": texturePath
+						})
+					
 
 	lookbookData.append(lookbookItem)
 	saveLookbook.open("user://lookbook.save", File.WRITE)

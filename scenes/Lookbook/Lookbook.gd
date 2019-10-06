@@ -89,8 +89,12 @@ func render_looks():
 					characterNode.resetClothes()
 
 					for categoryItem in dressedItems:
+						if not categoryItem == 'Stack':
 							characterNode.showItemTexture(categoryItem, dressedItems[categoryItem].nodePath, dressedItems[categoryItem].texturePath)
-
+						else:
+							for stackItem in dressedItems[categoryItem]:
+								characterNode.showItemTexture(categoryItem, stackItem.nodePath, stackItem.texturePath)
+							
 				characterNode.show()
 				pictureFrameNode.isPictureLoaded = true
 
