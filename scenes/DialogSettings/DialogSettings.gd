@@ -53,7 +53,7 @@ func check_code():
 		animation_player.play("WobbleWindow")
 
 
-func open_scene(play_sound=false, target_node_name=""):
+func open_scene(play_sound: = false, target_node_name: = "TimerSettings"):
 	if target_node_name:
 		target_node = self.get_parent().get_node(target_node_name)
 
@@ -63,7 +63,7 @@ func open_scene(play_sound=false, target_node_name=""):
 		_reset_code()
 		generate_codes()
 
-		if target_node_name == 'TimerSettings':
+		if target_node_name == "TimerSettings":
 			if target_node.is_timed_out:
 				label.text = dialog_text.timed_out
 				close_btn.hide()

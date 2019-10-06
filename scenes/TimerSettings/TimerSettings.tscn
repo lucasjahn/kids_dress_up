@@ -15,7 +15,6 @@
 [ext_resource path="res://assets/close_scene.png" type="Texture" id=13]
 
 [node name="TimerSettings" type="MarginContainer"]
-editor/display_folded = true
 margin_right = 2048.0
 margin_bottom = 1536.0
 script = ExtResource( 1 )
@@ -126,7 +125,4 @@ margin_top = 77.5992
 margin_right = 1487.35
 margin_bottom = 178.599
 texture_normal = ExtResource( 13 )
-[connection signal="pressed" from="TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer/Ten" to="." method="_on_Ten_pressed"]
-[connection signal="pressed" from="TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer/Twenty" to="." method="_on_Twenty_pressed"]
-[connection signal="pressed" from="TextureRect/CenterContainer/TextureRect/VBoxContainer/BtnsTimer/HBoxContainer/Thirty" to="." method="_on_Thirty_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/TextureRect/Close" to="." method="_on_Close_pressed"]

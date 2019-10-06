@@ -251,7 +251,7 @@ volume_db = -5.0
 pitch_scale = 0.7
 
 [node name="Background" type="TextureRect" parent="."]
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -259,7 +259,7 @@ texture = ExtResource( 4 )
 expand = true
 
 [node name="MainSceneContainer" type="HBoxContainer" parent="."]
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="ButtonLeftContainer" type="MarginContainer" parent="MainSceneContainer"]
@@ -327,20 +327,20 @@ texture_pressed = ExtResource( 15 )
 
 [node name="CharacterContainer" type="CenterContainer" parent="MainSceneContainer"]
 margin_left = 206.0
-margin_right = 881.0
+margin_right = 802.0
 margin_bottom = 1540.0
 size_flags_horizontal = 3
 
 [node name="Character" parent="MainSceneContainer/CharacterContainer" instance=ExtResource( 16 )]
 anchor_bottom = 0.0
-margin_left = 127.0
+margin_left = 87.0
 margin_top = 175.0
-margin_right = 548.0
+margin_right = 508.0
 margin_bottom = 1365.0
 
 [node name="ButtonRightContainer" type="MarginContainer" parent="MainSceneContainer"]
-margin_left = 885.0
-margin_right = 1082.0
+margin_left = 806.0
+margin_right = 1003.0
 margin_bottom = 1540.0
 rect_min_size = Vector2( 197, 0 )
 custom_constants/margin_right = 38
@@ -381,8 +381,8 @@ texture_normal = ExtResource( 19 )
 texture_pressed = ExtResource( 20 )
 
 [node name="Wardrobe" type="MarginContainer" parent="MainSceneContainer"]
-margin_left = 1086.0
-margin_right = 2127.0
+margin_left = 1007.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 script = ExtResource( 21 )
 
@@ -837,9 +837,9 @@ stretch_mode = 4
 [node name="Special" type="VBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories"]
 visible = false
 margin_left = -163.0
-margin_top = -2705.0
+margin_top = -2697.0
 margin_right = 792.0
-margin_bottom = 4032.0
+margin_bottom = 4024.0
 custom_constants/separation = 120
 script = ExtResource( 40 )
 
@@ -850,8 +850,8 @@ script = ExtResource( 44 )
 isStack = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Stackable"]
-margin_left = 93.0
-margin_right = 861.0
+margin_left = 216.0
+margin_right = 739.0
 margin_bottom = 213.0
 custom_constants/separation = 80
 
@@ -895,9 +895,9 @@ script = ExtResource( 44 )
 isStack = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Stackable2"]
-margin_left = 79.0
-margin_right = 875.0
-margin_bottom = 233.0
+margin_left = 41.0
+margin_right = 914.0
+margin_bottom = 408.0
 custom_constants/separation = 80
 
 [node name="Feather" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Stackable2/HBoxContainer"]
@@ -940,9 +940,10 @@ script = ExtResource( 44 )
 isStack = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Stackable3"]
-margin_left = 257.0
-margin_right = 698.0
-margin_bottom = 408.0
+margin_left = 173.0
+margin_top = 95.0
+margin_right = 782.0
+margin_bottom = 312.0
 custom_constants/separation = 80
 
 [node name="Helmet" type="CenterContainer" parent="MainSceneContainer/Wardrobe/OpenWardrobeContainer/OpenWardrobeCols/OpenWardrobe/CenterContainer/ScrollContainer/MarginContainer/Categories/Special/Stackable3/HBoxContainer"]
@@ -1172,14 +1173,14 @@ stretch_mode = 4
 [node name="PictureFrameWrapper" type="MarginContainer" parent="."]
 editor/display_folded = true
 visible = false
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Background" type="TextureRect" parent="PictureFrameWrapper"]
 modulate = Color( 1, 1, 1, 0 )
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 rect_min_size = Vector2( 2048, 1536 )
 size_flags_horizontal = 3
@@ -1208,48 +1209,46 @@ anims/PictureFrameAnimation = SubResource( 8 )
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="ColorPicker" parent="." instance=ExtResource( 77 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="Lookbook" parent="." instance=ExtResource( 78 )]
 visible = false
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="DialogConfirmationDelete" parent="." instance=ExtResource( 79 )]
 visible = false
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="DialogSettings" parent="." instance=ExtResource( 80 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="TimerSettings" parent="." instance=ExtResource( 81 )]
 visible = false
-margin_right = 2127.0
 margin_bottom = 1540.0
 
 [node name="Store" parent="." instance=ExtResource( 82 )]
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 2127.0
+margin_right = 2048.0
 margin_bottom = 1540.0
 
 [node name="InfoDialog" parent="." instance=ExtResource( 83 )]
 visible = false
-margin_right = 2127.0
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsTop/ButtonBack" to="MainSceneContainer/Wardrobe" method="_on_Button_Back_pressed"]
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonOpenLookbook" to="." method="_on_open_lookbook_clicked"]
 [connection signal="pressed" from="MainSceneContainer/ButtonLeftContainer/VBoxContainer/ButtonsBottom/ButtonSaveToLookbook" to="MainSceneContainer/CharacterContainer/Character" method="save_to_lookbook"]
