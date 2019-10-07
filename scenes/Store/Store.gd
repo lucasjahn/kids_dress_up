@@ -54,6 +54,7 @@ func _check_events():
 
 		if event.type == "purchase":
 			if event.result == "ok":
+				timer.stop()
 				self.hide()
 				
 				_save_bought_product(selectedProduct)
@@ -62,7 +63,9 @@ func _check_events():
 				
 				Events.emit_signal("show_info_dialog", 'Kauf erfolgreich\nAbgeschlossen!', false)
 			else:
+				timer.stop()
 				self.hide()
+				
 				selectedProduct = ''
 				
 				Events.emit_signal("show_info_dialog", 'Leider ist ein\nFehler aufgetreten.', false)
